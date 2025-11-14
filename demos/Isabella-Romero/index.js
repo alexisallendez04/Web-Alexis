@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typewriterElement) {
         // Wait a bit for the hero animation to start
         setTimeout(() => {
-            typeWriter(typewriterElement, 'Nutrición real para personas reales', 80);
+            typeWriter(typewriterElement, 'Transforma tu cuerpo, alcanza tus objetivos', 80);
         }, 500);
     }
     

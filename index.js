@@ -22,11 +22,11 @@ const demos = [
         url: "demos/Ana-Rodriguez/index.html"
     },
     {
-        name: "Camila Fernández",
-        image: 'images/demos/Camila-Fernandez.png',
-        gradient: "linear-gradient(135deg, #7dd3c0 0%, #5fb8a5 100%)",
-        tags: ["Coach Fitness", "Web personal"],
-        url: "demos/Camila-Fernandez/index.html"
+        name: "Diego Fernández",
+        image: 'images/screens/Diego-Fernandez.png',
+        gradient: "linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)",
+        tags: ["Coach Fitness", "Web minimalista"],
+        url: "demos/Diego-Fernandez/index.html"
     },
     {
         name: "Valentina Torres",
@@ -36,10 +36,10 @@ const demos = [
         url: "demos/Valentina-Torres/index.html"
     },
     {
-        name: "Isabella Romero",
-        image: 'images/demos/Isabella-Romero.png',
+        name: "Santiago Martínez",
+        image: 'images/demos/Santiago-Martinez.png',
         gradient: "linear-gradient(135deg, #ffd89b 0%, #ffc870 100%)",
-        tags: ["Nutricionista", "Web minimalista"],
+        tags: ["Coach Fitness", "Web con conversión"],
         url: "demos/Isabella-Romero/index.html"
     }
 ];

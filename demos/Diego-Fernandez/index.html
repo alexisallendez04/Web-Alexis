@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diego Fernández - Coach Fitness. Transforma tu cuerpo y alcanza tus objetivos con entrenamiento personalizado.">
+    <title>Diego Fernández - Coach Fitness</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <meta name="theme-color" content="#7FB069">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Navbar + Hero Integrated -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-container">
+            <!-- Left Side: Navbar + Hero Content -->
+            <div class="hero-left">
+                <!-- Navbar -->
+                <nav class="navbar">
+                    <div class="nav-wrapper">
+                        <div class="logo">Diego Fernández</div>
+                        <ul class="nav-menu" id="navMenu">
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#sobre-mi">Sobre Mí</a></li>
+                            <li><a href="#precios">Lista de Precios</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="hero-line-1">Transforma tu</span>
+                        <span class="hero-line-2">cuerpo y</span>
+                        <span class="hero-line-3">alcanza tus objetivos</span>
+                    </h1>
+                    <a href="#contacto" class="btn-bar" id="getStartedBtn">
+                        <span class="btn-bar-track">
+                            <span class="btn-bar-slider"></span>
+                        </span>
+                        <span class="btn-bar-text">Comenzar</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Image with Contact Button -->
+            <div class="hero-right">
+                <div class="hero-image-wrapper">
+                    <img src="profesional.jpg" alt="Diego Fernández entrenando" class="hero-image" id="heroCoachImage">
+                    <div class="image-placeholder" id="heroImagePlaceholder">
+                        <span>Imagen del coach</span>
+                        <small>Agrega: profesional.jpg</small>
+                    </div>
+                    <a href="#contacto" class="btn-contact-overlay" id="contactBtnOverlay">
+                        <i class="bi bi-whatsapp"></i>
+                        Contactar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Mí</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-wrapper">
+                    <div class="about-image-section">
+                        <div class="about-image-card">
+                            <img src="retrato.jpg" alt="Diego Fernández" class="about-profile-image">
+                            <div class="about-image-placeholder" id="aboutImagePlaceholder">
+                                <span>DF</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p class="lead">Soy Diego Fernández, coach fitness especializado en transformaciones corporales y desarrollo de fuerza.</p>
+                        <p>Con años de experiencia ayudando a personas a alcanzar sus objetivos, mi enfoque combina entrenamiento de fuerza, hipertrofia y nutrición estratégica.</p>
+                        <p>Trabajo con programas personalizados que se adaptan a tu estilo de vida, objetivos y nivel actual. Cada entrenamiento está diseñado para maximizar tus resultados y mantenerte motivado.</p>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Certificaciones internacionales</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Metodología basada en ciencia</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Resultados comprobados</span>
+                            </div>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">8+</div>
+                                <div class="stat-label">Años de experiencia</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">200+</div>
+                                <div class="stat-label">Clientes transformados</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivational Break Section -->
+    <section class="motivational-break">
+        <div class="container">
+            <div class="motivational-content">
+                <p class="motivational-quote">"El único entrenamiento malo es el que no haces"</p>
+                <p class="motivational-author">Tu transformación comienza hoy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price List Section -->
+    <section id="precios" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lista de Precios</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Elige el programa que mejor se adapte a tus objetivos</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-badge">Más Popular</div>
+                    <h3>Transformación 12 Semanas</h3>
+                    <div class="price-amount">$149</div>
+                    <div class="price-period">por mes</div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle"></i> Plan de entrenamiento personalizado</li>
+                        <li><i class="bi bi-check-circle"></i> Plan nutricional adaptado</li>
+                        <li><i class="bi bi-check-circle"></i> Seguimiento semanal</li>
+                        <li><i class="bi bi-check-circle"></i> Ajustes del programa</li>
+                        <li><i class="bi bi-check-circle"></i> Grupo de WhatsApp exclusivo</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-primary btn-pricing">Contratar</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Hipertrofia Avanzada</h3>
+                    <div class="price-amount">$179</div>
+                    <div class="price-period">por mes</div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle"></i> Programa de 20 semanas</li>
+                        <li><i class="bi bi-check-circle"></i> Técnicas avanzadas</li>
+                        <li><i class="bi bi-check-circle"></i> Plan nutricional hipercalórico</li>
+                        <li><i class="bi bi-check-circle"></i> Mediciones cada 4 semanas</li>
+                        <li><i class="bi bi-check-circle"></i> Suplementación estratégica</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-primary btn-pricing">Contratar</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Coaching 1 a 1 Premium</h3>
+                    <div class="price-amount">$299</div>
+                    <div class="price-period">por mes</div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle"></i> Entrenamiento presencial</li>
+                        <li><i class="bi bi-check-circle"></i> Corrección de técnica en tiempo real</li>
+                        <li><i class="bi bi-check-circle"></i> Plan nutricional con seguimiento diario</li>
+                        <li><i class="bi bi-check-circle"></i> Disponibilidad vía WhatsApp</li>
+                        <li><i class="bi bi-check-circle"></i> Resultados 3x más rápidos</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-primary btn-pricing">Contratar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Casos de Éxito</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Transformaciones reales de clientes que confiaron en mi método</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">MC</div>
+                        <div class="testimonial-info">
+                            <h3>María C.</h3>
+                            <p class="testimonial-program">Transformación 12 Semanas</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-results">
+                        <div class="result-item">
+                            <span class="result-label">Pérdida de grasa:</span>
+                            <span class="result-value">-10kg</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Ganancia muscular:</span>
+                            <span class="result-value">+3kg</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"En 12 semanas logré resultados que no había conseguido en años. El programa fue perfecto para mi estilo de vida y Diego me acompañó en cada paso."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">JL</div>
+                        <div class="testimonial-info">
+                            <h3>Juan L.</h3>
+                            <p class="testimonial-program">Hipertrofia Avanzada</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-results">
+                        <div class="result-item">
+                            <span class="result-label">Ganancia muscular:</span>
+                            <span class="result-value">+5.5kg</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Aumento fuerza:</span>
+                            <span class="result-value">+45%</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"El programa de hipertrofia avanzada superó mis expectativas. Las técnicas que aprendí y la nutrición estratégica me permitieron ganar masa muscular de calidad."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">AS</div>
+                        <div class="testimonial-info">
+                            <h3>Ana S.</h3>
+                            <p class="testimonial-program">Coaching 1 a 1 Premium</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-results">
+                        <div class="result-item">
+                            <span class="result-label">Pérdida de grasa:</span>
+                            <span class="result-value">-8kg</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Ganancia fuerza:</span>
+                            <span class="result-value">+60%</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"El coaching personalizado fue la mejor inversión. Tener a Diego entrenando conmigo en cada sesión aceleró mis resultados 3 veces más rápido."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Todo lo que necesitas saber antes de comenzar</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <div class="faq-question-content">
+                            <i class="bi bi-clock"></i>
+                            <span>¿Cuánto tiempo tarda ver resultados?</span>
+                        </div>
+                        <i class="bi bi-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Con mi metodología probada, notarás mejoras en fuerza y energía desde la primera semana. Cambios visibles en composición corporal aparecen entre 6-8 semanas, y transformaciones significativas se logran en 12 semanas con dedicación constante al programa.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <div class="faq-question-content">
+                            <i class="bi bi-person-check"></i>
+                            <span>¿Necesito tener experiencia previa?</span>
+                        </div>
+                        <i class="bi bi-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutamente no. Diseño programas personalizados que se adaptan a tu nivel actual, ya seas principiante o avanzado. Cada entrenamiento está pensado para tu condición física específica.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <div class="faq-question-content">
+                            <i class="bi bi-apple"></i>
+                            <span>¿Incluye plan nutricional?</span>
+                        </div>
+                        <i class="bi bi-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, todos mis programas incluyen un plan nutricional completo y personalizado. Calculamos tus macros, diseñamos menús adaptados a tus objetivos y te guío en cada paso del proceso.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <div class="faq-question-content">
+                            <i class="bi bi-house"></i>
+                            <span>¿Puedo entrenar desde casa?</span>
+                        </div>
+                        <i class="bi bi-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ofrezco programas adaptables tanto para gimnasio como para entrenar en casa. Te proporciono alternativas de ejercicios según el equipamiento que tengas disponible.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <div class="faq-question-content">
+                            <i class="bi bi-shield-check"></i>
+                            <span>¿Qué garantía tienen los resultados?</span>
+                        </div>
+                        <i class="bi bi-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Con compromiso al programa y seguimiento de las indicaciones, los resultados están garantizados. Hacemos ajustes semanales para optimizar tu progreso y asegurar que alcances tus objetivos.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <div class="faq-question-content">
+                            <i class="bi bi-graph-up"></i>
+                            <span>¿Cómo funciona el seguimiento?</span>
+                        </div>
+                        <i class="bi bi-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Realizamos seguimiento semanal con mediciones corporales, fotos de progreso, análisis de rendimiento y ajustes personalizados del programa. Estoy disponible para resolver dudas y motivarte en cada paso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contacto</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">¿Listo para transformar tu cuerpo? Agenda tu consulta ahora</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-cta-wrapper">
+                    <div class="contact-cta">
+                        <div class="cta-content">
+                            <h3>Reserva tu consulta</h3>
+                            <p>Comienza tu transformación hoy mismo. Agenda una consulta donde evaluaremos tus objetivos y diseñaremos el plan perfecto para ti.</p>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-large btn-cta" id="whatsappBtnContact">
+                            <i class="bi bi-whatsapp me-2"></i>Contactar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Diego Fernández</h3>
+                    <p>Coach Fitness</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#sobre-mi">Sobre Mí</a></li>
+                        <li><a href="#precios">Lista de Precios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Sígueme</h4>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Diego Fernández. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
