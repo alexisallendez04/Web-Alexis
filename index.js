@@ -89,7 +89,7 @@ function setupWhatsAppButton() {
     const phoneNumberDisplay = '+54 2664 022762'; // 🔴 CAMBIAR ESTO
     
     // Mensaje predefinido
-    const message = encodeURIComponent('Hola Alexis, vi tu web y quiero mi web profesional lista en 48 horas');
+    const message = encodeURIComponent('Hola Alexis, vi tu web y quiero mi web profesional para nutricionistas');
     
     // URL de WhatsApp
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;

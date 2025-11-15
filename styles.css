@@ -2077,6 +2077,7 @@ section {
     box-shadow: var(--shadow-md);
     position: relative;
     z-index: 1;
+    font-family: var(--font-primary);
 }
 
 .step-card:hover .step-number {
@@ -2420,6 +2421,12 @@ section {
     font-size: 4rem;
     margin-bottom: 20px;
     display: block;
+    color: var(--color-primary-dark);
+}
+
+.benefit-icon i {
+    font-size: 4rem;
+    display: inline-block;
 }
 
 .benefit-card h3 {
