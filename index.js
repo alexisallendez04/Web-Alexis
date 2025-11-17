@@ -89,7 +89,7 @@ function setupWhatsAppButton() {
     const phoneNumberDisplay = '+54 2664 022762'; // 🔴 CAMBIAR ESTO
     
     // Mensaje predefinido
-    const message = encodeURIComponent('Hola Alexis, vi tu web y quiero mi web profesional para nutricionistas');
+    const message = encodeURIComponent('Hola Alexis, vi tu propuesta y quiero potenciar mi presencia online profesional');
     
     // URL de WhatsApp
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
@@ -97,7 +97,6 @@ function setupWhatsAppButton() {
     // Configurar todos los botones de WhatsApp
     const whatsappBtnNav = document.getElementById('whatsappBtnNav');
     const whatsappBtnHowItWorks = document.getElementById('whatsappBtnHowItWorks');
-    const whatsappBtnOffer = document.getElementById('whatsappBtnOffer');
     const whatsappBtnContact = document.getElementById('whatsappBtnContact');
     
     if (whatsappBtnNav) {
@@ -110,12 +109,6 @@ function setupWhatsAppButton() {
         whatsappBtnHowItWorks.href = whatsappUrl;
         whatsappBtnHowItWorks.target = '_blank';
         whatsappBtnHowItWorks.rel = 'noopener noreferrer';
-    }
-    
-    if (whatsappBtnOffer) {
-        whatsappBtnOffer.href = whatsappUrl;
-        whatsappBtnOffer.target = '_blank';
-        whatsappBtnOffer.rel = 'noopener noreferrer';
     }
     
     if (whatsappBtnContact) {
@@ -154,7 +147,7 @@ function setupContactForm() {
         const whatsapp = document.getElementById('whatsapp').value;
         
         // Construir mensaje para WhatsApp
-        let mensaje = `Hola Alexis, quiero mi web profesional.\n\n`;
+        let mensaje = `Hola Alexis, quiero potenciar mi presencia online profesional.\n\n`;
         mensaje += `Nombre: ${nombre}\n`;
         mensaje += `Profesión: ${profesion}\n`;
         if (instagram) {
@@ -238,7 +231,7 @@ function animateOnScroll() {
     
     // Observar todas las cards y secciones
     const elementsToAnimate = document.querySelectorAll(
-        '.demo-card, .step-card, .benefit-card, .testimonial-card, .offer-card, .contact-card, .section-title, .section-subtitle'
+        '.demo-card, .step-card, .benefit-card, .testimonial-card, .contact-card, .section-title, .section-subtitle'
     );
     
     elementsToAnimate.forEach((el, index) => {
