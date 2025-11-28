@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Desarrollo sitios web para estudios jurídicos y profesionales independientes.">
-    <title>Alexis Allendez | Desarrollo Web para Estudios Jurídicos</title>
+    <title>Alexis Allendez | Webs Profesionales</title>
+    
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNavbar">
+    <!-- 0. Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#inicio">
                 <span class="brand-text">Alexis Allendez</span>
@@ -32,148 +35,506 @@
                         <a class="nav-link" href="#inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                        <a class="nav-link" href="#demos">Demos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#quien-soy">Quién Soy</a>
+                        <a class="nav-link" href="#servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
+                        <a class="nav-link" href="#proceso">Proceso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#precios">Precios</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link btn-nav-contact" href="https://wa.me/526641234567?text=Hola,%20me%20interesa%20una%20landing%20page" target="_blank">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                            Contacto
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Portada Simple -->
-    <section id="inicio" class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-overlay"></div>
+    <!-- 1. Hero -->
+    <section id="inicio" class="hero-landing">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="bi bi-shield-check"></i>
-                    <span>Desarrollo Web Profesional</span>
-                </div>
-                <h1 class="hero-title">Mejoro la presencia profesional de estudios jurídicos con sitios web claros, confiables y orientados a que más clientes tomen contacto.</h1>
-                <div class="hero-features">
-                    <div class="hero-feature">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <span>Claridad</span>
-                    </div>
-                    <div class="hero-feature">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <span>Confianza</span>
-                    </div>
-                    <div class="hero-feature">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <span>Conversión</span>
+            <div class="row align-items-center min-vh-100 py-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="hero-title-landing mb-4">Landing Pages para Médicos y Clínicas Estéticas</h1>
+                    <p class="hero-subtitle mb-5">Más consultas por WhatsApp con páginas optimizadas y listas en 48 horas.</p>
+                    <div class="hero-buttons">
+                        <a href="#demos" class="btn btn-primary btn-lg me-3">
+                            <span>Ver demos</span>
+                        </a>
+                        <a href="https://wa.me/526641234567?text=Hola,%20me%20interesa%20una%20landing%20page" class="btn btn-outline-primary btn-lg" target="_blank">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                            <span>Hablar por WhatsApp</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hero-scroll-indicator">
-            <i class="bi bi-arrow-down"></i>
-        </div>
     </section>
 
-    <!-- Sección de Descanso Visual 1 -->
-    <section class="break-section break-section-1">
+    <!-- 2. Por qué este servicio existe -->
+    <section class="pain-section">
         <div class="container">
-            <div class="break-content">
-                <h3 class="break-title">Profesionalismo y Confianza</h3>
-                <p class="break-subtitle">Cada proyecto refleja seriedad, claridad y resultados</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mini Portfolio -->
-    <section id="portfolio" class="portfolio-section">
-        <div class="container">
-            <h2 class="section-title">Portfolio</h2>
-            <div class="portfolio-grid" id="portfolioGrid">
-                <!-- Las demos se renderizan dinámicamente con JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Descanso Visual 2 -->
-    <section class="break-section break-section-2">
-        <div class="container">
-            <div class="break-content">
-                <h3 class="break-title">Enfoque Directo</h3>
-                <p class="break-subtitle">Sin complicaciones. Resultados que generan contacto real</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quién Soy -->
-    <section id="quien-soy" class="about-section">
-        <div class="container">
-            <h2 class="section-title">Quién Soy</h2>
-            <div class="about-content">
-                <div class="about-profile">
-                    <img src="images/foto-perfil.jpg" alt="Alexis Allendez" class="about-image" id="aboutProfileImage">
-                    <div class="about-image-placeholder" id="aboutProfilePlaceholder">
-                        <i class="bi bi-person-circle"></i>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="section-title">El problema que resolvemos</h2>
+                    <div class="pain-points">
+                        <div class="pain-item">
+                            <p class="pain-text">"Muchos pacientes no confían si la clínica no tiene una página profesional."</p>
+                        </div>
+                        <div class="pain-item">
+                            <p class="pain-text">"Las redes sociales no convierten solas."</p>
+                        </div>
+                        <div class="pain-item">
+                            <p class="pain-text">"Los pacientes quieren ver precios, resultados y ubicación rápido."</p>
+                        </div>
+                        <div class="pain-item">
+                            <p class="pain-text">"Perder leads por un perfil de Instagram desordenado cuesta consultas todos los días."</p>
+                        </div>
+                    </div>
+                    <div class="solution-box mt-5">
+                        <p class="solution-text">Las clínicas que no tienen una web clara y profesional pierden hasta el <strong>40% de consultas</strong>.<br>Te ayudo a que tu clínica luzca confiable, clara y fácil de contactar.</p>
                     </div>
                 </div>
-                <div class="about-text-content">
-                    <p class="about-intro">
-                        Ayudo a estudios jurídicos y profesionales independientes a mejorar su presencia online con sitios web claros, profesionales y orientados a generar contacto real con clientes.
-                    </p>
-                    
-                    <div class="about-approach">
-                        <h3 class="about-approach-title">Mi enfoque es simple:</h3>
-                        <div class="about-features">
-                            <div class="about-feature-item">
-                                <div class="about-feature-icon">
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <p class="about-feature-text">Primera impresión impecable</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Demos -->
+    <section id="demos" class="demos-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Demos</h2>
+            <p class="text-center text-muted mb-5">Páginas optimizadas para convertir visitantes en pacientes</p>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-card">
+                        <div class="demo-image">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=400&fit=crop" alt="Demo Medicina Estética" class="img-fluid">
+                        </div>
+                        <div class="demo-content">
+                            <h3>Clínica Estética – Tijuana</h3>
+                            <p class="demo-subtitle">Landing optimizada para WhatsApp</p>
+                            <a href="demo/index.html" class="btn btn-secondary w-100" target="_blank">Ver demo completa</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-card">
+                        <div class="demo-image">
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop" alt="Demo Odontología Estética" class="img-fluid">
+                        </div>
+                        <div class="demo-content">
+                            <h3>Odontólogo Estético</h3>
+                            <p class="demo-subtitle">Landing optimizada para WhatsApp</p>
+                            <a href="demo/index.html" class="btn btn-secondary w-100" target="_blank">Ver demo completa</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-card">
+                        <div class="demo-image">
+                            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&h=400&fit=crop" alt="Demo Clínica de Belleza" class="img-fluid">
+                        </div>
+                        <div class="demo-content">
+                            <h3>Clínica de Belleza / Spa</h3>
+                            <p class="demo-subtitle">Landing optimizada para WhatsApp</p>
+                            <a href="demo/index.html" class="btn btn-secondary w-100" target="_blank">Ver demo completa</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-card">
+                        <div class="demo-image">
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&h=400&fit=crop" alt="Demo Dermatología" class="img-fluid">
+                        </div>
+                        <div class="demo-content">
+                            <h3>Dermatólogo</h3>
+                            <p class="demo-subtitle">Landing optimizada para WhatsApp</p>
+                            <a href="demo/index.html" class="btn btn-secondary w-100" target="_blank">Ver demo completa</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="demo-card">
+                        <div class="demo-image">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop" alt="Demo Cirugía Estética" class="img-fluid">
+                        </div>
+                        <div class="demo-content">
+                            <h3>Cirugía Estética</h3>
+                            <p class="demo-subtitle">Landing optimizada para WhatsApp</p>
+                            <a href="demo/index.html" class="btn btn-secondary w-100" target="_blank">Ver demo completa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Beneficios -->
+    <section id="servicios" class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Por qué trabajar conmigo</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">✓</div>
+                        <h3>Especialización solo en médicos y estética</h3>
+                        <p>Conozco el nicho y entiendo qué buscan tus pacientes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">✓</div>
+                        <h3>Webs enfocadas en conversión</h3>
+                        <p>Más consultas, no solo "diseños bonitos". Cada elemento está pensado para convertir.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">✓</div>
+                        <h3>Entrega en 48h</h3>
+                        <p>Tu landing lista y funcionando en máximo 2 días.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">✓</div>
+                        <h3>Botón de WhatsApp en toda la página</h3>
+                        <p>Los pacientes pueden contactarte desde cualquier sección.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">✓</div>
+                        <h3>Dominio incluido</h3>
+                        <p>Tu dominio profesional por 1 año incluido en el paquete inicial.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">✓</div>
+                        <h3>Hosting primer mes gratis</h3>
+                        <p>Primer mes de hosting incluido, sin costos ocultos.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">✓</div>
+                        <h3>Soporte directo</h3>
+                        <p>Comunicación directa por WhatsApp, sin intermediarios.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">✓</div>
+                        <h3>Ajustes sin costo en la primera semana</h3>
+                        <p>Refinamos detalles sin costo adicional durante la primera semana.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Cómo funciona -->
+    <section id="proceso" class="process-section">
+        <div class="container">
+            <h2 class="section-title">Cómo funciona</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Diagnóstico express (5 minutos)</h3>
+                        <p>Te pregunto 3 cosas: qué procedimiento querés promover, dónde atendés y a qué número enviamos los leads.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Diseño y armado (24–48hs)</h3>
+                        <p>Tomo tu información, fotos y creo la landing optimizada.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Revisión (5 minutos)</h3>
+                        <p>Te muestro el resultado y hacemos ajustes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Conectar WhatsApp y publicar</h3>
+                        <p>Listo: tu página está en línea generando consultas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Precios -->
+    <section id="precios" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Precios claros</h2>
+            <p class="text-center text-muted mb-5">Todo lo que necesitas para convertir visitantes en pacientes</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <div class="pricing-card-enhanced">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Paquete Completo</h3>
+                            <div class="pricing-price">
+                                <span class="price-amount">$100</span>
+                                <span class="price-currency">USD</span>
                             </div>
-                            <div class="about-feature-item">
-                                <div class="about-feature-icon">
-                                    <i class="bi bi-chat-dots-fill"></i>
+                            <p class="pricing-subtitle">Inversión única - Sin costos ocultos</p>
+                        </div>
+                        
+                        <div class="pricing-features">
+                            <div class="feature-group">
+                                <div class="feature-group-header">
+                                    <span class="feature-group-icon">🚀</span>
+                                    <h4 class="feature-group-title">Landing diseñada para conversiones</h4>
                                 </div>
-                                <p class="about-feature-text">Mensaje claro</p>
+                                <div class="feature-group-items">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Estructura validada para clínicas estéticas</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Mensajes optimizados para generar confianza</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Experiencia visual estilo "clínica premium"</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="about-feature-item">
-                                <div class="about-feature-icon">
-                                    <i class="bi bi-building"></i>
+
+                            <div class="feature-group">
+                                <div class="feature-group-header">
+                                    <span class="feature-group-icon">📲</span>
+                                    <h4 class="feature-group-title">Botón de WhatsApp en toda la página</h4>
                                 </div>
-                                <p class="about-feature-text">Estructura profesional</p>
+                                <div class="feature-group-items">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Los pacientes pueden escribirte en un click</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Redacción personalizada para aumentar consultas</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Automatización de mensaje inicial incluida</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="about-feature-item">
-                                <div class="about-feature-icon">
-                                    <i class="bi bi-telephone-fill"></i>
+
+                            <div class="feature-group">
+                                <div class="feature-group-header">
+                                    <span class="feature-group-icon">🧲</span>
+                                    <h4 class="feature-group-title">Sección estratégica para atraer pacientes</h4>
+                                    <span class="feature-badge">Exclusivo</span>
                                 </div>
-                                <p class="about-feature-text">Acceso directo a WhatsApp o formulario</p>
+                                <div class="feature-group-items">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Procedimientos principales con copy persuasivo</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Imágenes profesionales</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Sección de beneficios que responden miedos del paciente</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Llamados a la acción ubicados donde más convierten</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feature-group">
+                                <div class="feature-group-header">
+                                    <span class="feature-group-icon">💬</span>
+                                    <h4 class="feature-group-title">Sistema de prueba social</h4>
+                                </div>
+                                <div class="feature-group-items">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Testimonios listos para cargar</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Sección "Antes y Después" diseñada</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feature-group">
+                                <div class="feature-group-header">
+                                    <span class="feature-group-icon">🏥</span>
+                                    <h4 class="feature-group-title">Branding básico incluido</h4>
+                                </div>
+                                <div class="feature-group-items">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Paleta de colores profesional</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Tipografías médicas premium</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Identidad visual uniforme (aumenta la percepción de autoridad)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feature-group">
+                                <div class="feature-group-header">
+                                    <span class="feature-group-icon">🌐</span>
+                                    <h4 class="feature-group-title">Dominio + hosting</h4>
+                                </div>
+                                <div class="feature-group-items">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Dominio 1 año</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Primer mes de hosting gratis</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Publicación incluida</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feature-group">
+                                <div class="feature-group-header">
+                                    <span class="feature-group-icon">⚡</span>
+                                    <h4 class="feature-group-title">Ajustes sin costo durante 7 días</h4>
+                                </div>
+                                <div class="feature-group-items">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">El médico siente seguridad de que puede pedir cambios sin pagar extra</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feature-group feature-group-highlight">
+                                <div class="feature-group-header">
+                                    <span class="feature-group-icon">🎯</span>
+                                    <h4 class="feature-group-title">Enfoque especializado</h4>
+                                </div>
+                                <div class="feature-group-items">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Médicos estéticos</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Odontólogos estéticos</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text">Clínicas de belleza</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <p class="about-approach-result">
-                            para que quienes buscan asesoría legal tengan un punto de contacto confiable y sencillo.
-                        </p>
+
+                        <div class="pricing-cta">
+                            <a href="https://wa.me/526641234567?text=Hola,%20quiero%20el%20Paquete%20Completo" class="btn btn-primary btn-lg w-100" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg>
+                                <span>Contratar ahora</span>
+                            </a>
+                            <p class="pricing-guarantee">✓ Entrega en 48 horas • ✓ Sin costos ocultos • ✓ Soporte incluido</p>
+                        </div>
                     </div>
-                    
-                    <p class="about-closing">
-                        Trabajo cada proyecto con atención al detalle, priorizando claridad, confianza y funcionalidad.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contacto Directo -->
-    <section id="contacto" class="contact-section">
+    <!-- 7. Resultados -->
+    <section class="results-section">
         <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <div class="contact-content">
-                <a href="https://wa.me/542664022762" target="_blank" class="contact-link" id="whatsappLink">
-                    <i class="bi bi-whatsapp me-2"></i>WhatsApp
+            <h2 class="section-title">Resultados</h2>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="result-card">
+                        <p class="result-text">"Un diseño profesional me ayudó a agendar 15 consultas más en la primera semana."</p>
+                        <p class="result-author">– Clínica estética ficticia</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="result-card">
+                        <p class="result-text">"El botón de WhatsApp simplificó todo, ahora los pacientes consultan directo."</p>
+                        <p class="result-author">– Clínica estética ficticia</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="result-card">
+                        <p class="result-text">"Mejoró muchísimo la confianza de mis pacientes."</p>
+                        <p class="result-author">– Clínica estética ficticia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Sobre vos -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-4">
+                    <div class="about-image">
+                        <img src="images/foto-perfil.jpg" alt="Diseñador" class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <h2 class="section-title text-start">Sobre mí</h2>
+                    <p class="about-text">Diseñador especializado en landing pages para médicos y clínicas estéticas.</p>
+                    <p class="about-text">Entiendo lo que buscan tus pacientes: claridad, confianza y facilidad para agendar. Cada landing está diseñada para convertir visitantes en consultas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. CTA Final -->
+    <section class="cta-final-section">
+        <div class="container">
+            <h2 class="cta-title">¿Listo para aumentar consultas por WhatsApp?</h2>
+            <div class="cta-buttons">
+                <a href="https://wa.me/526641234567?text=Hola,%20me%20interesa%20una%20landing%20page" class="btn btn-primary btn-lg me-3" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    <span>Hablar por WhatsApp</span>
                 </a>
-                <a href="mailto:alexisallendez04@gmail.com" class="contact-link" id="emailLink">
-                    <i class="bi bi-envelope me-2"></i>Email
+                <a href="#demos" class="btn btn-outline-primary btn-lg">
+                    <span>Ver demos</span>
                 </a>
             </div>
         </div>
@@ -182,13 +543,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-tagline">Sitios web profesionales para estudios jurídicos — claridad, confianza y conversión.</p>
-            <p class="footer-text">© 2025 - Alexis Allendez</p>
+            <p class="mb-0">&copy; 2024 Landing Pages para Médicos. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

@@ -1,0 +1,652 @@
+/* Variables CSS */
+:root {
+    --color-white: #FFFFFF;
+    --color-beige: #F5F1EB;
+    --color-beige-dark: #E8E3DB;
+    --color-gold: #D4AF37;
+    --color-gold-light: #E8D5A3;
+    --color-green: #25D366;
+    --color-green-dark: #1DA851;
+    --color-text: #2C2C2C;
+    --color-text-light: #666666;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s ease;
+    --transition-slow: all 0.6s ease;
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    line-height: 1.6;
+    background-color: var(--color-white);
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--color-beige) 0%, var(--color-white) 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--color-gold-light) 0%, transparent 70%);
+    opacity: 0.3;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image img {
+    max-height: 600px;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-name {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.hero-title {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: var(--color-gold);
+    font-weight: 500;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+.hero-description {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+/* Sección de Descanso/Transición */
+.spacer-section {
+    background: linear-gradient(180deg, var(--color-beige) 0%, var(--color-white) 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.spacer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.spacer-line {
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(180deg, transparent, var(--color-gold), transparent);
+    position: relative;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.spacer-line::before,
+.spacer-line::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: var(--color-gold);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.spacer-line::before {
+    top: -6px;
+}
+
+.spacer-line::after {
+    bottom: -6px;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scaleY(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleY(1.1);
+    }
+}
+
+/* Buttons - Override Bootstrap */
+.btn-primary {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+    color: var(--color-white);
+    box-shadow: var(--shadow-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-green-dark);
+    border-color: var(--color-green-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    color: var(--color-white);
+}
+
+.btn-secondary {
+    background-color: var(--color-white);
+    color: var(--color-text);
+    border: 2px solid var(--color-beige-dark);
+    border-radius: 50px;
+    padding: 14px 28px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-beige);
+    border-color: var(--color-gold-light);
+    color: var(--color-text);
+    transform: translateY(-2px);
+}
+
+.btn-large {
+    padding: 20px 48px;
+    font-size: 1.1rem;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--color-text);
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    border-radius: 2px;
+}
+
+.section-title.text-start::after {
+    left: 0;
+    transform: none;
+}
+
+/* Procedures Section */
+.procedures {
+    padding: 100px 0;
+    background-color: var(--color-white);
+    position: relative;
+}
+
+.procedure-card {
+    background: var(--color-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-slow);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.procedure-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.procedure-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.procedure-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: var(--color-beige);
+}
+
+.procedure-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.procedure-card:hover .procedure-image img {
+    transform: scale(1.1);
+}
+
+.procedure-card .card-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 24px 20px 20px;
+    color: var(--color-text);
+}
+
+.procedure-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 100px 0;
+    background: linear-gradient(180deg, var(--color-white) 0%, var(--color-beige) 100%);
+}
+
+.benefit-item {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    height: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.benefit-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--color-white);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.benefit-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.benefit-item p {
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+/* Before & After Section */
+.before-after {
+    padding: 100px 0;
+    background-color: var(--color-white);
+}
+
+.gallery-item {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    aspect-ratio: 4/5;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.gallery-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 100px 0;
+    background: linear-gradient(180deg, var(--color-beige) 0%, var(--color-white) 100%);
+}
+
+.testimonial-card {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: var(--transition);
+    border-top: 4px solid var(--color-gold);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.testimonial-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.stars {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-text);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--color-gold);
+    font-size: 1rem;
+}
+
+/* About Section */
+.about {
+    padding: 100px 0;
+    background-color: var(--color-white);
+}
+
+.about-image img {
+    max-height: 500px;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.about-text {
+    padding: 20px 0;
+}
+
+.doctor-name {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+.doctor-title {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: var(--color-gold);
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.doctor-description {
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+    color: var(--color-text-light);
+    line-height: 1.8;
+    font-style: italic;
+    padding: 20px;
+    background: var(--color-beige);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-gold);
+}
+
+/* Location Section */
+.location {
+    padding: 100px 0;
+    background: linear-gradient(180deg, var(--color-white) 0%, var(--color-beige) 100%);
+    text-align: center;
+}
+
+.location-text {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+}
+
+.map-container {
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+/* CTA Final Section */
+.cta-final {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--color-beige) 0%, var(--color-white) 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-final::before {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--color-gold-light) 0%, transparent 70%);
+    opacity: 0.3;
+    border-radius: 50%;
+}
+
+.cta-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-final .btn {
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-text);
+    color: var(--color-white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-text {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .about-text .section-title {
+        text-align: center;
+    }
+
+    .about-text .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero-image img {
+        max-height: 400px;
+    }
+
+    .spacer-section {
+        padding: 60px 0;
+    }
+
+    .procedures,
+    .benefits,
+    .before-after,
+    .testimonials,
+    .about,
+    .location,
+    .cta-final {
+        padding: 60px 0;
+    }
+
+    .procedure-card .card-title,
+    .benefit-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .benefit-item {
+        padding: 30px;
+    }
+
+    .testimonial-card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-name {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .btn-large {
+        padding: 16px 32px;
+        font-size: 1rem;
+    }
+
+    .spacer-line {
+        height: 60px;
+    }
+}
+
+/* Smooth Transitions */
+* {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Utility Classes */
+.min-vh-100 {
+    min-height: 100vh;
+}
+
