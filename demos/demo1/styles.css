@@ -1,0 +1,2123 @@
+/* Tipografía moderna y profesional */
+* {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: auto; /* Desactivar smooth nativo para usar el personalizado */
+    scroll-padding-top: 120px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    overscroll-behavior-y: contain; /* Prevenir scroll rebote */
+    background-color: #fff; /* Fondo blanco para el body */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #2c2c2c;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+}
+
+body.scrolling {
+    cursor: default;
+    user-select: none;
+}
+
+/* Scroll más pesado y premium */
+html, body {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: auto;
+}
+
+/* Reducir velocidad de scroll en navegadores */
+* {
+    scroll-behavior: auto;
+}
+
+/* Navbar Desktop - Circular con Blur */
+.navbar-desktop {
+    width: 100%;
+    padding: 60px 0;
+    z-index: 1000;
+    display: none; /* Oculto por defecto, se muestra en desktop */
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+    background: transparent !important; /* Fondo completamente transparente */
+    background-color: transparent !important; /* Asegurar que no haya color de fondo */
+    pointer-events: none; /* Permitir clicks a través del contenedor */
+    border: none !important; /* Sin bordes */
+    box-shadow: none !important; /* Sin sombras en el contenedor */
+}
+
+@media (min-width: 992px) {
+    .navbar-desktop {
+        display: block;
+    }
+}
+
+.navbar-desktop-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 80px;
+    position: relative;
+    background: transparent !important; /* Fondo completamente transparente */
+    background-color: transparent !important; /* Asegurar que no haya color de fondo */
+    pointer-events: none; /* Permitir clicks a través del contenedor */
+    border: none !important; /* Sin bordes */
+    box-shadow: none !important; /* Sin sombras */
+}
+
+/* Permitir clicks solo en la barra circular */
+.navbar-circular {
+    pointer-events: auto;
+}
+
+/* Logo dentro del navbar circular */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    margin-right: 35px; /* Misma distancia que tiene con "Inicio" */
+}
+
+.logo-link:hover {
+    color: #333;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #333;
+}
+
+.logo-text {
+    white-space: nowrap;
+}
+
+/* Navbar circular centrado */
+.navbar-circular {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 50px;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    min-width: fit-content;
+}
+
+/* Lista de navegación */
+.navbar-nav-circular {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-item-circular {
+    margin: 0;
+}
+
+.nav-link-circular {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    position: relative;
+}
+
+.nav-link-circular:hover {
+    color: #000;
+}
+
+.nav-link-circular::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.nav-link-circular:hover::after {
+    width: 100%;
+}
+
+/* Botón Agendar Cita */
+.btn-agendar-cita {
+    background: #fff;
+    color: #333;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-agendar-cita:hover {
+    background: #f8f9fa;
+    color: #000;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.btn-agendar-cita:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+/* Navbar Mobile - Estilo similar al desktop */
+.navbar-mobile {
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    background: transparent !important;
+    pointer-events: none;
+}
+
+.navbar-mobile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    position: relative;
+    background: transparent !important;
+    pointer-events: none;
+}
+
+.navbar-mobile-circular {
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 50px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    max-width: 95%;
+    min-height: 50px;
+}
+
+.navbar-mobile-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.navbar-mobile-logo:hover {
+    color: #333;
+}
+
+.navbar-mobile-logo i {
+    font-size: 1.2rem;
+    color: #333;
+    flex-shrink: 0;
+}
+
+.navbar-mobile-logo span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Botón hamburguesa personalizado */
+.navbar-mobile-toggler {
+    background: transparent;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    gap: 4px;
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0;
+    outline: none;
+}
+
+.navbar-mobile-toggler span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #1a1a1a;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    transform-origin: center;
+}
+
+.navbar-mobile-toggler:hover span {
+    background: #667eea;
+}
+
+.navbar-mobile-toggler[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+    background: #667eea;
+}
+
+.navbar-mobile-toggler[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.navbar-mobile-toggler[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+    background: #667eea;
+}
+
+/* Menú colapsable */
+.navbar-mobile-menu {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    min-width: 280px;
+    max-width: 90vw;
+    pointer-events: auto;
+    will-change: transform, opacity;
+}
+
+/* Optimizar animación del collapse de Bootstrap - Más rápido */
+.navbar-collapse {
+    transition: height 0.15s ease !important;
+}
+
+.navbar-collapse.collapsing {
+    transition: height 0.15s ease !important;
+}
+
+#navbarNavMobile {
+    transition: height 0.15s ease !important;
+}
+
+#navbarNavMobile.collapsing {
+    transition: height 0.15s ease !important;
+}
+
+.navbar-mobile-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-item-mobile {
+    margin: 0;
+}
+
+.nav-link-mobile {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 10px;
+    transition: all 0.15s ease;
+    will-change: background-color, color;
+}
+
+.nav-link-mobile:hover {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+}
+
+/* Botón agendar en móvil */
+.btn-mobile-agendar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    margin-top: 15px;
+    width: 100%;
+}
+
+.btn-mobile-agendar:hover {
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-mobile-agendar i {
+    transition: transform 0.3s ease;
+}
+
+.btn-mobile-agendar:hover i {
+    transform: translateX(5px);
+}
+
+/* Ocultar navbar mobile en desktop */
+@media (min-width: 992px) {
+    .navbar-mobile {
+        display: none !important;
+    }
+}
+
+/* Ajustes para móviles pequeños */
+@media (max-width: 576px) {
+    .navbar-mobile {
+        padding: 15px 0;
+    }
+    
+    .navbar-mobile-circular {
+        padding: 10px 15px;
+        max-width: 100%;
+        gap: 12px;
+    }
+    
+    .navbar-mobile-logo {
+        font-size: 0.85rem;
+        gap: 6px;
+    }
+    
+    .navbar-mobile-logo i {
+        font-size: 1rem;
+    }
+    
+    .navbar-mobile-toggler {
+        width: 26px;
+        height: 18px;
+        padding: 4px;
+    }
+    
+    .navbar-mobile-menu {
+        min-width: calc(100vw - 40px);
+        max-width: calc(100vw - 40px);
+    }
+}
+
+/* Ajuste de padding para el contenido cuando hay navbar fijo */
+body {
+    padding-top: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: auto;
+        padding-bottom: 60px;
+    }
+}
+
+/* Contenedor de imagen que ocupa el 100% */
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Overlay oscuro para mejor contraste */
+.hero-overlay-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Contenido sobre la imagen */
+.hero-content-overlay {
+    position: relative;
+    z-index: 2;
+    padding-top: 150px;
+    padding-bottom: 80px;
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    .hero-content-overlay {
+        padding-top: 100px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content-overlay {
+        padding-top: 80px;
+        padding-bottom: 60px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Calificación */
+.hero-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rating-stars {
+    color: #ffc107;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.rating-text {
+    color: #fff;
+        font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Título principal */
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.5px;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Subtítulo */
+.hero-subtitle {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.2px;
+}
+
+@media (max-width: 768px) {
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* Descripción */
+.hero-description {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.98);
+    line-height: 1.75;
+    max-width: 600px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+}
+
+/* Contenedor de botones lado a lado */
+.hero-buttons-container {
+    display: flex;
+    align-items: center;
+        gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Botón CTA */
+.btn-hero-cta {
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    color: #333;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+.btn-hero-cta:hover {
+    background: #f8f9fa;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-hero-cta i {
+    transition: transform 0.3s ease;
+}
+
+.btn-hero-cta:hover i {
+    transform: translateX(5px);
+}
+
+/* Cómo funciona */
+.how-it-works-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+
+.how-it-works-link:hover {
+    color: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+.how-it-works-link i {
+    transition: transform 0.3s ease;
+}
+
+.how-it-works-link:hover i {
+    transform: translateY(3px);
+}
+
+/* Recuadro con blur - Estadísticas (más cuadrado y pequeño) */
+.hero-stats-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 20px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.stats-number {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    letter-spacing: -1px;
+}
+
+.stats-label {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.98);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    line-height: 1.3;
+    letter-spacing: 0.2px;
+}
+
+@media (max-width: 991px) {
+    .hero-stats-card {
+        margin-top: 40px;
+        padding: 30px 25px;
+        width: 180px;
+        height: 180px;
+    }
+    
+    .stats-number {
+        font-size: 2.8rem;
+    }
+    
+    .stats-label {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-stats-card {
+        width: 160px;
+        height: 160px;
+        padding: 25px 20px;
+    }
+    
+    .stats-number {
+        font-size: 2.4rem;
+    }
+    
+    .stats-label {
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 992px) {
+    section {
+        scroll-margin-top: 120px;
+    }
+}
+
+@media (max-width: 991px) {
+    section {
+        scroll-margin-top: 80px;
+    }
+}
+
+/* Sección Por qué elegir */
+.bg-white {
+    background-color: #fff;
+}
+
+/* Contenedor del header con punto y título */
+.why-choose-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Punto de color pequeño */
+.why-choose-dot {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+    flex-shrink: 0;
+}
+
+/* Título principal - más pequeño para mejor contraste visual */
+.why-choose-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+}
+
+@media (max-width: 991px) {
+    .why-choose-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-choose-title {
+        font-size: 1.6rem;
+    }
+    
+    .why-choose-header {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .why-choose-dot {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+    }
+}
+
+/* Descripción a la derecha - más grande y color más fuerte */
+.why-choose-description {
+    font-size: 1.85rem;
+    color: #1a1a1a;
+    line-height: 1.85;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: -0.1px;
+}
+
+@media (max-width: 991px) {
+    .why-choose-description {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-choose-description {
+        font-size: 1.3rem;
+    }
+}
+
+/* Tarjetas de razones */
+.reason-card {
+    text-align: left;
+    padding: 50px 35px;
+    height: 100%;
+    transition: all 0.3s ease;
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+    position: relative;
+}
+
+/* Número en la esquina superior derecha */
+.reason-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+        justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.reason-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
+    border-color: rgba(102, 126, 234, 0.2);
+}
+
+/* Iconos de razones */
+.reason-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+        justify-content: center;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.reason-card:hover .reason-icon {
+    transform: scale(1.1);
+}
+
+.reason-icon i {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+/* Título de razón */
+.reason-title {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    line-height: 1.3;
+    letter-spacing: -0.3px;
+}
+
+/* Descripción de razón */
+.reason-description {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .reason-card {
+        padding: 35px 25px;
+        text-align: center;
+    }
+    
+    .reason-icon {
+        margin: 0 auto 25px;
+    }
+    
+    .reason-title {
+        font-size: 1.4rem;
+    }
+    
+    .reason-description {
+        font-size: 1rem;
+    }
+    
+    .reason-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+/* Sección Servicios */
+.services-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+/* Punto de color pequeño centrado */
+.services-dot {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+    flex-shrink: 0;
+}
+
+/* Título Servicios - mismo tamaño que "Por qué elegirnos" */
+.services-title {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+        margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+/* Subtítulo "Servicios que ofrecemos" - mucho más grande */
+.services-subtitle {
+    font-size: 3.2rem;
+    color: #1a1a1a;
+    font-weight: 800;
+    margin-top: 25px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+@media (max-width: 991px) {
+    .services-subtitle {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-title {
+        font-size: 1.6rem;
+    }
+    
+    .services-subtitle {
+        font-size: 2rem;
+    }
+    
+    .services-dot {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+    }
+}
+
+/* Cards de servicios - diseño atractivo */
+.service-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 2px solid #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+        width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 50px rgba(102, 126, 234, 0.15);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+/* Iconos de servicios */
+.service-card-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+        justify-content: center;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.service-card-icon i {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+/* Título de servicio */
+.service-card-title {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    letter-spacing: -0.2px;
+}
+
+/* Descripción de servicio */
+.service-card-description {
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    line-height: 1.75;
+        margin: 0;
+    }
+    
+@media (max-width: 768px) {
+    .service-card {
+        padding: 35px 25px;
+    }
+    
+    .service-card-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .service-card-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .service-card-title {
+        font-size: 1.3rem;
+    }
+    
+    .service-card-description {
+        font-size: 0.95rem;
+    }
+}
+
+/* Sección de Testimonios */
+.testimonials-section {
+    background-color: #f8f9fa;
+}
+
+.testimonials-intro {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    font-weight: 600;
+        margin: 0;
+    letter-spacing: -0.2px;
+}
+
+@media (max-width: 768px) {
+    .testimonials-intro {
+        font-size: 1.2rem;
+    }
+}
+
+/* Contenedor del carrusel con fade lateral */
+.testimonials-carousel-wrapper {
+    position: relative;
+    max-width: 1400px;
+    margin: 50px auto 0;
+    overflow: hidden;
+        width: 100%;
+    padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .testimonials-carousel-wrapper {
+        padding: 0 10px;
+        margin: 30px auto 0;
+    }
+}
+
+/* Efectos de fade en los laterales */
+.testimonials-fade-left,
+.testimonials-fade-right {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.testimonials-fade-left {
+    left: 0;
+    background: linear-gradient(to right, #f8f9fa 0%, rgba(248, 249, 250, 0) 100%);
+}
+
+.testimonials-fade-right {
+    right: 0;
+    background: linear-gradient(to left, #f8f9fa 0%, rgba(248, 249, 250, 0) 100%);
+}
+
+@media (max-width: 768px) {
+    .testimonials-fade-left,
+    .testimonials-fade-right {
+        width: 50px;
+    }
+}
+
+/* Carrusel de testimonios - slide infinito */
+.testimonials-carousel {
+    display: flex;
+    gap: 25px;
+    animation: slideTestimonials 40s linear infinite;
+    width: fit-content;
+}
+
+/* Cards cuadradas de testimonios */
+.testimonial-card-square {
+    background: #fff;
+    padding: 35px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    min-width: 320px;
+    max-width: 320px;
+    height: 320px;
+    display: flex;
+        flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card-square:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-stars {
+    color: #ffc107;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    font-style: italic;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-author {
+    font-size: 1.05rem;
+    color: #2c2c2c;
+    font-weight: 600;
+    margin: 15px 0 5px 0;
+}
+
+.testimonial-case {
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: 400;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card-square {
+        min-width: 280px;
+        max-width: 280px;
+        height: 300px;
+        padding: 30px 25px;
+    }
+    
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+    
+    .testimonial-stars {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+}
+
+/* Animación del carrusel infinito */
+@keyframes slideTestimonials {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-320px * 10 - 25px * 10));
+    }
+}
+
+@media (max-width: 768px) {
+    @keyframes slideTestimonials {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-280px * 10 - 25px * 10));
+        }
+    }
+}
+
+/* Sección Cómo funciona */
+.how-works-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+/* Punto de color pequeño centrado */
+.how-works-dot {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+    flex-shrink: 0;
+}
+
+/* Título Cómo funciona - mismo tamaño que otras secciones */
+.how-works-title {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+/* Subtítulo más grande */
+.how-works-subtitle {
+    font-size: 3.2rem;
+    color: #1a1a1a;
+    font-weight: 800;
+    margin-top: 25px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+@media (max-width: 991px) {
+    .how-works-subtitle {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-works-title {
+        font-size: 1.6rem;
+    }
+    
+    .how-works-subtitle {
+        font-size: 2rem;
+    }
+    
+    .how-works-dot {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+    }
+}
+
+/* Pasos del proceso */
+.how-works-step {
+        text-align: center;
+    padding: 40px 25px;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.how-works-step:hover {
+    transform: translateY(-5px);
+}
+
+/* Número del paso */
+.step-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+/* Título del paso */
+.step-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    letter-spacing: -0.2px;
+}
+
+/* Descripción del paso */
+.step-description {
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    line-height: 1.75;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .how-works-step {
+        padding: 30px 20px;
+    }
+    
+    .step-number {
+        font-size: 2.5rem;
+    }
+    
+    .step-title {
+        font-size: 1.2rem;
+    }
+    
+    .step-description {
+        font-size: 0.95rem;
+    }
+}
+
+/* Sección Contacto */
+.contact-header {
+    display: flex;
+    align-items: center;
+        justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.contact-dot {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+    flex-shrink: 0;
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 1.6rem;
+    }
+    
+    .contact-dot {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+    }
+}
+
+/* Cards de contacto */
+.contact-info-card,
+.contact-form-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    height: 100%;
+}
+
+.contact-info-title,
+.contact-form-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    letter-spacing: -0.3px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    color: #667eea;
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.contact-item strong {
+    display: block;
+    color: #1a1a1a;
+    font-size: 1.05rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact-item p {
+    margin: 0;
+    color: #4a4a4a;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.contact-item a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #764ba2;
+}
+
+.contact-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+        justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    color: #fff;
+}
+
+/* Formulario de contacto */
+.form-label {
+    font-weight: 500;
+    color: #2c2c2c;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.btn-contact-submit {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-contact-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+    color: #fff;
+}
+
+.btn-contact-submit i {
+    transition: transform 0.3s ease;
+}
+
+.btn-contact-submit:hover i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .contact-info-card,
+    .contact-form-card {
+        padding: 30px 25px;
+    }
+}
+
+/* Sección Preguntas Frecuentes */
+.faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.faq-dot {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+    flex-shrink: 0;
+}
+
+.faq-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+}
+
+@media (max-width: 768px) {
+    .faq-title {
+        font-size: 1.6rem;
+    }
+    
+    .faq-dot {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+    }
+}
+
+/* Lista de preguntas frecuentes */
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    padding: 25px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f8f9fa;
+}
+
+.faq-question h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+    flex: 1;
+    padding-right: 20px;
+    letter-spacing: -0.2px;
+}
+
+.faq-arrow {
+    font-size: 1.2rem;
+    color: #667eea;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding: 0 30px 25px 30px;
+    margin: 0;
+    color: #4a4a4a;
+    line-height: 1.75;
+    font-size: 1.05rem;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+}
+
+@media (max-width: 768px) {
+    .faq-question {
+        padding: 20px 20px;
+    }
+    
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+    
+    .faq-answer p {
+        padding: 0 20px 20px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Animaciones de scroll suaves */
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Transiciones suaves para elementos animados */
+.reason-card,
+.service-card,
+.how-works-step,
+.faq-item,
+.contact-info-card,
+.contact-form-card {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Hero image sin parallax */
+.hero-image {
+    will-change: auto;
+}
+
+/* Mejoras generales de tipografía y espaciado */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a1a1a;
+    letter-spacing: -0.3px;
+}
+
+p {
+    line-height: 1.75;
+    color: #4a4a4a;
+}
+
+/* Mejoras en botones */
+.btn-hero-cta,
+.btn-agendar-cita,
+.btn-contact-submit {
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+/* Mejoras en cards */
+.card {
+    border: none;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Mejoras en enlaces */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Mejoras en formularios */
+.form-control {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+/* Sección CTA Final */
+.cta-final-section {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Imagen de fondo */
+.cta-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.cta-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Overlay oscuro para contraste */
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Contenido del CTA */
+.cta-content {
+    position: relative;
+    z-index: 2;
+    padding: 100px 20px;
+    color: #fff;
+}
+
+.cta-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.5px;
+}
+
+.cta-description {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.8;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-cta-primary {
+    background: #fff;
+    color: #333;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.2px;
+}
+
+.btn-cta-primary:hover {
+    background: #f8f9fa;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+.btn-cta-primary i {
+    transition: transform 0.3s ease;
+}
+
+.btn-cta-primary:hover i {
+    transform: translateX(5px);
+}
+
+.btn-cta-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.2px;
+}
+
+.btn-cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .cta-content {
+        padding: 80px 20px;
+    }
+    
+    .cta-title {
+        font-size: 2.5rem;
+    }
+    
+    .cta-description {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-cta-primary,
+    .btn-cta-secondary {
+    width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Footer Mejorado */
+.footer-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    margin-bottom: 40px;
+}
+
+/* Brand/Logo del footer */
+.footer-brand {
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-logo i {
+    font-size: 2rem;
+    color: #667eea;
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Títulos de secciones del footer */
+.footer-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 25px;
+    letter-spacing: -0.2px;
+}
+
+/* Información de contacto */
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+.footer-contact-item i {
+    color: #667eea;
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.footer-contact-item a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-item a:hover {
+    color: #fff;
+}
+
+.footer-contact-item span {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Redes sociales del footer */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-social-link {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-social-link:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    border-color: transparent;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    margin-top: 40px;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 50px 0 25px;
+    }
+    
+    .footer-content {
+        margin-bottom: 30px;
+    }
+    
+    .footer-title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    
+    .footer-logo {
+        font-size: 1.3rem;
+    }
+    
+    .footer-logo i {
+        font-size: 1.8rem;
+    }
+    
+    .footer-social-link {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+    }
+    
+    .footer-bottom .col-md-6 {
+        margin-bottom: 10px;
+    }
+}
+
+/* Correcciones generales para móviles - Asegurar que nada se corte */
+@media (max-width: 768px) {
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    
+    [class*="col-"] {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Asegurar que las secciones tengan padding adecuado */
+    section {
+        padding-left: 0;
+        padding-right: 0;
+        overflow-x: hidden;
+    }
+    
+    /* Asegurar que el body no tenga overflow horizontal */
+    body, html {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+}
+

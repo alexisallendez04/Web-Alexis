@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="Permissions-Policy" content="unload=()">
+    <title>Dr. Santiago Herrera - Abogado Penal y Laboral | CDMX</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar Desktop -->
+    <nav class="navbar-desktop fixed-top d-none d-lg-block">
+        <div class="navbar-desktop-container">
+            <!-- Navbar circular centrado -->
+            <div class="navbar-circular">
+                <!-- Logo dentro del navbar circular -->
+                <a href="#inicio" class="logo-link">
+                    <i class="fas fa-balance-scale logo-icon"></i>
+                    <span class="logo-text">Dr. Santiago Herrera</span>
+                </a>
+                
+                <ul class="navbar-nav-circular">
+                    <li class="nav-item-circular">
+                        <a class="nav-link-circular" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item-circular">
+                        <a class="nav-link-circular" href="#por-que-elegir">Por qué</a>
+                    </li>
+                    <li class="nav-item-circular">
+                        <a class="nav-link-circular" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item-circular">
+                        <a class="nav-link-circular" href="#testimonios">Testimonios</a>
+                    </li>
+                    <li class="nav-item-circular">
+                        <a class="nav-link-circular" href="#como-funciona">Cómo</a>
+                    </li>
+                    <li class="nav-item-circular">
+                        <a class="nav-link-circular" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <a href="#contacto" class="btn-agendar-cita">
+                    Agendar cita gratis
+                    <i class="fas fa-arrow-right arrow-icon"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar Mobile -->
+    <nav class="navbar-mobile fixed-top d-lg-none">
+        <div class="navbar-mobile-container">
+            <div class="navbar-mobile-circular">
+                <!-- Logo -->
+                <a href="#inicio" class="navbar-mobile-logo">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Dr. Santiago Herrera</span>
+                </a>
+                
+                <!-- Botón hamburguesa -->
+                <button class="navbar-mobile-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMobile" aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <!-- Menú colapsable -->
+            <div class="collapse navbar-collapse" id="navbarNavMobile">
+                <div class="navbar-mobile-menu">
+                    <ul class="navbar-mobile-nav">
+                        <li class="nav-item-mobile">
+                            <a class="nav-link-mobile" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item-mobile">
+                            <a class="nav-link-mobile" href="#por-que-elegir">Por qué elegirnos</a>
+                        </li>
+                        <li class="nav-item-mobile">
+                            <a class="nav-link-mobile" href="#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item-mobile">
+                            <a class="nav-link-mobile" href="#testimonios">Testimonios</a>
+                        </li>
+                        <li class="nav-item-mobile">
+                            <a class="nav-link-mobile" href="#como-funciona">Cómo funciona</a>
+                        </li>
+                        <li class="nav-item-mobile">
+                            <a class="nav-link-mobile" href="#contacto">Contacto</a>
+                        </li>
+                        <li class="nav-item-mobile">
+                            <a class="nav-link-mobile" href="#preguntas-frecuentes">Preguntas Frecuentes</a>
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="btn-mobile-agendar">
+                        Agendar cita gratis
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section / Inicio -->
+    <section id="inicio" class="hero-section">
+        <!-- Imagen de fondo que ocupa el 100% -->
+        <div class="hero-image-container">
+            <img src="img3.jpg" alt="Dr. Santiago Herrera" class="hero-image">
+            <div class="hero-overlay-dark"></div>
+        </div>
+        <div class="container hero-content-overlay">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <!-- Calificación -->
+                    <div class="hero-rating mb-3">
+                        <span class="rating-stars">★★★★★</span>
+                        <span class="rating-text">5.0 (980 Reviews)</span>
+                    </div>
+                    
+                    <!-- Título principal -->
+                    <h1 class="hero-title mb-4">
+                        Defendemos tu derecho a la justicia
+                    </h1>
+                    
+                    <!-- Subtítulo -->
+                    <p class="hero-subtitle mb-4">
+                        Especialistas en Derecho Penal y Derecho Laboral
+                    </p>
+                    
+                    <!-- Descripción -->
+                    <p class="hero-description mb-4">
+                        Con más de 14 años de experiencia y un proceso comprobado, nuestro equipo legal experto te guía paso a paso para resolver tus conflictos legales y proteger tus derechos.
+                    </p>
+                    
+                    <!-- Botones lado a lado -->
+                    <div class="hero-buttons-container">
+                        <a href="#contacto" class="btn-hero-cta">
+                            Agenda una cita 
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#servicios" class="how-it-works-link">
+                            Cómo funciona
+                            <i class="fas fa-chevron-down ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Recuadro con blur a la derecha -->
+                <div class="col-lg-5">
+                    <div class="hero-stats-card">
+                        <div class="stats-number">+1.200</div>
+                        <div class="stats-label">Clientes Satisfechos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegir -->
+    <section id="por-que-elegir" class="py-5 bg-white">
+        <div class="container">
+            <!-- Título principal con punto de color -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-5">
+                    <div class="why-choose-header">
+                        <div class="why-choose-dot"></div>
+                        <h2 class="why-choose-title">
+                            Por qué elegirnos
+                        </h2>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <p class="why-choose-description">
+                        Con más de 14 años de experiencia, un enfoque estratégico y resultados comprobables, el Dr. Santiago Herrera se ha consolidado como uno de los abogados más confiables en Derecho Penal y Derecho Laboral de Ciudad de México. Su compromiso con la excelencia, la transparencia y la defensa efectiva de los derechos de sus clientes lo distingue en el mercado legal.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3 Razones -->
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="reason-card">
+                        <div class="reason-number">1</div>
+                        <div class="reason-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="reason-title">Transparencia & Confianza</h3>
+                        <p class="reason-description">
+                            Lo mantenemos informado en cada etapa del proceso, con total claridad sobre los plazos, costos y avances de su caso.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="reason-card">
+                        <div class="reason-number">2</div>
+                        <div class="reason-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="reason-title">Estrategias Comprobadas</h3>
+                        <p class="reason-description">
+                            Utilizamos procedimientos legales y alianzas internacionales para maximizar las posibilidades de recuperar su capital.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="reason-card">
+                        <div class="reason-number">3</div>
+                        <div class="reason-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3 class="reason-title">Atención Personalizada</h3>
+                        <p class="reason-description">
+                            Cada caso es único: analizamos su situación en detalle y diseñamos un plan de acción a medida para su recuperación.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-5 bg-white">
+        <div class="container">
+            <!-- Título con punto centrado -->
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <div class="services-header">
+                        <div class="services-dot"></div>
+                        <h2 class="services-title">Servicios</h2>
+                    </div>
+                    <p class="services-subtitle">Servicios que ofrecemos</p>
+                </div>
+            </div>
+
+            <!-- Lista de servicios -->
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h3 class="service-card-title">Derecho Penal</h3>
+                        <p class="service-card-description">
+                            Defensa especializada en casos penales, incluyendo acusaciones falsas, detenciones, delitos patrimoniales, delitos contra las personas, violencia familiar, tramitación de amparos y asesoría urgente 24/7.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="service-card-title">Derecho Laboral</h3>
+                        <p class="service-card-description">
+                            Representación legal para trabajadores en casos de despidos injustificados, reclamos por indemnización, acoso laboral, reincorporación y falta de pago. Para empresas: auditoría legal, contratos, prevención de conflictos y representación ante demandas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 class="service-card-title">Derecho Civil</h3>
+                        <p class="service-card-description">
+                            Asesoría en sucesiones, contratos civiles y comerciales, y gestión de deudas. Soluciones legales para proteger tus intereses patrimoniales y familiares.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 offset-lg-2">
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="service-card-title">Mediación y Acuerdos Extrajudiciales</h3>
+                        <p class="service-card-description">
+                            Negociación y mediación profesional para resolver conflictos de manera rápida y eficiente, evitando largos procesos judiciales y reduciendo costos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="service-card-title">Asesoría a Emprendedores y Startups</h3>
+                        <p class="service-card-description">
+                            Asesoría legal integral para emprendedores y startups, incluyendo constitución de empresas, contratos comerciales, propiedad intelectual y cumplimiento normativo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Automáticos -->
+    <section id="testimonios" class="testimonials-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <p class="testimonials-intro">Nuestros servicios están avalados por cientos de clientes satisfechos</p>
+                </div>
+            </div>
+            
+            <!-- Carrusel de testimonios -->
+            <div class="testimonials-carousel-wrapper">
+                <div class="testimonials-fade-left"></div>
+                <div class="testimonials-carousel">
+                    <!-- Primera tanda de testimonios -->
+                    <div class="testimonial-card-square">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Me despidieron sin causa después de 7 años. El Dr. Herrera logró un acuerdo rápido por una indemnización incluso mayor a lo que esperaba."</p>
+                        <p class="testimonial-author">María López</p>
+                        <p class="testimonial-case">Caso Laboral</p>
+                    </div>
+                    <div class="testimonial-card-square">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Pasé por una situación injusta. Desde el primer minuto el Dr. Herrera estuvo presente y logró que cerraran el caso sin antecedentes."</p>
+                        <p class="testimonial-author">Jorge Ramírez</p>
+                        <p class="testimonial-case">Defensa Penal</p>
+                    </div>
+                    <div class="testimonial-card-square">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Contratamos al Dr. Herrera para auditar nuestros contratos laborales. Nos ayudó a prevenir conflictos y mejorar nuestros procesos."</p>
+                        <p class="testimonial-author">Lucía Gutiérrez</p>
+                        <p class="testimonial-case">Asesoría Empresarial</p>
+                    </div>
+                    <div class="testimonial-card-square">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Excelente atención y resultados. El Dr. Herrera logró resolver mi caso de manera eficiente y siempre estuvo disponible."</p>
+                        <p class="testimonial-author">Carlos Méndez</p>
+                        <p class="testimonial-case">Caso Civil</p>
+                    </div>
+                    <div class="testimonial-card-square">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Profesionalismo y dedicación en cada paso del proceso. Recomiendo al Dr. Herrera sin dudarlo, es un abogado de confianza."</p>
+                        <p class="testimonial-author">Ana Martínez</p>
+                        <p class="testimonial-case">Mediación</p>
+                    </div>
+                    <div class="testimonial-card-square">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"El mejor abogado que he conocido. Resolvió mi caso de manera rápida y profesional. Definitivamente lo recomiendo."</p>
+                        <p class="testimonial-author">Roberto Sánchez</p>
+                        <p class="testimonial-case">Derecho Penal</p>
+                    </div>
+                    <div class="testimonial-card-square">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Gracias al Dr. Herrera recuperé lo que me correspondía. Su experiencia y dedicación fueron fundamentales para el éxito de mi caso."</p>
+                        <p class="testimonial-author">Patricia González</p>
+                        <p class="testimonial-case">Derecho Laboral</p>
+                    </div>
+                    <div class="testimonial-card-square">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Excelente servicio, muy profesional y siempre disponible. El Dr. Herrera logró resolver mi problema de manera eficiente."</p>
+                        <p class="testimonial-author">Miguel Torres</p>
+                        <p class="testimonial-case">Asesoría Legal</p>
+                    </div>
+                    <div class="testimonial-card-square">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Un abogado excepcional. Su conocimiento y estrategia legal fueron clave para obtener un resultado favorable en mi caso."</p>
+                        <p class="testimonial-author">Laura Fernández</p>
+                        <p class="testimonial-case">Derecho Civil</p>
+                    </div>
+                    <div class="testimonial-card-square">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Muy satisfecha con el servicio. El Dr. Herrera es profesional, puntual y logra excelentes resultados. Totalmente recomendado."</p>
+                        <p class="testimonial-author">Diego Morales</p>
+                        <p class="testimonial-case">Mediación</p>
+                    </div>
+                    
+                    <!-- Duplicados para efecto infinito -->
+                    <div class="testimonial-card-square">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Me despidieron sin causa después de 7 años. El Dr. Herrera logró un acuerdo rápido por una indemnización incluso mayor a lo que esperaba."</p>
+                        <p class="testimonial-author">María López</p>
+                        <p class="testimonial-case">Caso Laboral</p>
+                    </div>
+                    <div class="testimonial-card-square">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Pasé por una situación injusta. Desde el primer minuto el Dr. Herrera estuvo presente y logró que cerraran el caso sin antecedentes."</p>
+                        <p class="testimonial-author">Jorge Ramírez</p>
+                        <p class="testimonial-case">Defensa Penal</p>
+                    </div>
+                    <div class="testimonial-card-square">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Contratamos al Dr. Herrera para auditar nuestros contratos laborales. Nos ayudó a prevenir conflictos y mejorar nuestros procesos."</p>
+                        <p class="testimonial-author">Lucía Gutiérrez</p>
+                        <p class="testimonial-case">Asesoría Empresarial</p>
+                    </div>
+                </div>
+                <div class="testimonials-fade-right"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section id="como-funciona" class="py-5 bg-white">
+        <div class="container">
+            <!-- Título con punto centrado -->
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <div class="how-works-header">
+                        <div class="how-works-dot"></div>
+                        <h2 class="how-works-title">Cómo funciona</h2>
+                    </div>
+                    <p class="how-works-subtitle">Proceso simple y transparente para resolver tu caso legal</p>
+                </div>
+            </div>
+
+            <!-- Pasos del proceso -->
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="how-works-step">
+                        <div class="step-number">01</div>
+                        <h3 class="step-title">Consulta Inicial</h3>
+                        <p class="step-description">
+                            Agenda una consulta gratuita donde analizamos tu caso y te explicamos las opciones legales disponibles.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="how-works-step">
+                        <div class="step-number">02</div>
+                        <h3 class="step-title">Análisis y Estrategia</h3>
+                        <p class="step-description">
+                            Evaluamos todos los detalles de tu caso y diseñamos una estrategia legal personalizada para obtener los mejores resultados.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="how-works-step">
+                        <div class="step-number">03</div>
+                        <h3 class="step-title">Ejecución del Plan</h3>
+                        <p class="step-description">
+                            Implementamos la estrategia acordada, manteniéndote informado en cada etapa del proceso legal.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="how-works-step">
+                        <div class="step-number">04</div>
+                        <h3 class="step-title">Resolución y Seguimiento</h3>
+                        <p class="step-description">
+                            Trabajamos hasta lograr la mejor solución para tu caso y te acompañamos en el seguimiento posterior.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <div class="contact-header">
+                        <div class="contact-dot"></div>
+                        <h2 class="contact-title">Contacto</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="contact-info-card">
+                        <h3 class="contact-info-title mb-4">Información de Contacto</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <p><a href="tel:+525548937710">+52 55 4893 7710</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp contact-icon"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <p><a href="https://wa.me/525591823344" target="_blank">+52 55 9182 3344</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:contacto@santiagoherreraabogado.com">contacto@santiagoherreraabogado.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <div>
+                                <strong>Dirección</strong>
+                                <p>Av. Reforma 1580 – Piso 12<br>Cuauhtémoc, Ciudad de México<br>CP 06600</p>
+                            </div>
+                        </div>
+                        <div class="contact-social mt-4">
+                            <a href="https://facebook.com/DrSantiagoHerrera" target="_blank" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://instagram.com/DrSantiagoHerreraMx" target="_blank" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/santiagoherrera-abogado" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://tiktok.com/@abogadoherrera" target="_blank" class="social-link">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form-card">
+                        <h3 class="contact-form-title mb-4">Envíanos un Mensaje</h3>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefono" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-contact-submit">
+                                Enviar Mensaje
+                                <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section id="preguntas-frecuentes" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <div class="faq-header">
+                        <div class="faq-dot"></div>
+                        <h2 class="faq-title">Preguntas Frecuentes</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>¿Cuánto tiempo tarda en resolverse un caso legal?</h3>
+                                <i class="fas fa-chevron-down faq-arrow"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>El tiempo de resolución depende del tipo de caso y su complejidad. En casos de derecho laboral, algunos se resuelven en semanas mediante acuerdos extrajudiciales. Casos penales pueden tomar varios meses. Durante la consulta inicial evaluamos tu caso y te proporcionamos un estimado realista.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>¿Ofrecen consulta gratuita?</h3>
+                                <i class="fas fa-chevron-down faq-arrow"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sí, ofrecemos una consulta inicial gratuita donde analizamos tu caso, explicamos tus opciones legales y te proporcionamos una estrategia preliminar. Esta consulta te permite conocer nuestro enfoque sin compromiso.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>¿Cuáles son los honorarios del Dr. Herrera?</h3>
+                                <i class="fas fa-chevron-down faq-arrow"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Los honorarios varían según la complejidad del caso, el tipo de servicio requerido y el tiempo estimado. Durante la consulta inicial te proporcionamos una cotización transparente y detallada sin costos ocultos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>¿Atienden casos fuera de Ciudad de México?</h3>
+                                <i class="fas fa-chevron-down faq-arrow"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sí, el Dr. Herrera atiende casos en todo México. Aunque nuestra oficina principal está en CDMX, trabajamos con clientes de diferentes estados, adaptando nuestros servicios según las necesidades del caso.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>¿Qué documentos necesito para iniciar mi caso?</h3>
+                                <i class="fas fa-chevron-down faq-arrow"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Los documentos necesarios dependen del tipo de caso. Generalmente necesitarás identificación oficial, documentos relacionados con el caso (contratos, notificaciones, etc.) y cualquier evidencia relevante. Durante la consulta te indicaremos exactamente qué necesitas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>¿Ofrecen servicios de emergencia 24/7?</h3>
+                                <i class="fas fa-chevron-down faq-arrow"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sí, para casos de derecho penal ofrecemos asesoría urgente 24/7. Si te encuentras en una situación de detención o emergencia legal, puedes contactarnos inmediatamente a través de nuestro WhatsApp o teléfono de emergencia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final-section">
+        <div class="cta-background-image">
+            <img src="img4.jpg" alt="CTA Background" class="cta-bg-img">
+            <div class="cta-overlay"></div>
+        </div>
+        <div class="container cta-content">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="cta-title">¿Necesitas Asesoría Legal?</h2>
+                    <p class="cta-description">
+                        No dejes pasar el tiempo. Agenda una consulta gratuita y recibe la orientación legal que necesitas para proteger tus derechos.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#contacto" class="btn-cta-primary">
+                            Agenda una Consulta Gratis
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="https://wa.me/525591823344" target="_blank" class="btn-cta-secondary">
+                            <i class="fab fa-whatsapp me-2"></i>
+                            Contactar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row footer-content">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>Dr. Santiago Herrera</span>
+                        </div>
+                        <p class="footer-description">
+                            Abogado especializado en Derecho Penal y Derecho Laboral con más de 14 años de experiencia defendiendo tus derechos.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-title">Información de Contacto</h5>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+525548937710">+52 55 4893 7710</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/525591823344" target="_blank">+52 55 9182 3344</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contacto@santiagoherreraabogado.com">contacto@santiagoherreraabogado.com</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. Reforma 1580 – Piso 12, CDMX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-title">Síguenos</h5>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/DrSantiagoHerrera" target="_blank" class="footer-social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com/DrSantiagoHerreraMx" target="_blank" class="footer-social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/santiagoherrera-abogado" target="_blank" class="footer-social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://tiktok.com/@abogadoherrera" target="_blank" class="footer-social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/525591823344" target="_blank" class="footer-social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2024 Dr. Santiago Herrera. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="mb-0">Matrícula: T° 45 – F° 12 (Colegio Público de Abogados)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
