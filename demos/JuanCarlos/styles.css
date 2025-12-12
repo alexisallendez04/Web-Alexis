@@ -143,17 +143,11 @@ html {
 /* Hero Section */
 .hero-section {
     position: relative;
-    height: calc(100vh - 80px);
-    height: calc(100dvh - 80px); /* Dynamic viewport height para móviles */
-    min-height: calc(100vh - 80px);
-    min-height: calc(100dvh - 80px);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
     background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
-    margin-top: -80px; /* Compensar el padding-top del body */
-    padding-top: 80px; /* Espacio para el navbar */
-    box-sizing: border-box;
 }
 
 .hero-background {
