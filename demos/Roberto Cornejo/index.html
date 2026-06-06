@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- Barra Superior de Contacto -->
-    <div class="top-bar">
+    <div class="top-bar">y
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -88,10 +88,10 @@
                         <i class="fas fa-map-marker-alt me-2"></i>
                         Atendemos en Plaza Alameda Otay, Tijuana
                     </div>
-                    <a href="https://wa.me/5215551234567" target="_blank" class="btn btn-whatsapp-hero btn-lg">
-                        <i class="fab fa-whatsapp me-2"></i>
-                        <span>Pedí tu Consulta</span>
-                    </a>
+                    <button type="button" class="btn btn-whatsapp-hero btn-lg js-open-lead-qualifier" data-qualifier-entry="hero">
+                        <i class="fas fa-clipboard-check me-2"></i>
+                        <span>Evaluá tu caso — paso a paso</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -166,9 +166,9 @@
             </div>
 
             <div class="text-center mb-5">
-                <a href="https://wa.me/5215551234567" target="_blank" class="btn btn-service-cta">
-                    Pedí tu Consulta Ahora
-                </a>
+                <button type="button" class="btn btn-service-cta js-open-lead-qualifier" data-qualifier-entry="servicios">
+                    Ver si tu caso encaja — 3 pasos
+                </button>
             </div>
 
             <!-- Otros Servicios -->
@@ -317,28 +317,14 @@
             <div class="row align-items-start">
                 <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
                     <div class="contact-form-wrapper">
-                        <h3 class="contact-form-title mb-4">Consúltenos</h3>
-                        <form class="contact-form">
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="telefono" class="form-label">Teléfono</label>
-                                <input type="tel" class="form-control" id="telefono" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="mensaje" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="mensaje" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-contact-submit">
-                                Enviar Consulta
-                            </button>
-                        </form>
+                        <h3 class="contact-form-title mb-4">Contacto</h3>
+                        <p class="contact-form-intro mb-4">
+                            Para llegar al WhatsApp con tu caso ordenado, primero hacemos una evaluación breve paso a paso.
+                            Así solo escribimos con consultas que podemos encarar bien desde el despacho.
+                        </p>
+                        <button type="button" class="btn btn-contact-submit js-open-lead-qualifier" data-qualifier-entry="contacto-form">
+                            Iniciar evaluación de caso
+                        </button>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
@@ -348,9 +334,9 @@
                             No dejes pasar el tiempo. Si necesitas asesoría legal profesional, 
                             dejate ayudar por expertos.
                         </p>
-                        <a href="https://wa.me/5215551234567" target="_blank" class="btn btn-whatsapp-cta mb-4">
-                            Pedí tu consulta ahora
-                        </a>
+                        <button type="button" class="btn btn-whatsapp-cta mb-4 js-open-lead-qualifier" data-qualifier-entry="contacto-sidebar">
+                            Continuar a evaluación guiada
+                        </button>
                         <div class="contact-details">
                             <div class="contact-detail-item">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -391,10 +377,10 @@
                         Si necesitas asesoría legal en contratos, enfrentas un asunto civil o mercantil, 
                         o requieres representación legal profesional, dejate ayudar por expertos.
                     </p>
-                    <a href="https://wa.me/5215551234567" target="_blank" class="btn btn-cta-final btn-lg">
-                        <i class="fab fa-whatsapp me-2"></i>
-                        Pedí tu consulta ahora
-                    </a>
+                    <button type="button" class="btn btn-cta-final btn-lg js-open-lead-qualifier" data-qualifier-entry="cta-final">
+                        <i class="fas fa-clipboard-check me-2"></i>
+                        Evaluar mi caso antes de WhatsApp
+                    </button>
                 </div>
             </div>
         </div>
@@ -407,17 +393,101 @@
                     <p class="mb-0">&copy; 2024 Asesoría Legal Integral. Todos los derechos reservados.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <a href="https://wa.me/5215551234567" target="_blank" class="footer-link me-3"><i class="fab fa-whatsapp"></i></a>
+                    <button type="button" class="footer-link footer-link--btn me-3 js-open-lead-qualifier" data-qualifier-entry="footer" aria-label="Abrir evaluación para WhatsApp"><i class="fab fa-whatsapp"></i></button>
                     <a href="#" class="footer-link"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Botón WhatsApp Flotante -->
-    <a href="https://wa.me/5215551234567" target="_blank" class="whatsapp-float" id="whatsappFloat">
+    <!-- Botón WhatsApp Flotante (abre calificación antes de derivar) -->
+    <button type="button" class="whatsapp-float" id="whatsappFloat" aria-label="Evaluar caso para WhatsApp">
         <i class="fab fa-whatsapp"></i>
-    </a>
+    </button>
+
+    <!-- Modal: calificación de lead paso a paso -->
+    <div class="modal fade lead-qualifier-modal" id="leadQualifierModal" tabindex="-1" aria-labelledby="leadQualifierModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content lead-qualifier-content">
+                <div class="modal-header border-0 pb-0">
+                    <div class="w-100">
+                        <p class="lead-qualifier-step-label text-uppercase small text-muted mb-0" id="leadQualifierModalLabel">Evaluación de caso</p>
+                        <div class="lead-qualifier-progress mt-2" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                            <div class="lead-qualifier-progress-bar" id="leadQualifierProgressBar"></div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body pt-2">
+                    <div class="lead-qualifier-panel" id="leadStep1">
+                        <h4 class="lead-qualifier-title mb-2">Paso 1 de 3 — ¿Sobre qué necesitás asesoría?</h4>
+                        <p class="lead-qualifier-hint mb-3">Elegí la opción que mejor describa tu situación.</p>
+                        <div class="lead-option-grid" role="group" aria-label="Tipo de asunto">
+                            <button type="button" class="lead-option-btn" data-q1="contratos">Contratos o negociación de contratos</button>
+                            <button type="button" class="lead-option-btn" data-q1="civil_mercantil">Litigio civil o mercantil</button>
+                            <button type="button" class="lead-option-btn" data-q1="representacion">Representación / juicios</button>
+                            <button type="button" class="lead-option-btn" data-q1="tramites">Trámites y regularizaciones</button>
+                            <button type="button" class="lead-option-btn" data-q1="empresarial">Asesoría empresarial o societaria</button>
+                            <button type="button" class="lead-option-btn" data-q1="otro_area">Penal, familia, laboral o migratorio</button>
+                            <button type="button" class="lead-option-btn" data-q1="otro_general">Otro tema no listado arriba</button>
+                        </div>
+                    </div>
+                    <div class="lead-qualifier-panel d-none" id="leadStep2">
+                        <h4 class="lead-qualifier-title mb-2">Paso 2 de 3 — ¿Qué tan concreto es tu caso?</h4>
+                        <p class="lead-qualifier-hint mb-3">Priorizamos asuntos con hechos o plazos definidos.</p>
+                        <div class="lead-option-grid" role="group" aria-label="Etapa del caso">
+                            <button type="button" class="lead-option-btn" data-q2="hechos_plazo">Tengo hechos claros y/o un plazo o audiencia</button>
+                            <button type="button" class="lead-option-btn" data-q2="pronto">Necesito avanzar en días o semanas</button>
+                            <button type="button" class="lead-option-btn" data-q2="preventivo">Asesoría preventiva sin conflicto abierto</button>
+                            <button type="button" class="lead-option-btn" data-q2="solo_info">Solo busco información general, sin caso aún</button>
+                        </div>
+                    </div>
+                    <div class="lead-qualifier-panel d-none" id="leadStep3">
+                        <h4 class="lead-qualifier-title mb-2">Paso 3 de 3 — ¿Cómo preferís trabajar el caso?</h4>
+                        <p class="lead-qualifier-hint mb-3">Atendemos en Plaza Alameda Otay, Tijuana; parte de la asesoría puede ser remota.</p>
+                        <div class="lead-option-grid" role="group" aria-label="Modalidad">
+                            <button type="button" class="lead-option-btn" data-q3="tj_presencial">Puedo acudir a Tijuana / prefiero cita presencial</button>
+                            <button type="button" class="lead-option-btn" data-q3="mixta">Combinación presencial en TJ y seguimiento remoto</button>
+                            <button type="button" class="lead-option-btn" data-q3="remota_contratos">Principalmente remota (contratos / documentos)</button>
+                            <button type="button" class="lead-option-btn" data-q3="fuera_bc">Estoy fuera de BC y necesito todo presencial fuera de Tijuana</button>
+                        </div>
+                    </div>
+                    <div class="lead-qualifier-panel d-none" id="leadStepQualified">
+                        <h4 class="lead-qualifier-title mb-2">Tu caso puede encajar con nuestro despacho</h4>
+                        <p class="lead-qualifier-hint mb-3">Completá estos datos y continuá directo al chat de WhatsApp con tu información.</p>
+                        <form id="leadQualifiedForm" novalidate>
+                            <p class="text-danger small mb-3 d-none" id="leadFormFeedback" role="alert"></p>
+                            <div class="mb-3">
+                                <label class="form-label" for="leadNombre">Nombre y apellido</label>
+                                <input type="text" class="form-control" id="leadNombre" required autocomplete="name" maxlength="120">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="leadTelefono">Teléfono (WhatsApp)</label>
+                                <input type="tel" class="form-control" id="leadTelefono" required autocomplete="tel" maxlength="40">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="leadDetalle">En una frase: ¿qué necesitás resolver?</label>
+                                <textarea class="form-control" id="leadDetalle" rows="3" required maxlength="600"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-lead-whatsapp w-100">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                Continuar en WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                    <div class="lead-qualifier-panel d-none text-center py-3" id="leadStepThanks">
+                        <div class="lead-thanks-icon mb-3"><i class="fas fa-heart"></i></div>
+                        <h4 class="lead-qualifier-title mb-2">Gracias por tu tiempo</h4>
+                        <p class="lead-thanks-text mb-0" id="leadThanksMessage"></p>
+                        <button type="button" class="btn btn-outline-secondary mt-4" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0" id="leadQualifierFooter">
+                    <button type="button" class="btn btn-link text-decoration-none lead-back-btn d-none" id="leadBackBtn">← Anterior</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Botón Scroll to Top -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba">

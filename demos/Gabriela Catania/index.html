@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estudio Jurídico Integral en Cariló. Especialista en Derecho Inmobiliario, Sucesiones y Laboral. Atención en Pinamar, Villa Gesell, Partido de la Costa y Mar del Plata.">
+  <meta name="author" content="Gabriela Catania">
+  <meta name="theme-color" content="#1a2530">
+  <meta property="og:title" content="Gabriela Catania | Estudio Jurídico — Cariló">
+  <meta property="og:description" content="Asesoramiento legal de alto nivel en Derecho Inmobiliario, Sucesiones y Laboral. El único estudio en Cariló.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/Gabriela.png">
+
+  <title>Gabriela Catania | Estudio Jurídico Integral — Cariló</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- ═══════════════════ HERO + NAVBAR ═══════════════════ -->
+  <header class="hero-header" id="inicio">
+    <div class="hero-header__bg" aria-hidden="true"></div>
+    <div class="hero-header__overlay" aria-hidden="true"></div>
+
+    <div class="hero-header__inner">
+      <nav class="navbar-custom" id="navbar">
+        <div class="container">
+          <a href="#inicio" class="navbar-brand-custom" id="logoHome">
+            <img
+              src="assets/images/Gabriela.png"
+              alt="Gabriela Catania — Estudio Jurídico Integral"
+              class="navbar-logo"
+              width="460"
+              height="112"
+            >
+          </a>
+
+          <button
+            class="navbar-toggler-custom"
+            id="navToggler"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="navMenu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <ul class="navbar-menu" id="navMenu">
+            <li><a href="#areas" class="navbar-menu__link">Áreas</a></li>
+            <li><a href="#solucion" class="navbar-menu__link">Proceso</a></li>
+            <li><a href="#autoridad" class="navbar-menu__link">Estudio</a></li>
+            <li><a href="#testimonios" class="navbar-menu__link">Casos</a></li>
+            <li><a href="#faq" class="navbar-menu__link">FAQ</a></li>
+            <li><a href="#contacto" class="navbar-menu__link">Contacto</a></li>
+            <li class="navbar-menu__cta">
+              <a href="#contacto" class="btn-cta">Consultar</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container hero-content">
+        <div class="row">
+          <div class="col-lg-10 col-xl-9 hero-content__block">
+            <h1 class="hero-title">
+              Estudio jurídico en Cariló
+              <span class="hero-title__accent">Su patrimonio y su familia, con estrategia legal clara desde la primera consulta</span>
+            </h1>
+            <p class="hero-subtitle">
+              Inmobiliario, sucesiones, laboral y familia en la Costa Atlántica.
+              Presencial en Pinamar, Villa Gesell, Madariaga, Partido de la Costa y Mar del Plata; virtual en toda la provincia.
+            </p>
+            <div class="hero-trust">
+              <span><strong>+5</strong> años de experiencia</span>
+              <span class="hero-trust-divider" aria-hidden="true"></span>
+              <span><strong>+100</strong> casos resueltos</span>
+              <span class="hero-trust-divider" aria-hidden="true"></span>
+              <span>Consulta inicial <strong>sin compromiso</strong></span>
+            </div>
+            <div class="hero-actions">
+              <a href="#" class="btn-cta btn-cta--lg js-whatsapp-direct">
+                <svg class="icon-whatsapp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Consultar por WhatsApp
+              </a>
+              <a href="#contacto" class="btn-cta-outline btn-cta-outline--hero">Completar formulario</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="navbarSpacer" class="navbar-spacer" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- ═══════════════════ ÁREAS DE PRÁCTICA ═══════════════════ -->
+    <section class="section-padding section-areas bg-alt" id="areas">
+      <div class="container">
+        <div class="section-header section-header--center section-header--compact">
+          <span class="eyebrow">Áreas de práctica</span>
+          <h2>Especialidades del estudio</h2>
+        </div>
+
+        <div class="row g-4 g-xl-5 practice-grid reveal-stagger">
+          <div class="col-sm-6 col-lg-4">
+            <article class="practice-card">
+              <span class="practice-card__index" aria-hidden="true">01</span>
+              <h3 class="practice-card__title">Derecho Inmobiliario</h3>
+              <p class="practice-card__text">Regularización, escrituras, contratos y desalojos.</p>
+              <a href="#contacto" class="practice-card__link" data-area="Derecho Inmobiliario">Consultar sobre este tema</a>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <article class="practice-card">
+              <span class="practice-card__index" aria-hidden="true">02</span>
+              <h3 class="practice-card__title">Sucesiones</h3>
+              <p class="practice-card__text">Declaratoria de herederos y transmisión ágil de bienes.</p>
+              <a href="#contacto" class="practice-card__link" data-area="Sucesiones">Consultar sobre este tema</a>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <article class="practice-card">
+              <span class="practice-card__index" aria-hidden="true">03</span>
+              <h3 class="practice-card__title">Derecho Laboral</h3>
+              <p class="practice-card__text">Reclamos, despidos, ART y defensa del empleador.</p>
+              <a href="#contacto" class="practice-card__link" data-area="Derecho Laboral">Consultar sobre este tema</a>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-6">
+            <article class="practice-card">
+              <span class="practice-card__index" aria-hidden="true">04</span>
+              <h3 class="practice-card__title">Accidentes de Tránsito</h3>
+              <p class="practice-card__text">Reclamos a seguros y responsables, con gestión penal incluida.</p>
+              <a href="#contacto" class="practice-card__link" data-area="Accidentes de Tránsito">Consultar sobre este tema</a>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-6">
+            <article class="practice-card">
+              <span class="practice-card__index" aria-hidden="true">05</span>
+              <h3 class="practice-card__title">Familia y Divorcios</h3>
+              <p class="practice-card__text">Alimentos, régimen de visitas y divorcios integrales.</p>
+              <a href="#contacto" class="practice-card__link" data-area="Derecho de Familia">Consultar sobre este tema</a>
+            </article>
+          </div>
+        </div>
+
+        <div class="cta-band cta-band--light">
+          <p class="cta-band__text">¿Reconoce su situación? Cuénteme su caso y reciba una evaluación inicial del camino legal.</p>
+          <div class="cta-band__actions">
+            <a href="#" class="btn-cta js-whatsapp-direct">Consultar por WhatsApp</a>
+            <a href="#contacto" class="btn-cta-outline">Ir al formulario</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ SOLUCIÓN ═══════════════════ -->
+    <section class="section-padding bg-main" id="solucion">
+      <div class="container">
+        <div class="section-header section-header--center section-header--compact">
+          <span class="eyebrow">Proceso</span>
+          <h2>Cómo trabajamos</h2>
+        </div>
+
+        <div class="row align-items-start justify-content-center g-4 g-lg-5 mb-5 reveal-stagger">
+          <div class="col-md-4">
+            <div class="step-item">
+              <div class="step-number">01</div>
+              <h3>Consulta</h3>
+              <p>Evalúo su caso por WhatsApp y defino el camino legal más eficiente.</p>
+            </div>
+          </div>
+          <div class="col-auto d-none d-md-flex px-0">
+            <div class="step-divider"></div>
+          </div>
+          <div class="col-md-4">
+            <div class="step-item">
+              <div class="step-number">02</div>
+              <h3>Estrategia</h3>
+              <p>Plan de acción a medida según su situación y objetivos.</p>
+            </div>
+          </div>
+          <div class="col-auto d-none d-md-flex px-0">
+            <div class="step-divider"></div>
+          </div>
+          <div class="col-md-4">
+            <div class="step-item">
+              <div class="step-number">03</div>
+              <h3>Resolución</h3>
+              <p>Gestión integral hasta el resultado que busca.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-8">
+            <p class="text-center solution-highlight mb-4">
+              Sucesiones en <strong>3 a 4 meses</strong>. Contratos sólidos. Experiencia en cada instancia del proceso.
+            </p>
+            <div class="text-center">
+              <a href="#" class="btn-cta js-whatsapp-direct">Iniciar consulta por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ DESCANSO VISUAL ═══════════════════ -->
+    <section class="visual-pause" id="pausa" aria-label="Mensaje del estudio">
+      <div class="visual-pause__bg" aria-hidden="true"></div>
+      <div class="visual-pause__overlay" aria-hidden="true"></div>
+      <div class="container visual-pause__inner">
+        <p class="visual-pause__eyebrow">Cariló · Costa Atlántica</p>
+        <blockquote class="visual-pause__quote">
+          Cada decisión legal impacta lo que más importa: su patrimonio, su familia y su tranquilidad.
+        </blockquote>
+        <p class="visual-pause__author">Gabriela Catania — Estudio Jurídico Integral</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ CASOS DE ESTUDIO ═══════════════════ -->
+    <section class="section-padding section-cases bg-main" id="testimonios">
+      <div class="container">
+        <div class="section-header section-header--center section-header--compact">
+          <span class="eyebrow">Casos de estudio</span>
+          <h2>Resultados que respaldan el trabajo del estudio</h2>
+        </div>
+      </div>
+
+      <div class="cases-slider" aria-label="Carrusel de casos de estudio">
+        <div class="cases-slider__track">
+          <div class="cases-slider__group">
+            <article class="case-card">
+              <span class="case-card__area">Sucesiones</span>
+              <h3 class="case-card__title">Declaratoria de herederos en 3 meses</h3>
+              <p class="case-card__text">Sucesión familiar cerrada con celeridad para habilitar la venta del inmueble.</p>
+              <span class="case-card__location">Pinamar</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Derecho Inmobiliario</span>
+              <h3 class="case-card__title">Regularización y escrituración</h3>
+              <p class="case-card__text">Inmueble con documentación incompleta dejado en regla para transmitir a herederos.</p>
+              <span class="case-card__location">Cariló</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Derecho Laboral</span>
+              <h3 class="case-card__title">Reclamo por despido sin causa</h3>
+              <p class="case-card__text">Defensa integral por mala registración y despido. Acuerdo favorable al trabajador.</p>
+              <span class="case-card__location">Villa Gesell</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Accidentes de Tránsito</span>
+              <h3 class="case-card__title">Reclamo integral al seguro</h3>
+              <p class="case-card__text">Gestión civil y penal ante aseguradora tras siniestro con lesiones.</p>
+              <span class="case-card__location">Mar del Plata</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Familia</span>
+              <h3 class="case-card__title">Cuota alimentaria actualizada</h3>
+              <p class="case-card__text">Incumplimiento de alimentos resuelto con régimen de pago ejecutable.</p>
+              <span class="case-card__location">Pinamar</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Derecho Inmobiliario</span>
+              <h3 class="case-card__title">Boleto de compraventa seguro</h3>
+              <p class="case-card__text">Redacción de contrato con cláusulas de protección para comprador y vendedor.</p>
+              <span class="case-card__location">Partido de la Costa</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Sucesiones</span>
+              <h3 class="case-card__title">Conflicto entre herederos</h3>
+              <p class="case-card__text">Traba registral resuelta y acuerdo homologado entre coherederos.</p>
+              <span class="case-card__location">Cariló</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Derecho Laboral</span>
+              <h3 class="case-card__title">Defensa del empleador</h3>
+              <p class="case-card__text">Reclamo laboral en curso desactivado con estrategia preventiva y negociación.</p>
+              <span class="case-card__location">General Madariaga</span>
+            </article>
+          </div>
+          <div class="cases-slider__group" aria-hidden="true">
+            <article class="case-card">
+              <span class="case-card__area">Sucesiones</span>
+              <h3 class="case-card__title">Declaratoria de herederos en 3 meses</h3>
+              <p class="case-card__text">Sucesión familiar cerrada con celeridad para habilitar la venta del inmueble.</p>
+              <span class="case-card__location">Pinamar</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Derecho Inmobiliario</span>
+              <h3 class="case-card__title">Regularización y escrituración</h3>
+              <p class="case-card__text">Inmueble con documentación incompleta dejado en regla para transmitir a herederos.</p>
+              <span class="case-card__location">Cariló</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Derecho Laboral</span>
+              <h3 class="case-card__title">Reclamo por despido sin causa</h3>
+              <p class="case-card__text">Defensa integral por mala registración y despido. Acuerdo favorable al trabajador.</p>
+              <span class="case-card__location">Villa Gesell</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Accidentes de Tránsito</span>
+              <h3 class="case-card__title">Reclamo integral al seguro</h3>
+              <p class="case-card__text">Gestión civil y penal ante aseguradora tras siniestro con lesiones.</p>
+              <span class="case-card__location">Mar del Plata</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Familia</span>
+              <h3 class="case-card__title">Cuota alimentaria actualizada</h3>
+              <p class="case-card__text">Incumplimiento de alimentos resuelto con régimen de pago ejecutable.</p>
+              <span class="case-card__location">Pinamar</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Derecho Inmobiliario</span>
+              <h3 class="case-card__title">Boleto de compraventa seguro</h3>
+              <p class="case-card__text">Redacción de contrato con cláusulas de protección para comprador y vendedor.</p>
+              <span class="case-card__location">Partido de la Costa</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Sucesiones</span>
+              <h3 class="case-card__title">Conflicto entre herederos</h3>
+              <p class="case-card__text">Traba registral resuelta y acuerdo homologado entre coherederos.</p>
+              <span class="case-card__location">Cariló</span>
+            </article>
+            <article class="case-card">
+              <span class="case-card__area">Derecho Laboral</span>
+              <h3 class="case-card__title">Defensa del empleador</h3>
+              <p class="case-card__text">Reclamo laboral en curso desactivado con estrategia preventiva y negociación.</p>
+              <span class="case-card__location">General Madariaga</span>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="cta-band cta-band--accent">
+          <p class="cta-band__text">¿Busca un resultado similar? Cuénteme su caso y evaluamos juntos el camino legal.</p>
+          <div class="cta-band__actions">
+            <a href="#contacto" class="btn-cta">Iniciar consulta</a>
+            <a href="#" class="btn-cta-outline btn-cta-outline--dark js-whatsapp-direct">WhatsApp directo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ ESTUDIO ═══════════════════ -->
+    <section class="section-padding section-studio bg-alt" id="autoridad">
+      <div class="container">
+        <div class="section-header section-header--center section-header--compact">
+          <span class="eyebrow">El estudio</span>
+          <h2>El único estudio jurídico en Cariló</h2>
+          <p class="studio-intro mx-auto">
+            Atención directa en la Costa Atlántica. Conocimiento del territorio y disponibilidad real.
+          </p>
+        </div>
+
+        <div class="row g-4 studio-highlights reveal-stagger">
+          <div class="col-md-4">
+            <div class="studio-stat">
+              <span class="studio-stat__value">Único</span>
+              <span class="studio-stat__label">en la ciudad de Cariló</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="studio-stat">
+              <span class="studio-stat__value">Presencial</span>
+              <span class="studio-stat__label">Costa Atlántica</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="studio-stat">
+              <span class="studio-stat__value">Virtual</span>
+              <span class="studio-stat__label">Provincia de Buenos Aires</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="studio-coverage">
+          <div class="studio-coverage__block">
+            <h3 class="studio-coverage__title">Atención presencial</h3>
+            <div class="studio-locations">
+              <span>Cariló</span>
+              <span>Pinamar</span>
+              <span>Villa Gesell</span>
+              <span>Gral. Madariaga</span>
+              <span>Partido de la Costa</span>
+              <span>Mar del Plata</span>
+            </div>
+          </div>
+          <div class="studio-coverage__block">
+            <h3 class="studio-coverage__title">Atención virtual</h3>
+            <p class="studio-coverage__text">
+              Consultas y seguimiento de causas en toda la provincia, sin desplazamientos innecesarios.
+            </p>
+          </div>
+        </div>
+
+        <div class="cta-band cta-band--light studio-cta">
+          <p class="cta-band__text">Único estudio jurídico en Cariló. Atención cercana, presencial o virtual según su caso.</p>
+          <div class="cta-band__actions">
+            <a href="#" class="btn-cta js-whatsapp-direct">Consultar por WhatsApp</a>
+            <a href="#contacto" class="btn-cta-outline">Completar formulario</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FAQ ═══════════════════ -->
+    <section class="section-padding bg-alt" id="faq">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-header section-header--center">
+              <div class="accent-line"></div>
+              <span class="eyebrow">Preguntas frecuentes</span>
+              <h2>Respuestas antes de su consulta</h2>
+            </div>
+
+            <div class="accordion faq-accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                    ¿Cuánto demora una sucesión con su estudio?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Depende de la complejidad del acervo y si hay conflictos entre herederos. En casos sin trabas mayores,
+                    he obtenido declaratorias de herederos en <strong>3 a 4 meses</strong>. Muchos colegas demoran significativamente más
+                    porque no dominan la parte registral o se estancan ante disputas familiares. En la consulta inicial evalúo su caso
+                    y le doy un estimado realista.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    ¿Atiende de forma virtual si no estoy en la Costa Atlántica?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Sí. Atiendo virtualmente en toda la <strong>Provincia de Buenos Aires</strong>. Puede iniciar la consulta por WhatsApp,
+                    enviarme la documentación de forma digital y dar seguimiento sin necesidad de desplazarse.
+                    La atención presencial está disponible en Cariló, Pinamar, Villa Gesell, General Madariaga,
+                    Partido de la Costa y Mar del Plata.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    Compré un inmueble con papeles flojos. ¿Puede ayudarme a regularizarlo?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Es uno de los consultas más frecuentes en mi práctica inmobiliaria. Analizo la titularidad,
+                    la cadena de transferencias y las opciones legales — escrituración, usucapión u otras vías —
+                    para dejar el inmueble en condiciones de vender, transmitir o dejar prolijo a sus herederos.
+                    También redacto contratos de alquiler y boletos de compraventa sólidos.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    ¿Representa tanto a trabajadores como a empleadores?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Sí. En derecho laboral represento a <strong>trabajadores</strong> con reclamos por despido, mala registración,
+                    accidentes laborales o reclamos ante la ART; y a <strong>empleadores</strong> que enfrentan reclamos de sus dependientes.
+                    Lo ideal para el empleador es consultar <em>antes</em> del despido, pero también intervengo cuando el conflicto ya está en curso.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                    ¿Cómo funciona la consulta inicial?
+                  </button>
+                </h3>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Complete el formulario al final de esta página o escríbame directamente por WhatsApp.
+                    Cuénteme brevemente su situación y el área del derecho involucrada. Evaluaré su caso
+                    y le indicaré los pasos a seguir, los plazos estimados y los honorarios correspondientes.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-cta">
+              <p class="faq-cta__text">¿Resolvió sus dudas? El siguiente paso es contarme su situación.</p>
+              <a href="#contacto" class="btn-cta">Ir al formulario de contacto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ CONTACTO ═══════════════════ -->
+    <section class="section-padding contact-section" id="contacto">
+      <div class="container contact-section__container">
+        <div class="section-header section-header--center section-header--compact contact-section__header">
+          <span class="eyebrow contact-section__eyebrow">Contacto</span>
+          <h2>Inicie su consulta hoy</h2>
+          <p class="contact-intro mx-auto">
+            En menos de 2 minutos deja su consulta lista para enviar por WhatsApp. Sin registro en el sitio.
+          </p>
+        </div>
+
+        <ul class="contact-trust">
+          <li>Evaluación inicial sin compromiso</li>
+          <li>Respuesta en el día hábil</li>
+          <li>Confidencialidad profesional</li>
+        </ul>
+
+        <div class="contact-card">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="row g-4 contact-form__row">
+              <div class="col-md-6">
+                <div class="form__group">
+                  <label for="nombre" class="form-label-custom">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" class="form-control-custom" placeholder="Su nombre" required autocomplete="name">
+                  <div class="invalid-feedback-custom">Ingrese su nombre.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form__group">
+                  <label for="telefono" class="form-label-custom">WhatsApp</label>
+                  <input type="tel" id="telefono" name="telefono" class="form-control-custom" placeholder="11 1234-5678" required autocomplete="tel">
+                  <div class="invalid-feedback-custom">Ingrese su teléfono.</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form__group">
+                  <label for="area" class="form-label-custom">Área de consulta</label>
+                  <select id="area" name="area" class="form-select-custom" required>
+                    <option value="" selected disabled>Seleccione un área</option>
+                    <option value="Derecho Inmobiliario">Derecho Inmobiliario</option>
+                    <option value="Sucesiones">Sucesiones</option>
+                    <option value="Derecho Laboral">Derecho Laboral</option>
+                    <option value="Accidentes de Tránsito">Accidentes de Tránsito</option>
+                    <option value="Divorcios">Divorcios</option>
+                    <option value="Derecho de Familia">Derecho de Familia</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                  <div class="invalid-feedback-custom">Seleccione un área.</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form__group form__group--last">
+                  <label for="mensaje" class="form-label-custom">Su consulta</label>
+                  <textarea id="mensaje" name="mensaje" class="form-control-custom" rows="3" placeholder="Describa brevemente su situación..." required></textarea>
+                  <div class="invalid-feedback-custom">Describa su consulta.</div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn-cta btn-cta--lg w-100 contact-form__submit">
+              <svg class="icon-whatsapp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Enviar por WhatsApp
+            </button>
+            <p class="form-note text-center mb-0">Sus datos no se almacenan en este sitio.</p>
+          </form>
+        </div>
+
+        <p class="contact-direct mx-auto">
+          ¿Prefiere escribir directo?
+          <a href="#" class="contact-direct__link js-whatsapp-direct">Abrir WhatsApp</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="site-footer bg-main">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <p class="site-footer__name">Gabriela Catania</p>
+          <p class="site-footer__tagline">Estudio Jurídico Integral · Cariló, Buenos Aires</p>
+          <a href="#contacto" class="site-footer__cta btn-cta btn-cta--sm">Iniciar consulta</a>
+          <a href="#" class="site-footer__cta-secondary js-whatsapp-direct">WhatsApp</a>
+        </div>
+
+        <div class="site-footer__col">
+          <p class="site-footer__label">Navegación</p>
+          <ul class="site-footer__links">
+            <li><a href="#areas">Áreas</a></li>
+            <li><a href="#solucion">Proceso</a></li>
+            <li><a href="#autoridad">Estudio</a></li>
+            <li><a href="#testimonios">Casos</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <p class="site-footer__label">Redes sociales</p>
+          <div class="site-footer__social">
+            <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link js-whatsapp-direct" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">&copy; 2026 Gabriela Catania. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a
+    href="#"
+    class="whatsapp-float js-whatsapp-direct"
+    id="whatsappFloat"
+    aria-label="Consultar por WhatsApp"
+  >
+    <span class="whatsapp-float__ring" aria-hidden="true"></span>
+    <svg class="icon-whatsapp icon-whatsapp--float" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
