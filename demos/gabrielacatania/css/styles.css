@@ -14,6 +14,8 @@
       --font-body: "Source Sans 3", system-ui, sans-serif;
       --section-py: 110px;
       --section-py-mobile: 72px;
+      --page-px: 1.5rem;
+      --hero-px: var(--page-px);
       --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
       --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
       --nav-duration: 0.45s;
@@ -34,6 +36,19 @@
       background-color: var(--bg-main);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      --bs-gutter-x: calc(var(--page-px) * 2);
+      padding-left: max(var(--page-px), env(safe-area-inset-left, 0px));
+      padding-right: max(var(--page-px), env(safe-area-inset-right, 0px));
+    }
+
+    .container > .row,
+    .container .practice-grid,
+    .container .studio-highlights,
+    .container .contact-form__row {
+      --bs-gutter-x: calc(var(--page-px) * 2);
     }
 
     h1, h2, h3, h4, h5, h6,
@@ -367,17 +382,36 @@
       }
     }
 
-    /* â”€â”€ Hero content â”€â”€ */
+    /* ── Hero content ── */
     .hero-content {
       flex: 1;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
       padding: 2.25rem 0 4rem;
+      padding-left: max(var(--hero-px), env(safe-area-inset-left, 0px));
+      padding-right: max(var(--hero-px), env(safe-area-inset-right, 0px));
+    }
+
+    .hero-content > .row {
+      width: 100%;
+      margin-inline: 0;
+      --bs-gutter-x: 0;
+    }
+
+    .hero-content > .row > [class*="col-"] {
+      padding-inline: 0;
+    }
+
+    .hero-content__block {
+      max-width: 100%;
     }
 
     @media (min-width: 992px) {
       .hero-content {
-        padding: 3rem 0 5.5rem;
+        padding-top: 3rem;
+        padding-bottom: 5.5rem;
       }
     }
 
@@ -444,7 +478,7 @@
         display: flex;
         background: #1a2530;
         margin-top: 1rem;
-        padding: 0.5rem 0 1rem;
+        padding: 0.5rem 0.35rem 1rem;
         border-radius: 6px;
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
@@ -636,6 +670,13 @@
       .practice-grid {
         --bs-gutter-x: 2.5rem;
         --bs-gutter-y: 2.5rem;
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .practice-grid {
+        --bs-gutter-x: calc(var(--page-px) * 2);
+        --bs-gutter-y: calc(var(--page-px) * 1.25);
       }
     }
 
@@ -1005,7 +1046,7 @@
       color: var(--text-title);
       background: transparent;
       box-shadow: none;
-      padding: 1.5rem 0;
+      padding: 1.5rem 0.75rem;
     }
 
     .faq-accordion .accordion-button:not(.collapsed) {
@@ -1018,7 +1059,7 @@
     }
 
     .faq-accordion .accordion-body {
-      padding: 0 0 1.5rem;
+      padding: 0 0.75rem 1.5rem;
       font-size: 0.9375rem;
       line-height: 1.75;
       color: var(--text-body);
@@ -1155,7 +1196,7 @@
     .form-select-custom {
       display: block;
       width: 100%;
-      padding: 0.875rem 0;
+      padding: 0.875rem 0.75rem;
       font-size: 1rem;
       color: var(--text-title);
       background: transparent;
@@ -1466,6 +1507,118 @@
 .divider-subtle { border-color: var(--border-subtle); opacity: 1; }
 textarea.form-control-custom { resize: vertical; min-height: 80px; }
 .btn-cta--sm { padding: 0.65rem 1.25rem; font-size: 0.875rem; }
+
+/* ── Espaciado lateral global ── */
+@media (max-width: 991.98px) {
+  :root {
+    --page-px: 1.625rem;
+    --hero-px: calc(var(--page-px) + 0.5rem);
+  }
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --page-px: 1.875rem;
+    --hero-px: calc(var(--page-px) + 0.875rem);
+  }
+
+  .section-padding {
+    padding-top: calc(var(--section-py-mobile) - 8px);
+    padding-bottom: calc(var(--section-py-mobile) - 8px);
+  }
+
+  .container > .row.g-4,
+  .container > .row.g-lg-5,
+  .container > .row.g-xl-5,
+  .container .studio-highlights.g-4 {
+    --bs-gutter-x: calc(var(--page-px) * 2);
+    --bs-gutter-y: calc(var(--page-px) * 1.25);
+  }
+
+  .practice-card {
+    padding: 1.85rem 1.35rem;
+  }
+
+  .cta-band {
+    padding: 1.75rem 1.35rem;
+  }
+
+  .studio-stat {
+    padding: 1.75rem 1.35rem;
+  }
+
+  .studio-coverage {
+    padding: 2rem 1.35rem;
+  }
+
+  .contact-card {
+    padding: 2rem 1.35rem;
+  }
+
+  .hero-trust {
+    padding: 0.85rem 1rem;
+    max-width: 100%;
+  }
+
+  .hero-content {
+    padding-bottom: 3.5rem;
+  }
+
+  .step-item {
+    padding: 0;
+  }
+
+  .cases-slider {
+    padding-left: var(--page-px);
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      #000 0%,
+      #000 calc(100% - var(--page-px)),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      90deg,
+      #000 0%,
+      #000 calc(100% - var(--page-px)),
+      transparent 100%
+    );
+  }
+
+  .site-footer {
+    padding-top: 3rem;
+  }
+
+  .whatsapp-float {
+    bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
+    right: max(1.25rem, env(safe-area-inset-right, 0px));
+  }
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --page-px: 1.625rem;
+    --hero-px: calc(var(--page-px) + 0.75rem);
+  }
+
+  .hero-actions .btn-cta,
+  .hero-actions .btn-cta-outline--hero {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar-menu__link {
+    padding: 0.85rem 0.75rem;
+  }
+
+  .faq-accordion .accordion-button {
+    padding: 1.25rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  .faq-accordion .accordion-body {
+    padding: 0 0.5rem 1.25rem;
+  }
+}
 
 /* ── Botón flotante WhatsApp ── */
 .whatsapp-float {
