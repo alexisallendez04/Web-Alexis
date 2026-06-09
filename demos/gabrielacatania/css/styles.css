@@ -651,6 +651,21 @@
       box-shadow: 0 6px 24px rgba(197, 168, 128, 0.35);
     }
 
+    .btn-cta:disabled,
+    .btn-cta[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-cta:disabled:hover,
+    .btn-cta[disabled]:hover {
+      background-color: var(--accent);
+      transform: none;
+      box-shadow: none;
+    }
+
     .btn-cta--lg {
       padding: 0.875rem 1.75rem;
       font-size: 0.9375rem;

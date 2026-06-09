@@ -1,6 +1,16 @@
-/* ── Configuración: reemplace con el número real de WhatsApp ── */
-const WHATSAPP_NUMBER = "549XXXXXXXXXX";
-const WHATSAPP_DEFAULT_MSG = "Hola, quiero realizar una consulta legal.";
+const WHATSAPP_NUMBER = "5492254585248";
+const WHATSAPP_DEFAULT_MSG =
+  "Hola, Gabriela. Quiero consultarte sobre un asunto legal. ¿Podemos coordinar una primera orientación?";
+const LAWYER_NAME = "Gabriela Catania";
+const INSTAGRAM_URL = "https://www.instagram.com/abogadagabrielacatania/";
+
+const PRACTICE_AREA_MAP = {
+  "Derecho Laboral": "Consultoría General",
+  "Accidentes de Tránsito": "Daños y Perjuicios",
+  "Derecho de Familia": "Consultoría General",
+  "Divorcios": "Consultoría General",
+  "Otro": "Consultoría General",
+};
 
 const MOTION = {
   staggerStep: 0.09,
@@ -13,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeroImage();
   initPageLoad();
   initWhatsAppLinks();
+  initSocialLinks();
   initNavbar();
   initFloatingWhatsApp();
   initScrollReveal();
@@ -65,6 +76,26 @@ function getWhatsAppUrl(message) {
   return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
 }
 
+function openWhatsAppChat(message) {
+  const text = encodeURIComponent(message);
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  const base = isMobile ? "https://api.whatsapp.com/send" : "https://web.whatsapp.com/send";
+  window.open(base + "?phone=" + WHATSAPP_NUMBER + "&text=" + text, "_blank", "noopener,noreferrer");
+}
+
+function buildConsultationMessage({ nombre, area, consulta }) {
+  return [
+    "Hola Dra. " + LAWYER_NAME + ", quisiera realizar una consulta.",
+    "",
+    "Nombre: " + nombre,
+    "",
+    "Área de consulta: " + area,
+    "",
+    "Consulta:",
+    consulta,
+  ].join("\n");
+}
+
 function initWhatsAppLinks() {
   const url = getWhatsAppUrl(WHATSAPP_DEFAULT_MSG);
 
@@ -73,6 +104,16 @@ function initWhatsAppLinks() {
     link.target = "_blank";
     link.rel = "noopener noreferrer";
   });
+}
+
+function initSocialLinks() {
+  const instagram = document.querySelector(".js-social-instagram");
+
+  if (instagram) {
+    instagram.href = INSTAGRAM_URL;
+    instagram.target = "_blank";
+    instagram.rel = "noopener noreferrer";
+  }
 }
 
 function initNavbar() {
@@ -263,8 +304,10 @@ function initPracticeAreaLinks() {
   if (!areaSelect) return;
 
   const setArea = (value) => {
-    const hasOption = Array.from(areaSelect.options).some((opt) => opt.value === value);
-    if (hasOption) areaSelect.value = value;
+    const mapped = PRACTICE_AREA_MAP[value] || value;
+    const hasOption = Array.from(areaSelect.options).some((opt) => opt.value === mapped);
+    if (hasOption) areaSelect.value = mapped;
+    areaSelect.dispatchEvent(new Event("change", { bubbles: true }));
   };
 
   document.querySelectorAll(".practice-card__link[data-area]").forEach((link) => {
@@ -274,47 +317,63 @@ function initPracticeAreaLinks() {
 
 function initContactForm() {
   const form = document.getElementById("contactForm");
-  const fields = ["nombre", "telefono", "area", "mensaje"];
+  const submitBtn = document.getElementById("contactSubmit");
+  const fieldIds = ["nombre", "area", "consulta"];
 
-  if (!form) return;
+  if (!form || !submitBtn) return;
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  const getField = (id) => document.getElementById(id);
+
+  const isFormComplete = () =>
+    fieldIds.every((id) => {
+      const el = getField(id);
+      return el && el.value.trim() !== "";
+    });
+
+  const updateSubmitState = () => {
+    submitBtn.disabled = !isFormComplete();
+  };
+
+  const validateForm = () => {
     let valid = true;
 
-    fields.forEach((id) => {
-      const el = document.getElementById(id);
+    fieldIds.forEach((id) => {
+      const el = getField(id);
       const isEmpty = !el.value.trim();
       el.classList.toggle("is-invalid", isEmpty);
       if (isEmpty) valid = false;
     });
 
-    if (!valid) return;
+    return valid;
+  };
 
-    const nombre = document.getElementById("nombre").value.trim();
-    const telefono = document.getElementById("telefono").value.trim();
-    const area = document.getElementById("area").value;
-    const mensaje = document.getElementById("mensaje").value.trim();
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!validateForm()) return;
 
-    const text = [
-      "Hola, Gabriela. Quiero iniciar una consulta.",
-      "",
-      "Nombre: " + nombre,
-      "Teléfono: " + telefono,
-      "Área: " + area,
-      "",
-      "Consulta:",
-      mensaje,
-    ].join("\n");
-
-    window.open(getWhatsAppUrl(text), "_blank", "noopener,noreferrer");
+    openWhatsAppChat(
+      buildConsultationMessage({
+        nombre: getField("nombre").value.trim(),
+        area: getField("area").value,
+        consulta: getField("consulta").value.trim(),
+      })
+    );
   });
 
-  fields.forEach((id) => {
-    document.getElementById(id)?.addEventListener("input", function () {
-      if (this.value.trim()) this.classList.remove("is-invalid");
-    });
+  fieldIds.forEach((id) => {
+    const el = getField(id);
+    if (!el) return;
+
+    const clearError = () => {
+      if (el.value.trim()) el.classList.remove("is-invalid");
+      updateSubmitState();
+    };
+
+    el.addEventListener("input", clearError);
+    el.addEventListener("change", clearError);
   });
+
+  updateSubmitState();
 }
 
 const CASES_AUTOPLAY_PX_PER_SEC = 48;
