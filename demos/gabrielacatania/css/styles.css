@@ -19,6 +19,8 @@
       --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
       --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
       --nav-duration: 0.45s;
+      --hero-vh: 100vh;
+      --hero-vh: 100dvh;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -104,40 +106,43 @@
     /* â”€â”€ Hero Header (Navbar + Hero unificados) â”€â”€ */
     .hero-header {
       position: relative;
-      min-height: 100vh;
-      min-height: 100dvh;
+      width: 100%;
+      height: var(--hero-vh);
+      max-height: var(--hero-vh);
+      min-height: 0;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-    }
-
-    @media (max-width: 991.98px) {
-      .hero-header {
-        min-height: auto;
-        height: auto;
-      }
-
-      .hero-header__inner {
-        min-height: 100dvh;
-        min-height: 100svh;
-      }
+      isolation: isolate;
     }
 
     .hero-header__bg {
       position: absolute;
       inset: 0;
+      width: 100%;
+      height: 100%;
       z-index: 0;
       overflow: hidden;
       background-color: var(--color-primary, #1a2530);
     }
 
-    .hero-header__bg picture,
-    .hero-header__bg-img {
+    .hero-header__bg picture {
+      position: absolute;
+      inset: 0;
       display: block;
       width: 100%;
       height: 100%;
+      margin: 0;
     }
 
     .hero-header__bg-img {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-width: 100%;
+      min-height: 100%;
       object-fit: cover;
       object-position: center;
       opacity: 0;
@@ -151,6 +156,8 @@
     .hero-header__overlay {
       position: absolute;
       inset: 0;
+      width: 100%;
+      height: 100%;
       background: linear-gradient(
         135deg,
         rgba(26, 37, 48, 0.88) 0%,
@@ -158,6 +165,7 @@
         rgba(26, 37, 48, 0.82) 100%
       );
       z-index: 1;
+      pointer-events: none;
     }
 
     .hero-header__inner {
@@ -165,8 +173,12 @@
       z-index: 2;
       display: flex;
       flex-direction: column;
-      flex: 1;
+      flex: 1 1 auto;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
       padding-top: var(--nav-height, 6.5rem);
+      padding-bottom: max(0px, env(safe-area-inset-bottom, 0px));
     }
 
     /* ── Navbar (siempre fijo: evita saltos y solapamientos) ── */
@@ -425,12 +437,14 @@
 
     /* ── Hero content ── */
     .hero-content {
-      flex: 1;
+      flex: 1 1 auto;
+      min-height: 0;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: stretch;
-      padding: 2.25rem 0 4rem;
+      padding: clamp(1rem, 2.5vh, 2.25rem) 0 clamp(1.5rem, 4vh, 4rem);
       padding-left: max(var(--hero-px), env(safe-area-inset-left, 0px));
       padding-right: max(var(--hero-px), env(safe-area-inset-right, 0px));
     }
@@ -447,12 +461,52 @@
 
     .hero-content__block {
       max-width: 100%;
+      min-height: 0;
     }
 
     @media (min-width: 992px) {
       .hero-content {
-        padding-top: 3rem;
-        padding-bottom: 5.5rem;
+        padding-top: clamp(1.25rem, 3vh, 3rem);
+        padding-bottom: clamp(2rem, 5vh, 5.5rem);
+      }
+    }
+
+    @media (max-height: 720px) {
+      .hero-title {
+        font-size: clamp(1.75rem, 4.2vw, 2.75rem);
+        margin-bottom: 0.875rem;
+      }
+
+      .hero-subtitle {
+        margin-bottom: 0.875rem;
+      }
+
+      .hero-subtitle--secondary {
+        margin-bottom: 1.125rem;
+      }
+
+      .hero-trust-list {
+        gap: 0.4rem;
+        margin-bottom: 1.125rem;
+      }
+
+      .hero-actions {
+        gap: 0.625rem;
+      }
+    }
+
+    @media (max-height: 580px) {
+      .hero-subtitle--secondary {
+        display: none;
+      }
+
+      .hero-trust-list li {
+        font-size: 0.875rem;
+      }
+
+      .hero-content {
+        padding-top: 0.75rem;
+        padding-bottom: 1rem;
       }
     }
 
@@ -1746,7 +1800,7 @@ textarea.form-control-custom { resize: vertical; min-height: 80px; }
   }
 
   .hero-content {
-    padding-bottom: 3.5rem;
+    padding-bottom: clamp(1.25rem, 3vh, 3.5rem);
   }
 
   .hero-title {
@@ -1805,8 +1859,8 @@ textarea.form-control-custom { resize: vertical; min-height: 80px; }
   }
 
   .hero-content {
-    padding-top: 1rem;
-    padding-bottom: 2.75rem;
+    padding-top: clamp(0.75rem, 2vh, 1rem);
+    padding-bottom: clamp(1rem, 2.5vh, 2.75rem);
   }
 
   .navbar-custom {

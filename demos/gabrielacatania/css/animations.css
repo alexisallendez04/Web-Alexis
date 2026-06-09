@@ -18,6 +18,7 @@
 
 body.is-hero-ready .hero-header__bg-img {
   will-change: transform;
+  transform-origin: center center;
   animation: hero-ken-burns 32s ease-in-out infinite alternate;
 }
 
