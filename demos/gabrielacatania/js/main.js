@@ -16,9 +16,17 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   initFloatingWhatsApp();
   initScrollReveal();
+  equalizeCaseCards();
+  initCasesCarousel();
   initContactForm();
   initPracticeAreaLinks();
 });
+
+if (document.fonts?.ready) {
+  document.fonts.ready.then(equalizeCaseCards);
+}
+
+window.addEventListener("resize", equalizeCaseCards);
 
 function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -191,7 +199,7 @@ function initScrollReveal() {
   const isMobile = window.matchMedia("(max-width: 767.98px)").matches;
 
   const singles = document.querySelectorAll(
-    ".cta-band, .cases-grid, .studio-coverage, .faq-cta, .contact-trust, .contact-section__header"
+    ".cta-band, .cases-carousel, .studio-coverage, .faq-cta, .contact-trust, .contact-section__header"
   );
 
   const staggers = document.querySelectorAll(".reveal-stagger");
@@ -307,4 +315,150 @@ function initContactForm() {
       if (this.value.trim()) this.classList.remove("is-invalid");
     });
   });
+}
+
+const CASES_AUTOPLAY_PX_PER_SEC = 48;
+
+function equalizeCaseCards() {
+  const track = document.getElementById("casesTrack");
+  if (!track) return;
+
+  const sourceGroup = track.querySelector('.cases-slider__group:not([aria-hidden="true"])');
+  if (!sourceGroup) return;
+
+  const allCards = track.querySelectorAll(".case-card");
+  const allQuotes = track.querySelectorAll(".case-card__quote");
+  const allResults = track.querySelectorAll(".case-card__result");
+
+  allCards.forEach((card) => {
+    card.style.minHeight = "";
+  });
+  allQuotes.forEach((el) => {
+    el.style.minHeight = "";
+  });
+  allResults.forEach((el) => {
+    el.style.minHeight = "";
+  });
+
+  const sourceCards = sourceGroup.querySelectorAll(".case-card");
+  let maxQuoteHeight = 0;
+  let maxResultHeight = 0;
+
+  sourceCards.forEach((card) => {
+    const quote = card.querySelector(".case-card__quote");
+    const result = card.querySelector(".case-card__result");
+    if (quote) maxQuoteHeight = Math.max(maxQuoteHeight, quote.offsetHeight);
+    if (result) maxResultHeight = Math.max(maxResultHeight, result.offsetHeight);
+  });
+
+  if (maxQuoteHeight > 0) {
+    allQuotes.forEach((el) => {
+      el.style.minHeight = maxQuoteHeight + "px";
+    });
+  }
+
+  if (maxResultHeight > 0) {
+    allResults.forEach((el) => {
+      el.style.minHeight = maxResultHeight + "px";
+    });
+  }
+
+  let maxCardHeight = 0;
+  sourceCards.forEach((card) => {
+    maxCardHeight = Math.max(maxCardHeight, card.offsetHeight);
+  });
+
+  if (maxCardHeight > 0) {
+    allCards.forEach((card) => {
+      card.style.minHeight = maxCardHeight + "px";
+    });
+  }
+}
+
+function initCasesCarousel() {
+  const track = document.getElementById("casesTrack");
+  const slider = document.getElementById("casesSlider");
+  const prevBtn = document.getElementById("casesPrev");
+  const nextBtn = document.getElementById("casesNext");
+
+  if (!track || prefersReducedMotion()) {
+    return;
+  }
+
+  let offset = 0;
+  let paused = false;
+  let halfWidth = 0;
+  let lastTime = 0;
+  let resumeTimer = null;
+  let rafId = null;
+
+  const measure = () => {
+    equalizeCaseCards();
+    halfWidth = track.scrollWidth / 2;
+    if (offset >= halfWidth && halfWidth > 0) offset -= halfWidth;
+    applyTransform();
+  };
+
+  const applyTransform = () => {
+    track.style.transform = "translate3d(-" + offset + "px, 0, 0)";
+  };
+
+  const tick = (time) => {
+    if (!lastTime) lastTime = time;
+    const delta = (time - lastTime) / 1000;
+    lastTime = time;
+
+    if (!paused && halfWidth > 0) {
+      offset += CASES_AUTOPLAY_PX_PER_SEC * delta;
+      if (offset >= halfWidth) offset -= halfWidth;
+      applyTransform();
+    }
+
+    rafId = requestAnimationFrame(tick);
+  };
+
+  const pause = () => {
+    paused = true;
+  };
+
+  const resume = () => {
+    paused = false;
+    lastTime = 0;
+  };
+
+  const pauseTemporarily = () => {
+    pause();
+    clearTimeout(resumeTimer);
+    resumeTimer = window.setTimeout(resume, 4500);
+  };
+
+  const getStep = () => {
+    const card = track.querySelector(".case-card");
+    if (!card) return 364;
+    const group = track.querySelector(".cases-slider__group");
+    const gap = group ? parseFloat(getComputedStyle(group).gap) || 24 : 24;
+    return card.offsetWidth + gap;
+  };
+
+  const nudge = (direction) => {
+    measure();
+    offset = (offset + direction * getStep() + halfWidth) % halfWidth;
+    applyTransform();
+    pauseTemporarily();
+  };
+
+  slider?.addEventListener("mouseenter", pause);
+  slider?.addEventListener("mouseleave", resume);
+  slider?.addEventListener("focusin", pause);
+  slider?.addEventListener("focusout", (event) => {
+    if (slider.contains(event.relatedTarget)) return;
+    resume();
+  });
+
+  prevBtn?.addEventListener("click", () => nudge(-1));
+  nextBtn?.addEventListener("click", () => nudge(1));
+
+  window.addEventListener("resize", measure);
+  measure();
+  rafId = requestAnimationFrame(tick);
 }

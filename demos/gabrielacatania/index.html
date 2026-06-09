@@ -74,7 +74,47 @@
 </head>
 <body>
 
-  <!-- ═══════════════════ HERO + NAVBAR ═══════════════════ -->
+  <nav class="navbar-custom" id="navbar">
+    <div class="container">
+      <a href="#inicio" class="navbar-brand-custom" id="logoHome">
+        <img
+          src="assets/images/Gabriela.png"
+          alt="Gabriela Catania — Abogada en Cariló, sucesiones e inmobiliario"
+          class="navbar-logo"
+          width="460"
+          height="112"
+          decoding="async"
+          fetchpriority="low"
+        >
+      </a>
+
+      <button
+        class="navbar-toggler-custom"
+        id="navToggler"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="navMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="navbar-menu" id="navMenu">
+        <li><a href="#situaciones" class="navbar-menu__link">Situaciones</a></li>
+        <li><a href="#areas" class="navbar-menu__link">Áreas</a></li>
+        <li><a href="#autoridad" class="navbar-menu__link">Estudio</a></li>
+        <li><a href="#faq" class="navbar-menu__link">FAQ</a></li>
+        <li><a href="#contacto" class="navbar-menu__link">Contacto</a></li>
+        <li class="navbar-menu__cta">
+          <a href="#contacto" class="btn-cta">Consultar</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
   <header class="hero-header" id="inicio">
     <div class="hero-header__bg" aria-hidden="true">
       <picture>
@@ -93,46 +133,6 @@
     <div class="hero-header__overlay" aria-hidden="true"></div>
 
     <div class="hero-header__inner">
-      <nav class="navbar-custom" id="navbar">
-        <div class="container">
-          <a href="#inicio" class="navbar-brand-custom" id="logoHome">
-            <img
-              src="assets/images/Gabriela.png"
-              alt="Gabriela Catania — Abogada en Cariló, sucesiones e inmobiliario"
-              class="navbar-logo"
-              width="460"
-              height="112"
-              decoding="async"
-              fetchpriority="low"
-            >
-          </a>
-
-          <button
-            class="navbar-toggler-custom"
-            id="navToggler"
-            type="button"
-            aria-label="Abrir menú"
-            aria-expanded="false"
-            aria-controls="navMenu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-
-          <ul class="navbar-menu" id="navMenu">
-            <li><a href="#situaciones" class="navbar-menu__link">Situaciones</a></li>
-            <li><a href="#areas" class="navbar-menu__link">Áreas</a></li>
-            <li><a href="#autoridad" class="navbar-menu__link">Estudio</a></li>
-            <li><a href="#faq" class="navbar-menu__link">FAQ</a></li>
-            <li><a href="#contacto" class="navbar-menu__link">Contacto</a></li>
-            <li class="navbar-menu__cta">
-              <a href="#contacto" class="btn-cta">Consultar</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
       <div class="container hero-content">
         <div class="row">
           <div class="col-lg-10 col-xl-9 hero-content__block">
@@ -144,7 +144,7 @@
               Atención presencial en Cariló, Pinamar, Villa Gesell, General Madariaga, Partido de la Costa y Mar del Plata.
             </p>
             <ul class="hero-trust-list" aria-label="Credenciales del estudio">
-              <li>Más de 5 años de experiencia</li>
+              <li>Más de 11 años de experiencia</li>
               <li>Más de 100 casos gestionados</li>
               <li>Consulta inicial por WhatsApp</li>
             </ul>
@@ -346,44 +346,141 @@
       </div>
     </section>
 
-    <!-- ═══════════════════ CASOS DE ESTUDIO ═══════════════════ -->
+    <!-- ═══════════════════ TESTIMONIOS Y CASOS ═══════════════════ -->
     <section class="section-padding section-cases bg-main" id="testimonios">
       <div class="container">
         <div class="section-header section-header--center section-header--compact">
-          <span class="eyebrow">Casos de estudio</span>
-          <h2>Resultados concretos del estudio</h2>
+          <span class="eyebrow">Testimonios y casos</span>
+          <h2>Problemas resueltos con resultados concretos</h2>
+          <p class="section-header__lead">Experiencias reales de clientes que encontraron solución legal con acompañamiento claro y resultados visibles.</p>
         </div>
+      </div>
 
-        <div class="row g-4 cases-grid reveal-stagger">
-          <div class="col-md-6">
-            <article class="case-card case-card--static">
-              <span class="case-card__area">Sucesiones</span>
-              <h3 class="case-card__title">Declaratoria de herederos obtenida en 3 meses</h3>
-              <p class="case-card__text">Sucesión iniciada para permitir la venta de un inmueble familiar.</p>
-            </article>
-          </div>
-          <div class="col-md-6">
-            <article class="case-card case-card--static">
-              <span class="case-card__area">Derecho Inmobiliario</span>
-              <h3 class="case-card__title">Inmueble regularizado para futura venta</h3>
-              <p class="case-card__text">Propiedad con documentación incompleta puesta en regla.</p>
-            </article>
-          </div>
-          <div class="col-md-6">
-            <article class="case-card case-card--static">
-              <span class="case-card__area">Derecho Laboral</span>
-              <h3 class="case-card__title">Reclamo laboral por despido</h3>
-              <p class="case-card__text">Acuerdo favorable obtenido tras despido sin causa.</p>
-            </article>
-          </div>
-          <div class="col-md-6">
-            <article class="case-card case-card--static">
-              <span class="case-card__area">Accidentes de Tránsito</span>
-              <h3 class="case-card__title">Reclamo integral por accidente de tránsito</h3>
-              <p class="case-card__text">Gestión frente a aseguradora y seguimiento del caso.</p>
-            </article>
+      <div class="cases-carousel reveal" aria-label="Testimonios y casos de éxito">
+        <button type="button" class="cases-carousel__btn cases-carousel__btn--prev" id="casesPrev" aria-label="Testimonio anterior">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="cases-slider" id="casesSlider">
+          <div class="cases-slider__track" id="casesTrack">
+            <div class="cases-slider__group">
+              <article class="case-card">
+                <blockquote class="case-card__quote">&ldquo;Gracias Dra. por explicarme tan claramente el asunto de la sucesión de mis padres. Agradezco la transparencia en la gestión y la velocidad con que salió todo. Desde ahora ya tengo abogada para todo.&rdquo;</blockquote>
+                <div class="case-card__result">
+                  <span class="case-card__result-label">Resultado</span>
+                  <p class="case-card__result-text">Pudo iniciar la sucesión sin afrontar honorarios al comienzo del proceso.</p>
+                </div>
+                <div class="case-card__meta">
+                  <p class="case-card__name">Mónica</p>
+                  <span class="case-card__type">Sucesión</span>
+                </div>
+              </article>
+              <article class="case-card">
+                <blockquote class="case-card__quote">&ldquo;La verdad, muy conforme con el resultado doctora. Al final hicimos un buen arreglo y en realidad no tardamos tanto. Me habían dicho que estas cosas demoraban años.&rdquo;</blockquote>
+                <div class="case-card__result">
+                  <span class="case-card__result-label">Resultado</span>
+                  <p class="case-card__result-text">Acuerdo favorable alcanzado sin años de litigio.</p>
+                </div>
+                <div class="case-card__meta">
+                  <p class="case-card__name">Santiago</p>
+                  <span class="case-card__type">Reclamo laboral</span>
+                </div>
+              </article>
+              <article class="case-card">
+                <blockquote class="case-card__quote">&ldquo;El divorcio más rápido que vi en mi vida. La verdad, estoy chocha. Tuve que ir solamente dos veces al Estudio y el poder resolver algunas cosas por videollamada me facilitó bastante todo.&rdquo;</blockquote>
+                <div class="case-card__result">
+                  <span class="case-card__result-label">Resultado</span>
+                  <p class="case-card__result-text">Solo dos visitas al estudio durante todo el trámite.</p>
+                </div>
+                <div class="case-card__meta">
+                  <p class="case-card__name">Vanina</p>
+                  <span class="case-card__type">Divorcio de común acuerdo</span>
+                </div>
+              </article>
+              <article class="case-card">
+                <blockquote class="case-card__quote">&ldquo;Gracias por ocuparse con tanto empeño de la escrituración. Sin su dedicación y su conocimiento, el esfuerzo de mis padres hubiera quedado en la nada.&rdquo;</blockquote>
+                <div class="case-card__result">
+                  <span class="case-card__result-label">Resultado</span>
+                  <p class="case-card__result-text">Hoy puede vender una propiedad que estuvo años sin escritura.</p>
+                </div>
+                <div class="case-card__meta">
+                  <p class="case-card__name">Verónica</p>
+                  <span class="case-card__type">Escrituración</span>
+                </div>
+              </article>
+              <article class="case-card">
+                <blockquote class="case-card__quote">&ldquo;Gaby sos lo más. Cálida, eficiente, correcta, resolutiva. Más que conforme con lo que abonó el seguro. Y en tiempo récord. Te voy a recomendar con todos.&rdquo;</blockquote>
+                <div class="case-card__result">
+                  <span class="case-card__result-label">Resultado</span>
+                  <p class="case-card__result-text">Cobró más de $25 millones del seguro en menos de 7 meses.</p>
+                </div>
+                <div class="case-card__meta">
+                  <p class="case-card__name">Francisco</p>
+                  <span class="case-card__type">Accidente de tránsito</span>
+                </div>
+              </article>
+            </div>
+            <div class="cases-slider__group" aria-hidden="true">
+              <article class="case-card">
+                <blockquote class="case-card__quote">&ldquo;Gracias Dra. por explicarme tan claramente el asunto de la sucesión de mis padres. Agradezco la transparencia en la gestión y la velocidad con que salió todo. Desde ahora ya tengo abogada para todo.&rdquo;</blockquote>
+                <div class="case-card__result">
+                  <span class="case-card__result-label">Resultado</span>
+                  <p class="case-card__result-text">Pudo iniciar la sucesión sin afrontar honorarios al comienzo del proceso.</p>
+                </div>
+                <div class="case-card__meta">
+                  <p class="case-card__name">Mónica</p>
+                  <span class="case-card__type">Sucesión</span>
+                </div>
+              </article>
+              <article class="case-card">
+                <blockquote class="case-card__quote">&ldquo;La verdad, muy conforme con el resultado doctora. Al final hicimos un buen arreglo y en realidad no tardamos tanto. Me habían dicho que estas cosas demoraban años.&rdquo;</blockquote>
+                <div class="case-card__result">
+                  <span class="case-card__result-label">Resultado</span>
+                  <p class="case-card__result-text">Acuerdo favorable alcanzado sin años de litigio.</p>
+                </div>
+                <div class="case-card__meta">
+                  <p class="case-card__name">Santiago</p>
+                  <span class="case-card__type">Reclamo laboral</span>
+                </div>
+              </article>
+              <article class="case-card">
+                <blockquote class="case-card__quote">&ldquo;El divorcio más rápido que vi en mi vida. La verdad, estoy chocha. Tuve que ir solamente dos veces al Estudio y el poder resolver algunas cosas por videollamada me facilitó bastante todo.&rdquo;</blockquote>
+                <div class="case-card__result">
+                  <span class="case-card__result-label">Resultado</span>
+                  <p class="case-card__result-text">Solo dos visitas al estudio durante todo el trámite.</p>
+                </div>
+                <div class="case-card__meta">
+                  <p class="case-card__name">Vanina</p>
+                  <span class="case-card__type">Divorcio de común acuerdo</span>
+                </div>
+              </article>
+              <article class="case-card">
+                <blockquote class="case-card__quote">&ldquo;Gracias por ocuparse con tanto empeño de la escrituración. Sin su dedicación y su conocimiento, el esfuerzo de mis padres hubiera quedado en la nada.&rdquo;</blockquote>
+                <div class="case-card__result">
+                  <span class="case-card__result-label">Resultado</span>
+                  <p class="case-card__result-text">Hoy puede vender una propiedad que estuvo años sin escritura.</p>
+                </div>
+                <div class="case-card__meta">
+                  <p class="case-card__name">Verónica</p>
+                  <span class="case-card__type">Escrituración</span>
+                </div>
+              </article>
+              <article class="case-card">
+                <blockquote class="case-card__quote">&ldquo;Gaby sos lo más. Cálida, eficiente, correcta, resolutiva. Más que conforme con lo que abonó el seguro. Y en tiempo récord. Te voy a recomendar con todos.&rdquo;</blockquote>
+                <div class="case-card__result">
+                  <span class="case-card__result-label">Resultado</span>
+                  <p class="case-card__result-text">Cobró más de $25 millones del seguro en menos de 7 meses.</p>
+                </div>
+                <div class="case-card__meta">
+                  <p class="case-card__name">Francisco</p>
+                  <span class="case-card__type">Accidente de tránsito</span>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
+        <button type="button" class="cases-carousel__btn cases-carousel__btn--next" id="casesNext" aria-label="Testimonio siguiente">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
       </div>
     </section>
 
@@ -398,7 +495,7 @@
             </div>
             <div class="about-block">
               <p class="about-block__text">
-                El estudio es dirigido por <strong>Gabriela Catania</strong>, abogada con ejercicio profesional en Cariló y la Costa Atlántica bonaerense. Experiencia en derecho inmobiliario, sucesiones, derecho laboral y conflictos familiares.
+                El estudio es dirigido por <strong>Gabriela Catania</strong>, abogada con más de 11 años de ejercicio profesional en Cariló y la Costa Atlántica bonaerense. Experiencia en derecho inmobiliario, sucesiones, derecho laboral y conflictos familiares.
               </p>
               <p class="about-block__text">
                 Atención directa, seguimiento personalizado y comunicación clara durante todo el proceso. Consultas presenciales en Cariló, Pinamar, Villa Gesell, General Madariaga, Partido de la Costa y Mar del Plata, y seguimiento virtual en toda la Provincia de Buenos Aires.
@@ -675,7 +772,7 @@
             <li><a href="#areas">Áreas</a></li>
             <li><a href="#solucion">Proceso</a></li>
             <li><a href="#autoridad">Estudio</a></li>
-            <li><a href="#testimonios">Casos</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contacto">Contacto</a></li>
