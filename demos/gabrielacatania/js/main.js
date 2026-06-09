@@ -10,6 +10,7 @@ const MOTION = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  initHeroImage();
   initPageLoad();
   initWhatsAppLinks();
   initNavbar();
@@ -21,6 +22,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function initHeroImage() {
+  const img = document.querySelector(".hero-header__bg-img");
+  const markReady = () => document.body.classList.add("is-hero-ready");
+
+  if (!img) {
+    markReady();
+    return;
+  }
+
+  if (img.complete && img.naturalWidth > 0) {
+    markReady();
+    return;
+  }
+
+  img.addEventListener("load", markReady, { once: true });
+  img.addEventListener("error", markReady, { once: true });
 }
 
 function initPageLoad() {

@@ -12,8 +12,11 @@
 }
 
 /* ── Hero: fondo y entrada ── */
-.hero-header__bg {
+.hero-header__bg-img {
   transform: scale(1);
+}
+
+body.is-hero-ready .hero-header__bg-img {
   will-change: transform;
   animation: hero-ken-burns 32s ease-in-out infinite alternate;
 }
@@ -446,8 +449,14 @@ body.nav-menu-open {
 
 /* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
-  .hero-header__bg {
+  .hero-header__bg-img {
+    transition: none;
+  }
+
+  .hero-header__bg-img,
+  body.is-hero-ready .hero-header__bg-img {
     animation: none;
+    will-change: auto;
   }
 
   .hero-content__block > *,

@@ -15,6 +15,11 @@
   <meta property="og:image" content="assets/images/Gabriela.png">
 
   <title>Abogada de Sucesiones, Inmobiliario y Laboral en Cariló | Gabriela Catania</title>
+
+  <!-- Hero LCP: prioridad máxima antes del resto de recursos -->
+  <link rel="preload" as="image" href="assets/images/carilo-hero-mobile.jpg" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/carilo-hero.jpg" media="(min-width: 768px)" fetchpriority="high">
+
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -71,7 +76,20 @@
 
   <!-- ═══════════════════ HERO + NAVBAR ═══════════════════ -->
   <header class="hero-header" id="inicio">
-    <div class="hero-header__bg" aria-hidden="true"></div>
+    <div class="hero-header__bg" aria-hidden="true">
+      <picture>
+        <source media="(max-width: 767px)" srcset="assets/images/carilo-hero-mobile.jpg">
+        <img
+          class="hero-header__bg-img"
+          src="assets/images/carilo-hero.jpg"
+          alt=""
+          width="1280"
+          height="853"
+          fetchpriority="high"
+          decoding="async"
+        >
+      </picture>
+    </div>
     <div class="hero-header__overlay" aria-hidden="true"></div>
 
     <div class="hero-header__inner">
@@ -84,6 +102,8 @@
               class="navbar-logo"
               width="460"
               height="112"
+              decoding="async"
+              fetchpriority="low"
             >
           </a>
 

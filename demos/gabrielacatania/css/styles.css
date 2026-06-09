@@ -125,9 +125,27 @@
     .hero-header__bg {
       position: absolute;
       inset: 0;
-      background: url("../assets/images/carilo.png") center center / cover no-repeat;
       z-index: 0;
       overflow: hidden;
+      background-color: var(--color-primary, #1a2530);
+    }
+
+    .hero-header__bg picture,
+    .hero-header__bg-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-header__bg-img {
+      object-fit: cover;
+      object-position: center;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    body.is-hero-ready .hero-header__bg-img {
+      opacity: 1;
     }
 
     .hero-header__overlay {
@@ -1598,8 +1616,14 @@
     .visual-pause__bg {
       position: absolute;
       inset: 0;
-      background: url("../assets/images/carilo.png") center center / cover no-repeat;
+      background: url("../assets/images/carilo-hero-mobile.jpg") center center / cover no-repeat;
       z-index: 0;
+    }
+
+    @media (min-width: 768px) {
+      .visual-pause__bg {
+        background-image: url("../assets/images/carilo-hero.jpg");
+      }
     }
 
     .visual-pause__overlay {
