@@ -38,14 +38,19 @@ body.is-page-loaded .hero-content__block > .hero-subtitle {
   animation-delay: 0.28s;
 }
 
-body.is-page-loaded .hero-content__block > .hero-trust {
+body.is-page-loaded .hero-content__block > .hero-subtitle--secondary {
   animation: hero-rise var(--duration-slow) var(--ease-premium) forwards;
-  animation-delay: 0.44s;
+  animation-delay: 0.36s;
+}
+
+body.is-page-loaded .hero-content__block > .hero-trust-list {
+  animation: hero-rise var(--duration-slow) var(--ease-premium) forwards;
+  animation-delay: 0.48s;
 }
 
 body.is-page-loaded .hero-content__block > .hero-actions {
   animation: hero-rise var(--duration-slow) var(--ease-premium) forwards;
-  animation-delay: 0.58s;
+  animation-delay: 0.62s;
 }
 
 @keyframes hero-rise {
@@ -189,7 +194,6 @@ body.is-page-loaded .hero-content__block > .hero-actions {
   .navbar-menu.open > li:nth-child(4) { animation-delay: 0.18s; }
   .navbar-menu.open > li:nth-child(5) { animation-delay: 0.22s; }
   .navbar-menu.open > li:nth-child(6) { animation-delay: 0.26s; }
-  .navbar-menu.open > li:nth-child(7) { animation-delay: 0.3s; }
 
   .navbar-custom.scrolled .navbar-menu.open {
     animation: menu-panel-in 0.5s var(--ease-premium);

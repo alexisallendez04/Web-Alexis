@@ -58,7 +58,7 @@ function initNavbar() {
 
   let ticking = false;
   const scrollThreshold = 56;
-  const sectionIds = ["areas", "solucion", "testimonios", "autoridad", "faq", "contacto"];
+  const sectionIds = ["situaciones", "areas", "autoridad", "faq", "contacto"];
 
   const syncNavHeight = () => {
     document.documentElement.style.setProperty("--nav-height", navbar.offsetHeight + "px");
@@ -169,9 +169,10 @@ function applyStaggerDelays(container) {
 
 function initScrollReveal() {
   const reduced = prefersReducedMotion();
+  const isMobile = window.matchMedia("(max-width: 767.98px)").matches;
 
   const singles = document.querySelectorAll(
-    ".cta-band, .cases-slider, .studio-coverage, .faq-cta, .contact-trust, .contact-section__header"
+    ".cta-band, .cases-grid, .studio-coverage, .faq-cta, .contact-trust, .contact-section__header"
   );
 
   const staggers = document.querySelectorAll(".reveal-stagger");
@@ -185,12 +186,6 @@ function initScrollReveal() {
   faqItems.forEach((el) => el.classList.add("reveal"));
 
   /* visual-pause: animación por hijos vía .visual-pause__inner.is-visible */
-
-  const casesSlider = document.querySelector(".cases-slider");
-  if (casesSlider) {
-    casesSlider.classList.remove("reveal");
-    casesSlider.classList.add("reveal-fade");
-  }
 
   staggers.forEach((el) => {
     el.classList.add("reveal-stagger");
@@ -222,12 +217,18 @@ function initScrollReveal() {
       });
     },
     {
-      threshold: MOTION.revealThreshold,
-      rootMargin: MOTION.revealRootMargin,
+      threshold: isMobile ? 0.05 : MOTION.revealThreshold,
+      rootMargin: isMobile ? "0px 0px 2% 0px" : MOTION.revealRootMargin,
     }
   );
 
   observeTargets.forEach((el) => observer.observe(el));
+
+  if (isMobile) {
+    window.setTimeout(() => {
+      observeTargets.forEach((el) => el.classList.add("is-visible"));
+    }, 1200);
+  }
 }
 
 function initPracticeAreaLinks() {
