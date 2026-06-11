@@ -240,7 +240,7 @@ function initScrollReveal() {
   const isMobile = window.matchMedia("(max-width: 767.98px)").matches;
 
   const singles = document.querySelectorAll(
-    ".cta-band, .cases-carousel, .studio-coverage, .faq-cta, .contact-trust, .contact-section__header"
+    ".cta-band, .cases-carousel, .studio-coverage, .faq-cta, .contact-trust, .contact-section__header, .about-portrait"
   );
 
   const staggers = document.querySelectorAll(".reveal-stagger");

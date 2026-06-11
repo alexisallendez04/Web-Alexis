@@ -5,10 +5,17 @@
       --navy-soft: #1e293b;
       --accent: #c5a880;
       --accent-hover: #b89770;
-      --text-title: #212529;
-      --text-body: #495057;
+      --text-title: #1a2530;
+      --text-body: #3a4249;
+      --text-muted: #5c656d;
       --border-subtle: #e9ecef;
-      --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.02);
+      --shadow-soft: 0 4px 24px rgba(26, 37, 48, 0.07);
+      --font-size-body: 1.0625rem;
+      --font-size-sm: 0.9375rem;
+      --font-size-card-title: 1.25rem;
+      --font-size-section-lead: 1.125rem;
+      --line-height-body: 1.7;
+      --line-height-tight: 1.35;
       --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
       --font-heading: "Libre Baskerville", Georgia, "Times New Roman", serif;
       --font-body: "Source Sans 3", system-ui, sans-serif;
@@ -33,13 +40,18 @@
 
     body {
       font-family: var(--font-body);
-      font-size: 1.0625rem;
-      line-height: 1.65;
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-body);
       color: var(--text-body);
       background-color: var(--bg-main);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x: clip;
+    }
+
+    strong {
+      font-weight: 600;
+      color: var(--navy);
     }
 
     .container {
@@ -60,8 +72,8 @@
       font-family: var(--font-heading);
       color: var(--text-title);
       font-weight: 700;
-      line-height: 1.25;
-      letter-spacing: 0.01em;
+      line-height: var(--line-height-tight);
+      letter-spacing: 0.015em;
     }
 
     p { margin-bottom: 1rem; }
@@ -88,17 +100,17 @@
     .eyebrow {
       display: inline-block;
       font-family: var(--font-body);
-      font-size: 0.6875rem;
+      font-size: 0.75rem;
       font-weight: 600;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     .lead-custom {
-      font-size: 1.0625rem;
-      line-height: 1.7;
+      font-size: var(--font-size-section-lead);
+      line-height: var(--line-height-body);
       color: var(--text-body);
       max-width: 38rem;
     }
@@ -528,16 +540,18 @@
     }
 
     .hero-subtitle {
-      font-size: clamp(1rem, 1.9vw, 1.25rem);
-      line-height: 1.7;
-      color: rgba(255, 255, 255, 0.88);
+      font-size: clamp(1.0625rem, 1.9vw, 1.3125rem);
+      line-height: var(--line-height-body);
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.94);
       max-width: 40rem;
       margin-bottom: 1.25rem;
     }
 
     .hero-subtitle--secondary {
-      font-size: clamp(0.9375rem, 1.6vw, 1.0625rem);
-      color: rgba(255, 255, 255, 0.78);
+      font-size: clamp(1rem, 1.6vw, 1.125rem);
+      line-height: var(--line-height-body);
+      color: rgba(255, 255, 255, 0.86);
       margin-bottom: 1.75rem;
     }
 
@@ -553,9 +567,10 @@
     .hero-trust-list li {
       position: relative;
       padding-left: 1.5rem;
-      font-size: 0.9375rem;
-      color: rgba(255, 255, 255, 0.92);
-      line-height: 1.5;
+      font-size: var(--font-size-sm);
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.95);
+      line-height: 1.55;
     }
 
     .hero-trust-list li::before {
@@ -745,8 +760,8 @@
     }
 
     .cta-band__text {
-      font-size: 1.0625rem;
-      line-height: 1.55;
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-body);
       color: var(--text-body);
       margin: 0;
       max-width: 42ch;
@@ -804,12 +819,14 @@
       margin-bottom: 0;
     }
 
-    .section-header__lead {
+    .section-header__lead,
+    .section-intro {
       max-width: 42rem;
-      margin: 1rem auto 0;
-      font-size: 1.0625rem;
-      line-height: 1.65;
+      margin: 1.125rem auto 0;
+      font-size: var(--font-size-section-lead);
+      line-height: var(--line-height-body);
       color: var(--text-body);
+      font-weight: 400;
     }
 
     .practice-grid {
@@ -861,27 +878,23 @@
 
     .practice-card__title {
       font-family: var(--font-heading);
-      font-size: 1.3125rem;
+      font-size: var(--font-size-card-title);
       font-weight: 700;
       color: var(--navy);
       margin-bottom: 1rem;
-      line-height: 1.35;
+      line-height: var(--line-height-tight);
     }
 
     @media (min-width: 992px) {
       .practice-card__title {
         min-height: 2.7em;
-      }
-
-      .practice-card__text {
-        font-size: 1rem;
-        line-height: 1.6;
+        font-size: 1.3125rem;
       }
     }
 
     .practice-card__text {
-      font-size: 1.0625rem;
-      line-height: 1.55;
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-body);
       color: var(--text-body);
       margin: 0 0 1.25rem;
       max-width: none;
@@ -929,14 +942,15 @@
     }
 
     .step-item h3 {
-      font-size: 1.125rem;
-      margin-bottom: 0.75rem;
+      font-size: var(--font-size-card-title);
+      margin-bottom: 0.875rem;
+      color: var(--navy);
     }
 
     .step-item p {
-      font-size: 1rem;
-      line-height: 1.55;
-      max-width: 260px;
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-body);
+      max-width: 280px;
       margin: 0 auto;
       color: var(--text-body);
     }
@@ -958,23 +972,15 @@
 
     /* ── Estudio ── */
     .studio-intro {
-      font-size: 1.0625rem;
-      line-height: 1.65;
+      font-size: var(--font-size-section-lead);
+      line-height: var(--line-height-body);
       color: var(--text-body);
       max-width: 32rem;
       margin-bottom: 0;
     }
 
-    .section-intro {
-      font-size: 1.0625rem;
-      line-height: 1.65;
-      color: var(--text-body);
-      max-width: 40rem;
-      margin-top: 0.75rem;
-      margin-bottom: 0;
-    }
-
-    .section-header--center .section-intro {
+    .section-header--center .section-intro,
+    .section-header--center .section-header__lead {
       text-align: center;
     }
 
@@ -1001,17 +1007,17 @@
     .studio-stat__value {
       display: block;
       font-family: var(--font-heading);
-      font-size: 1.25rem;
+      font-size: 1.3125rem;
       font-weight: 700;
       color: var(--navy);
-      line-height: 1.3;
-      margin-bottom: 0.75rem;
+      line-height: var(--line-height-tight);
+      margin-bottom: 0.875rem;
     }
 
     .studio-stat__label {
       display: block;
-      font-size: 0.9375rem;
-      line-height: 1.55;
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-body);
       color: var(--text-body);
     }
 
@@ -1027,16 +1033,16 @@
 
     .situation-card__title {
       font-family: var(--font-heading);
-      font-size: 1.125rem;
+      font-size: var(--font-size-card-title);
       font-weight: 700;
       color: var(--navy);
-      line-height: 1.35;
-      margin-bottom: 0.75rem;
+      line-height: var(--line-height-tight);
+      margin-bottom: 0.875rem;
     }
 
     .situation-card__text {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-body);
       color: var(--text-body);
       margin: 0;
     }
@@ -1059,13 +1065,40 @@
     }
 
     /* ── Sobre Gabriela ── */
+    .section-about {
+      position: relative;
+      z-index: 2;
+      overflow: visible;
+    }
+
+    .about-section__header {
+      margin-bottom: clamp(2rem, 4vw, 2.75rem);
+    }
+
+    .about-layout {
+      max-width: 1080px;
+      margin-inline: auto;
+    }
+
+    @media (min-width: 992px) {
+      .about-block-col {
+        padding-right: clamp(1rem, 3vw, 2.5rem);
+        padding-bottom: 0.25rem;
+      }
+
+      .about-portrait-col {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
     .about-block {
-      text-align: center;
+      text-align: left;
     }
 
     .about-block__text {
-      font-size: 1.0625rem;
-      line-height: 1.7;
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-body);
       color: var(--text-body);
       margin-bottom: 1.25rem;
     }
@@ -1074,8 +1107,96 @@
       margin-bottom: 0;
     }
 
-    .about-block__text strong {
-      color: var(--navy);
+    .about-portrait {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: min(100%, 15.5rem);
+      margin-inline: auto;
+      margin-bottom: -2rem;
+      position: relative;
+      z-index: 3;
+    }
+
+    @media (min-width: 576px) {
+      .about-portrait {
+        max-width: min(100%, 17rem);
+        margin-bottom: -2.25rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .about-portrait {
+        max-width: min(100%, 18.5rem);
+        margin-inline: auto;
+        margin-bottom: -2.5rem;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .about-portrait {
+        max-width: min(100%, 19.5rem);
+        margin-bottom: -2.75rem;
+      }
+    }
+
+    .about-portrait__stage {
+      position: relative;
+      width: 100%;
+      padding-top: clamp(1.25rem, 9%, 2.25rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .about-portrait__stage::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 90%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow:
+        0 12px 32px rgba(197, 168, 128, 0.2),
+        inset 0 0 0 1px rgba(26, 37, 48, 0.06);
+    }
+
+    .about-portrait__img {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 90%;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      background: none;
+      object-fit: contain;
+      object-position: bottom center;
+    }
+
+    #faq {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (min-width: 992px) {
+      #faq {
+        padding-top: calc(var(--section-py) + 2rem);
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .about-block {
+        text-align: center;
+      }
     }
 
     .studio-coverage {
@@ -1115,8 +1236,8 @@
     }
 
     .studio-coverage__text {
-      font-size: 1rem;
-      line-height: 1.65;
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-body);
       color: var(--text-body);
       margin: 0;
       max-width: 28ch;
@@ -1305,8 +1426,8 @@
       margin: 0;
       padding: 0;
       border: none;
-      font-size: 0.9875rem;
-      line-height: 1.65;
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-body);
       color: var(--text-body);
       font-style: normal;
       flex-shrink: 0;
@@ -1335,9 +1456,9 @@
 
     .case-card__result-text {
       margin: 0;
-      font-size: 0.9375rem;
+      font-size: var(--font-size-sm);
       font-weight: 600;
-      line-height: 1.5;
+      line-height: 1.55;
       color: var(--navy);
     }
 
@@ -1385,12 +1506,13 @@
 
     .faq-accordion .accordion-button {
       font-family: var(--font-heading);
-      font-size: 1.0625rem;
-      font-weight: 600;
+      font-size: var(--font-size-card-title);
+      font-weight: 700;
       color: var(--text-title);
       background: transparent;
       box-shadow: none;
       padding: 1.5rem 0.75rem;
+      line-height: var(--line-height-tight);
     }
 
     .faq-accordion .accordion-button:not(.collapsed) {
@@ -1404,8 +1526,8 @@
 
     .faq-accordion .accordion-body {
       padding: 0 0.75rem 1.5rem;
-      font-size: 0.9375rem;
-      line-height: 1.75;
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-body);
       color: var(--text-body);
     }
 
@@ -1421,6 +1543,7 @@
 
     .contact-section__header h2 {
       color: #fff;
+      font-size: clamp(1.75rem, 3.2vw, 2.375rem);
     }
 
     .contact-section__eyebrow {
@@ -1428,10 +1551,10 @@
     }
 
     .contact-intro {
-      font-size: 1.0625rem;
-      line-height: 1.65;
-      color: rgba(255, 255, 255, 0.78);
-      max-width: 28rem;
+      font-size: var(--font-size-section-lead);
+      line-height: var(--line-height-body);
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 32rem;
       margin-bottom: 0;
     }
 
@@ -1446,8 +1569,9 @@
     }
 
     .contact-trust li {
-      font-size: 0.875rem;
-      color: rgba(255, 255, 255, 0.72);
+      font-size: var(--font-size-sm);
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.85);
       padding-left: 1.125rem;
       position: relative;
     }
@@ -1471,7 +1595,8 @@
     }
 
     .faq-cta__text {
-      font-size: 1.0625rem;
+      font-size: var(--font-size-section-lead);
+      font-weight: 500;
       color: var(--text-body);
       margin-bottom: 1.25rem;
     }
@@ -1509,8 +1634,8 @@
 
     .contact-direct {
       text-align: center;
-      font-size: 0.9375rem;
-      color: rgba(255, 255, 255, 0.7);
+      font-size: var(--font-size-sm);
+      color: rgba(255, 255, 255, 0.82);
       margin: 0;
       max-width: 24rem;
     }
@@ -1530,9 +1655,9 @@
     .form-label-custom {
       font-size: 0.8125rem;
       font-weight: 600;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: var(--text-title);
+      color: var(--navy);
       margin-bottom: 0.5rem;
     }
 
@@ -1541,7 +1666,7 @@
       display: block;
       width: 100%;
       padding: 0.875rem 0.75rem;
-      font-size: 1rem;
+      font-size: var(--font-size-body);
       color: var(--text-title);
       background: transparent;
       border: none;
@@ -1621,8 +1746,8 @@
     }
 
     .site-footer__tagline {
-      font-size: 0.9375rem;
-      line-height: 1.5;
+      font-size: var(--font-size-sm);
+      line-height: var(--line-height-body);
       color: var(--text-body);
       margin-bottom: 1.25rem;
     }
@@ -1735,9 +1860,9 @@
       opacity: 0.75;
     }
 
-    /* â”€â”€ Section headers â”€â”€ */
+    /* ── Section headers ── */
     .section-header {
-      max-width: 560px;
+      max-width: 38rem;
       margin-bottom: 3rem;
     }
 
@@ -1748,9 +1873,11 @@
     }
 
     .section-header h2 {
-      font-size: clamp(1.625rem, 3vw, 2.125rem);
-      margin-bottom: 0.75rem;
+      font-size: clamp(1.75rem, 3.2vw, 2.375rem);
+      margin-bottom: 0;
       font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
     }
 
     /* â”€â”€ Divider accent â”€â”€ */
@@ -1850,8 +1977,8 @@
 
 /* ── Utilidades (antes inline) ── */
 .solution-highlight {
-  font-size: 1.0625rem;
-  line-height: 1.65;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
   color: var(--text-body);
 }
 .divider-subtle { border-color: var(--border-subtle); opacity: 1; }
@@ -1914,7 +2041,7 @@ textarea.form-control-custom { resize: vertical; min-height: 80px; }
   }
 
   .studio-stat__value {
-    font-size: 1.25rem;
+    font-size: 1.1875rem;
   }
 
   .hero-content {
@@ -1970,10 +2097,14 @@ textarea.form-control-custom { resize: vertical; min-height: 80px; }
     line-height: 1.2;
   }
 
-  .hero-subtitle,
+  .hero-subtitle {
+    font-size: 1.0625rem;
+    line-height: var(--line-height-body);
+  }
+
   .hero-subtitle--secondary {
-    font-size: 0.9375rem;
-    line-height: 1.65;
+    font-size: 1rem;
+    line-height: var(--line-height-body);
   }
 
   .hero-content {
@@ -2006,7 +2137,7 @@ textarea.form-control-custom { resize: vertical; min-height: 80px; }
 
   .faq-accordion .accordion-button {
     padding: 1.25rem 0.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 
   .faq-accordion .accordion-body {
