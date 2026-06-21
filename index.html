@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Diseño y desarrollo de landing pages para profesionales independientes. Sitios web que generan confianza y convierten visitas en consultas.">
+  <meta name="author" content="Alexis Allendez">
+  <meta name="theme-color" content="#0A0A0A">
+
+  <title>Alexis Allendez — Sitios web para profesionales</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo">Alexis Allendez</a>
+
+      <nav class="nav" aria-label="Principal">
+        <a href="#proyectos" class="nav__link">Proyectos</a>
+        <a href="#proceso" class="nav__link">Proceso</a>
+        <a href="#sobre-mi" class="nav__link">Sobre mí</a>
+        <a href="#contacto" class="btn btn--primary">Hablemos</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil" hidden>
+    <a href="#proyectos" class="mobile-nav__link">Proyectos</a>
+    <a href="#proceso" class="mobile-nav__link">Proceso</a>
+    <a href="#sobre-mi" class="mobile-nav__link">Sobre mí</a>
+    <a href="#contacto" class="btn btn--primary btn--lg" style="margin-top: auto;">Hablemos</a>
+  </nav>
+
+  <main>
+
+    <!-- 1. Hero -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="hero__eyebrow">
+            <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+            Diseño web para profesionales
+          </p>
+          <h1 class="hero__title">Sitios web que generan confianza y convierten visitas en consultas.</h1>
+          <p class="hero__subtitle">Diseño y desarrollo landing pages para profesionales que quieren destacar online y transmitir una imagen más sólida.</p>
+          <div class="hero__actions btn-group">
+            <a href="#proyectos" class="btn btn--primary btn--lg">Ver proyectos</a>
+            <a href="#contacto" class="btn btn--ghost btn--lg">Hablemos</a>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="mockup">
+            <div class="mockup__bar">
+              <span class="mockup__dot"></span>
+              <span class="mockup__dot"></span>
+              <span class="mockup__dot"></span>
+              <span class="mockup__url">estudio-profesional.com</span>
+            </div>
+            <div class="mockup__screen">
+              <div class="mockup-page">
+                <div class="mockup-page__nav">
+                  <div class="mockup-page__logo"></div>
+                  <div class="mockup-page__links">
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+                <div class="mockup-page__hero">
+                  <div class="mockup-page__text">
+                    <h2>Tu especialidad, presentada con autoridad y claridad.</h2>
+                    <p>Consultas directas · Atención personalizada · Resultados comprobables</p>
+                    <span class="mockup-page__btn">Agendar consulta</span>
+                  </div>
+                  <div class="mockup-page__img"></div>
+                </div>
+                <div class="mockup-page__stats">
+                  <div class="mockup-page__stat">
+                    <strong>+10 años</strong>
+                    <span>de experiencia</span>
+                  </div>
+                  <div class="mockup-page__stat">
+                    <strong>500+</strong>
+                    <span>casos atendidos</span>
+                  </div>
+                  <div class="mockup-page__stat">
+                    <strong>4.9 ★</strong>
+                    <span>valoración</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Problema -->
+    <section class="section problem" id="problema">
+      <div class="container">
+        <header class="section-header section-header--center reveal">
+          <span class="section-label">El contexto</span>
+          <h2 class="section-title section-title--center">Hoy tus clientes te buscan antes de contactarte.</h2>
+        </header>
+        <div class="problem-grid reveal-stagger">
+          <article class="problem-item">
+            <p class="problem-item__num">01</p>
+            <p class="problem-item__text">No tener web resta credibilidad.</p>
+          </article>
+          <article class="problem-item">
+            <p class="problem-item__num">02</p>
+            <p class="problem-item__text">Las redes sociales no siempre generan confianza.</p>
+          </article>
+          <article class="problem-item">
+            <p class="problem-item__num">03</p>
+            <p class="problem-item__text">La primera impresión influye en la decisión.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Solución -->
+    <section class="section section--lg" id="solucion">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-label">La solución</span>
+          <h2 class="section-title">Una web pensada para generar confianza.</h2>
+        </header>
+        <div class="solution-grid reveal-stagger">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">◆</div>
+            <h3 class="card__title">Imagen profesional</h3>
+            <p class="card__text">Una presencia online que refleja la calidad de tu trabajo y te diferencia de la competencia.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">◆</div>
+            <h3 class="card__title">Más oportunidades de contacto</h3>
+            <p class="card__text">Cada visita se convierte en una oportunidad real. Contacto directo, sin fricción.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">◆</div>
+            <h3 class="card__title">Experiencia optimizada para móviles</h3>
+            <p class="card__text">Tus clientes te buscan desde el celular. Tu web se ve impecable en cualquier dispositivo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Portfolio -->
+    <section class="section section--lg" id="proyectos" style="background: var(--surface); border-block: 1px solid var(--surface-border);">
+      <div class="container">
+        <header class="section-header section-header--center reveal">
+          <span class="section-label">Portfolio</span>
+          <h2 class="section-title section-title--center">Proyectos destacados</h2>
+          <p class="section-desc section-desc--center">Sitios diseñados para profesionales que necesitan transmitir autoridad y generar consultas.</p>
+        </header>
+
+        <div class="portfolio-list">
+
+          <article class="project reveal reveal--left">
+            <div class="project__media">
+              <img src="demos/imgdemos/Gabriela.png" alt="Captura del sitio web de Gabriela Catania — abogada en Cariló" loading="lazy">
+              <div class="project__overlay"></div>
+            </div>
+            <div class="project__body">
+              <span class="project__tag">Abogada · Sucesiones e inmobiliario</span>
+              <h3 class="project__name">Gabriela Catania</h3>
+              <p class="project__desc">Sitio profesional para abogada en Cariló. Sucesiones, inmobiliario y laboral. SEO local, testimonios con resultados y contacto directo por WhatsApp.</p>
+              <a href="https://gabrielacatania.com/" class="btn btn--outline-accent" target="_blank" rel="noopener noreferrer">Visitar proyecto →</a>
+            </div>
+          </article>
+
+          <article class="project reveal reveal--right">
+            <div class="project__media">
+              <img src="demos/imgdemos/Antonella.png" alt="Captura del sitio web de Antonela Foniciello — nutricionista deportiva" loading="lazy">
+              <div class="project__overlay"></div>
+            </div>
+            <div class="project__body">
+              <span class="project__tag">Nutricionista · Salud deportiva</span>
+              <h3 class="project__name">Antonela Foniciello</h3>
+              <p class="project__desc">Web para nutricionista deportiva en Tucumán. Certificaciones ISAK, servicios especializados, infoproductos y agenda de consultas por WhatsApp.</p>
+              <a href="https://www.antofoninutricion.com/" class="btn btn--outline-accent" target="_blank" rel="noopener noreferrer">Visitar proyecto →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Proceso -->
+    <section class="section section--lg" id="proceso">
+      <div class="container">
+        <header class="section-header section-header--center reveal">
+          <span class="section-label">Metodología</span>
+          <h2 class="section-title section-title--center">Cómo trabajo</h2>
+          <p class="section-desc section-desc--center">Un proceso claro, sin complicaciones técnicas de tu parte.</p>
+        </header>
+        <div class="process-grid reveal-stagger">
+          <article class="process-step">
+            <p class="process-step__num">Paso 01</p>
+            <h3 class="process-step__title">Conocemos tu proyecto</h3>
+            <p class="process-step__text">Entiendo tu rubro, tu cliente ideal y qué imagen querés transmitir.</p>
+          </article>
+          <article class="process-step">
+            <p class="process-step__num">Paso 02</p>
+            <h3 class="process-step__title">Diseñamos la estructura</h3>
+            <p class="process-step__text">Definimos secciones, mensajes y un diseño alineado a tu profesión.</p>
+          </article>
+          <article class="process-step">
+            <p class="process-step__num">Paso 03</p>
+            <h3 class="process-step__title">Desarrollamos la web</h3>
+            <p class="process-step__text">Construyo tu sitio con atención al detalle y optimizado para todos los dispositivos.</p>
+          </article>
+          <article class="process-step">
+            <p class="process-step__num">Paso 04</p>
+            <h3 class="process-step__title">Publicamos y optimizamos</h3>
+            <p class="process-step__text">Tu web queda online, lista para recibir visitas y generar consultas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Testimonios -->
+    <section class="section" id="testimonios" style="background: var(--surface); border-block: 1px solid var(--surface-border);">
+      <div class="container">
+        <header class="section-header section-header--center reveal">
+          <span class="section-label">Testimonios</span>
+          <h2 class="section-title section-title--center">Lo que dicen quienes confiaron</h2>
+        </header>
+        <div class="testimonials-grid reveal-stagger">
+          <blockquote class="testimonial">
+            <p class="testimonial__quote">Desde que tengo mi web, los pacientes llegan con más confianza. Se nota la diferencia cuando alguien te encuentra online y ve algo profesional.</p>
+            <footer class="testimonial__author">
+              <cite class="testimonial__name">Dra. Carolina Méndez</cite>
+              <p class="testimonial__role">Nutricionista · Buenos Aires</p>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p class="testimonial__quote">No quería una web complicada. Quería algo que me represente y genere consultas. Alexis entendió eso desde el primer día.</p>
+            <footer class="testimonial__author">
+              <cite class="testimonial__name">Dr. Martín Acosta</cite>
+              <p class="testimonial__role">Abogado laboralista · CABA</p>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p class="testimonial__quote">El proceso fue simple y el resultado superó lo que imaginaba. Ahora me siento orgullosa de compartir mi link con nuevos clientes.</p>
+            <footer class="testimonial__author">
+              <cite class="testimonial__name">Lic. Sofía Rinaldi</cite>
+              <p class="testimonial__role">Psicóloga clínica · Rosario</p>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Sobre mí -->
+    <section class="section section--lg" id="sobre-mi">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about__visual reveal reveal--scale">
+            <span class="about__initials" aria-hidden="true">AA</span>
+            <div class="about__visual-inner">
+              <p class="about__name">Alexis Allendez</p>
+              <p class="about__tagline">Diseño web para profesionales</p>
+            </div>
+          </div>
+          <div class="about__content reveal reveal-delay-1">
+            <span class="section-label">Sobre mí</span>
+            <h2 class="section-title" style="margin-bottom: var(--space-lg);">Ayudo a profesionales a transmitir confianza online.</h2>
+            <p class="about__text">Trabajo con negocios y profesionales independientes que necesitan una presencia digital a la altura de su trabajo.</p>
+            <p class="about__text">Mi enfoque no es impresionar con tecnología, sino construir sitios que generen confianza desde el primer segundo y conviertan visitantes en clientes reales.</p>
+            <a href="#contacto" class="btn btn--outline-accent" style="margin-top: var(--space-md);">Empecemos a hablar →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CTA final -->
+    <section class="section section--lg" id="contacto">
+      <div class="container">
+        <div class="cta-banner reveal reveal--scale">
+          <div class="cta-banner__glow" aria-hidden="true"></div>
+          <div class="cta-banner__glow cta-banner__glow--secondary" aria-hidden="true"></div>
+          <div class="cta-banner__content">
+            <h2 class="cta-banner__title">¿Tu negocio transmite la confianza que merece?</h2>
+            <p class="cta-banner__desc">Contame sobre tu proyecto y veamos cómo construir una presencia online profesional.</p>
+            <a href="https://wa.me/526641234567?text=Hola%20Alexis,%20quiero%20solicitar%20una%20consulta%20sobre%20mi%20sitio%20web" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">Solicitar una consulta</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2026 Alexis Allendez. Todos los derechos reservados.</p>
+      <div class="footer__links">
+        <a href="mailto:contacto@alexisallendez.com" class="footer__link">Email</a>
+        <a href="https://wa.me/526641234567" class="footer__link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="#inicio" class="footer__link">Volver arriba</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a
+    href="https://wa.me/526641234567?text=Hola%20Alexis,%20quiero%20solicitar%20una%20consulta%20sobre%20mi%20sitio%20web"
+    class="whatsapp-float"
+    id="whatsappFloat"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Consultar por WhatsApp"
+  >
+    <span class="whatsapp-float__ring" aria-hidden="true"></span>
+    <svg class="whatsapp-float__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-float__tooltip">Hablemos por WhatsApp</span>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
