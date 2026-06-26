@@ -103,4 +103,30 @@
       setTimeout(show, 1200);
     }
   }
+
+  /* ── Logo 3D tilt ── */
+  const logoLink = document.querySelector(".logo");
+  const logoTilt = document.querySelector(".logo__tilt");
+
+  if (logoLink && logoTilt && !prefersReducedMotion) {
+    const maxRotate = 12;
+
+    logoLink.addEventListener("mouseenter", () => {
+      logoTilt.classList.add("is-active");
+    });
+
+    logoLink.addEventListener("mousemove", (e) => {
+      const rect = logoLink.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width - 0.5;
+      const py = (e.clientY - rect.top) / rect.height - 0.5;
+
+      logoTilt.style.transform =
+        `rotateY(${px * maxRotate}deg) rotateX(${-py * maxRotate}deg) translateY(-4px) scale(1.04)`;
+    });
+
+    logoLink.addEventListener("mouseleave", () => {
+      logoTilt.classList.remove("is-active");
+      logoTilt.style.transform = "";
+    });
+  }
 })();

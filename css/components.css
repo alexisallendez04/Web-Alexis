@@ -134,13 +134,37 @@
   flex-shrink: 0;
 }
 
+.logo__frame {
+  display: block;
+  position: relative;
+  line-height: 0;
+  perspective: 900px;
+  animation: logoAura 2.2s var(--ease-out) 0.2s 1 both;
+}
+
+.logo__tilt {
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.4s var(--ease-out);
+  animation: logoFloat 5.5s ease-in-out 1.6s infinite;
+}
+
+.logo__tilt.is-active {
+  animation: none;
+  transition: transform 0.12s linear;
+}
+
 .logo__img {
   display: block;
   height: 56px;
   width: auto;
   max-width: min(calc(100vw - 7rem), 280px);
   object-fit: contain;
-  transition: opacity var(--duration) var(--ease);
+  transform-origin: center center;
+  backface-visibility: hidden;
+  animation: logoReveal 1.4s var(--ease-out) 0.15s both;
+  transition: filter 0.45s var(--ease-out);
 }
 
 @media (min-width: 768px) {

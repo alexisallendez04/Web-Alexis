@@ -15,6 +15,45 @@
   to { opacity: 1; }
 }
 
+@keyframes logoReveal {
+  0% {
+    opacity: 0;
+    clip-path: inset(100% 10% 0 10%);
+    transform: scale(0.86) translateY(16px);
+  }
+  50% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: scale(1.03) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes logoAura {
+  0% {
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  45% {
+    filter: drop-shadow(0 14px 32px rgba(200, 182, 166, 0.22));
+  }
+  100% {
+    filter: drop-shadow(0 4px 14px rgba(200, 182, 166, 0.1));
+  }
+}
+
 /* ── Hero entrance ── */
 .hero__content > * {
   opacity: 0;
@@ -111,8 +150,9 @@
   transform-origin: left;
 }
 
+/* ── Logo ── */
 .logo:hover .logo__img {
-  opacity: 0.88;
+  filter: drop-shadow(0 6px 22px rgba(200, 182, 166, 0.3));
 }
 
 .footer__link:hover {
@@ -248,6 +288,20 @@
   .case-study:hover .case-study__media img,
   .whatsapp-float:hover {
     transform: none !important;
+  }
+
+  .logo__img,
+  .logo__tilt,
+  .logo__frame {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+  }
+
+  .logo:hover .logo__img {
+    filter: none !important;
   }
 
   .whatsapp-float.is-visible {
