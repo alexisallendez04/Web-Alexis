@@ -40,7 +40,7 @@
 
   --container: min(1140px, 100% - 2rem);
   --container-wide: min(1280px, 100% - 2rem);
-  --header-h: 76px;
+  --header-h: 88px;
 
   --radius-sm: 8px;
   --radius-md: 12px;

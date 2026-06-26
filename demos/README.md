@@ -21,7 +21,27 @@ Las capturas del hero para la landing principal están en `demos/imgdemos/`:
 ```
 demos/
 ├── gabrielacatania/
-└── Antonela Foniciello/
+│   ├── index.html
+│   ├── css/
+│   ├── js/
+│   └── assets/
+│       ├── icons/
+│       ├── images/
+│       └── fonts/
+└── antofoninutricion/
+    ├── index.html
+    ├── css/
+    │   ├── reset.css
+    │   ├── variables.css
+    │   ├── styles.css
+    │   └── animations.css
+    ├── js/
+    │   └── main.js
+    └── assets/
+        ├── icons/
+        ├── images/
+        ├── documents/
+        └── fonts/
 ```
 
 ## Agregar un proyecto

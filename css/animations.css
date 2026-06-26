@@ -111,8 +111,8 @@
   transform-origin: left;
 }
 
-.logo:hover {
-  color: var(--premium);
+.logo:hover .logo__img {
+  opacity: 0.88;
 }
 
 .footer__link:hover {

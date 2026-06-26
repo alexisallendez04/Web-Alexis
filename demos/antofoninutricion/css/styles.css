@@ -1,28 +1,6 @@
-/* ===== VARIABLES ===== */
-:root {
-    --primary-color: #F3722C;
-    --primary-dark: #D65A1F;
-    --primary-light: #FF8A4A;
-    --secondary-color: #90BE6D;
-    --secondary-dark: #7A9F5A;
-    --secondary-light: #A8D18A;
-    --accent-color: #F39C12;
-    --light-bg: #f8f9fa;
-    --white: #ffffff;
-    --text-dark: #2c3e50;
-    --text-light: #6c757d;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
-    --border-radius: 12px;
-    --transition: all 0.3s ease;
-}
-
-/* ===== GLOBAL STYLES ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url("reset.css");
+@import url("variables.css");
+@import url("animations.css");
 
 /* ===== MATRICULA BADGE ===== */
 .matricula-badge {
@@ -62,13 +40,6 @@
 .matricula-badge:hover .matricula-text {
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: var(--text-dark);
-    overflow-x: hidden;
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -534,11 +505,6 @@ body {
 }
 
 
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
 
 /* ===== ABOUT SECTION ===== */
 #about {
@@ -1381,143 +1347,6 @@ body {
     font-style: italic;
 }
 
-/* ===== ANIMATIONS ===== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-60px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(60px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes bounceIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.3);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.05);
-    }
-    70% {
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Animation classes with improved timing */
-.animate-fade-in-up {
-    animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    opacity: 0;
-}
-
-.animate-fade-in-down {
-    animation: fadeInDown 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    opacity: 0;
-}
-
-.animate-fade-in-left {
-    animation: fadeInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    opacity: 0;
-}
-
-.animate-fade-in-right {
-    animation: fadeInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    opacity: 0;
-}
-
-.animate-slide-in-left {
-    animation: slideInLeft 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    opacity: 0;
-}
-
-.animate-slide-in-right {
-    animation: slideInRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    opacity: 0;
-}
-
-.animate-scale-in {
-    animation: scaleIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    opacity: 0;
-}
-
-.animate-bounce-in {
-    animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-    opacity: 0;
-}
-
 /* Initial state for elements that will be animated */
 .service-card,
 .testimonial-card,
@@ -1535,11 +1364,6 @@ section:not(#home) {
     opacity: 1;
     transform: translateY(0);
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-section.animate-fade-in-up {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* Ensure navbar and hero are always visible */
@@ -1842,18 +1666,6 @@ html {
     opacity: 1;
     visibility: visible;
     right: 75px;
-}
-
-@keyframes whatsapp-pulse {
-    0% {
-        box-shadow: 0 4px 12px rgba(144, 190, 109, 0.4);
-    }
-    50% {
-        box-shadow: 0 4px 20px rgba(144, 190, 109, 0.6);
-    }
-    100% {
-        box-shadow: 0 4px 12px rgba(144, 190, 109, 0.4);
-    }
 }
 
 /* WhatsApp button responsive */
