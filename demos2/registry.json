@@ -1,0 +1,21 @@
+﻿{
+    "version":  1,
+    "demos":  [
+                  {
+                      "slug":  "ejemplo-demo",
+                      "nombre":  "Ejemplo Demo",
+                      "rubro":  "abogado",
+                      "estado":  "borrador",
+                      "creado":  "2026-07-02",
+                      "carpeta":  "ejemplo-demo"
+                  },
+                  {
+                      "slug":  "mvg-estudio-legal",
+                      "nombre":  "MVG Estudio Legal",
+                      "rubro":  "abogado",
+                      "estado":  "borrador",
+                      "creado":  "2026-07-02",
+                      "carpeta":  "mvg-estudio-legal"
+                  }
+              ]
+}

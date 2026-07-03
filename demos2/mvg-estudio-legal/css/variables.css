@@ -1,0 +1,42 @@
+:root {
+  /* ── Paleta MVG ── */
+  --color-primary: #3a3a3a;
+  --color-primary-hover: #8e7644;
+  --color-secondary: #f7f4ef;
+  --color-accent: #b89b5e;
+  --color-accent-hover: #8e7644;
+  --color-accent-muted: rgba(184, 155, 94, 0.15);
+  --color-bg: #ffffff;
+  --color-bg-alt: #f7f4ef;
+  --color-surface: #ffffff;
+  --color-text: #202020;
+  --color-muted: #6f6f6f;
+  --color-text-inverse: #ffffff;
+  --color-border: #e8e5e0;
+
+  /* ── Tipografía ── */
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* ── Layout ── */
+  --container: min(1200px, 100% - 3rem);
+  --container-pad-mobile: 1.5rem;
+  --container-pad-tablet: 3rem;
+  --container-pad-desktop: 5rem;
+  --section-gap-mobile: 4.375rem;
+  --section-gap-tablet: 5.625rem;
+  --section-gap-desktop: 7.5rem;
+  --header-h: 80px;
+
+  /* ── Forma ── */
+  --radius-btn: 10px;
+  --radius-card: 18px;
+
+  /* ── Sombras ── */
+  --shadow-card: 0 2px 12px rgba(32, 32, 32, 0.04);
+  --shadow-card-hover: 0 8px 24px rgba(32, 32, 32, 0.06);
+
+  /* ── Transiciones ── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration: 0.3s;
+}

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Adaro López Calot — Estudio jurídico especializado en Derecho de Familia. Asesoramiento cercano, presencial u online. Derecho Laboral, Civil y Sucesiones.">
+  <meta name="theme-color" content="#0f3d2e">
+  <title>Adaro López Calot | Derecho de Familia y Asesoramiento Jurídico</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#0f3d2e', dark: '#0a2d22', light: 'rgba(15,61,46,0.08)' },
+            secondary: { DEFAULT: '#65795a', light: '#8a9d82' },
+            accent: { DEFAULT: '#c9b98d', hover: '#b8a67c', muted: 'rgba(201,185,141,0.18)' },
+            cream: '#f7f3ec',
+            ink: '#2f2f2f',
+            muted: '#7a7a7a',
+            border: '#e8e2d8',
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            body: ['Montserrat', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 8px 28px rgba(15,61,46,0.06)',
+            card: '0 1px 3px rgba(47,47,47,0.04)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Animaciones scroll — sutiles, respetan reduced-motion */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      [data-reveal] { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+    /* Hero entrance */
+    .hero-enter { opacity: 0; animation: heroFade 0.7s ease forwards; }
+    .hero-enter-d1 { animation-delay: 0.1s; }
+    .hero-enter-d2 { animation-delay: 0.2s; }
+    .hero-enter-d3 { animation-delay: 0.3s; }
+    @keyframes heroFade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-enter { opacity: 1; animation: none; }
+    }
+    /* Navbar */
+    html { scroll-padding-top: 5rem; }
+    .skip-link {
+      position: absolute; top: -100%; left: 1rem; z-index: 100;
+      padding: 0.625rem 1rem; background: #0f3d2e; color: #f7f3ec;
+      font-size: 0.875rem; font-weight: 500; border-radius: 6px;
+      transition: top 0.3s ease;
+    }
+    .skip-link:focus { top: 1rem; }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: ''; position: absolute; left: 0; bottom: -4px; width: 100%; height: 1px;
+      background: #c9b98d; transform: scaleX(0); transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+    .nav-link:hover::after, .nav-link.is-active::after {
+      transform: scaleX(1); transform-origin: left;
+    }
+    .nav-toggle-bar { transition: transform 0.3s ease, opacity 0.3s ease; }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    body.nav-open { overflow: hidden; }
+  </style>
+</head>
+
+<body class="font-body text-ink bg-cream antialiased">
+
+  <a href="#inicio" class="skip-link">Ir al contenido</a>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       ★ CONFIGURACIÓN WHATSAPP — editar aquí
+       ═══════════════════════════════════════════════════════════ -->
+  <script>
+    const WHATSAPP_NUMBER = '5491145678900'; // sin + ni espacios
+    const WHATSAPP_MESSAGE = 'Hola, quiero contarles mi situación y saber cómo pueden ayudarme';
+    const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[data-wa]').forEach(el => {
+        el.href = WHATSAPP_URL;
+        if (el.tagName === 'A') {
+          el.target = '_blank';
+          el.rel = 'noopener noreferrer';
+        }
+      });
+    });
+  </script>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav
+    id="navbar"
+    class="fixed top-0 inset-x-0 z-50 h-16 md:h-[4.5rem] bg-cream/95 border-b border-transparent transition-shadow duration-300"
+    aria-label="Navegación principal"
+  >
+    <div class="max-w-6xl mx-auto px-5 h-full flex items-center justify-between gap-4">
+      <a href="#inicio" class="font-display text-lg md:text-xl font-medium text-primary shrink-0 hover:text-secondary transition-colors">
+        Adaro <span class="text-accent">López Calot</span>
+      </a>
+
+      <!-- Links desktop -->
+      <ul class="hidden lg:flex items-center gap-7">
+        <li><a href="#inicio" class="nav-link text-sm font-medium text-muted hover:text-primary transition-colors" data-nav-link>Inicio</a></li>
+        <li><a href="#nosotros" class="nav-link text-sm font-medium text-muted hover:text-primary transition-colors" data-nav-link>Nosotros</a></li>
+        <li><a href="#servicios" class="nav-link text-sm font-medium text-muted hover:text-primary transition-colors" data-nav-link>Servicios</a></li>
+        <li><a href="#proceso" class="nav-link text-sm font-medium text-muted hover:text-primary transition-colors" data-nav-link>Proceso</a></li>
+        <li><a href="#contacto" class="nav-link text-sm font-medium text-muted hover:text-primary transition-colors" data-nav-link>Contacto</a></li>
+      </ul>
+
+      <a
+        data-wa
+        href="#"
+        class="hidden lg:inline-flex items-center gap-2 min-h-[44px] px-5 py-2.5 text-sm font-semibold text-primary bg-accent hover:bg-accent-hover rounded-lg transition-colors duration-300 shrink-0"
+      >
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Consultar
+      </a>
+
+      <!-- Toggle móvil -->
+      <button
+        id="navToggle"
+        type="button"
+        class="nav-toggle lg:hidden flex flex-col justify-center gap-[5px] w-11 h-11 p-2.5 rounded-lg hover:bg-primary/5 transition-colors"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="navMobile"
+      >
+        <span class="nav-toggle-bar block w-full h-0.5 bg-primary rounded-full"></span>
+        <span class="nav-toggle-bar block w-full h-0.5 bg-primary rounded-full"></span>
+        <span class="nav-toggle-bar block w-full h-0.5 bg-primary rounded-full"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div
+    id="navMobile"
+    class="fixed inset-x-0 top-16 md:top-[4.5rem] z-40 lg:hidden bg-cream border-b border-border shadow-soft translate-y-[-110%] opacity-0 invisible transition-all duration-300 pointer-events-none"
+    aria-hidden="true"
+  >
+    <ul class="max-w-6xl mx-auto px-5 py-4 flex flex-col">
+      <li><a href="#inicio" class="block py-3.5 text-base font-medium text-primary border-b border-border/60" data-nav-link>Inicio</a></li>
+      <li><a href="#nosotros" class="block py-3.5 text-base font-medium text-primary border-b border-border/60" data-nav-link>Nosotros</a></li>
+      <li><a href="#servicios" class="block py-3.5 text-base font-medium text-primary border-b border-border/60" data-nav-link>Servicios</a></li>
+      <li><a href="#proceso" class="block py-3.5 text-base font-medium text-primary border-b border-border/60" data-nav-link>Proceso</a></li>
+      <li><a href="#contacto" class="block py-3.5 text-base font-medium text-primary border-b border-border/60" data-nav-link>Contacto</a></li>
+      <li class="pt-4">
+        <a data-wa href="#" class="flex items-center justify-center gap-2 w-full min-h-[48px] px-5 py-3 text-sm font-semibold text-primary bg-accent hover:bg-accent-hover rounded-lg transition-colors">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Consultar por WhatsApp
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <header id="inicio" class="relative min-h-[92svh] flex items-center overflow-hidden pt-16 md:pt-[4.5rem] scroll-mt-16 md:scroll-mt-[4.5rem]">
+    <!-- Fondo: formas geométricas suaves -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-24 -right-24 w-72 h-72 md:w-96 md:h-96 rounded-full bg-primary/5"></div>
+      <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-cream to-transparent"></div>
+      <div class="absolute top-1/3 left-[-10%] w-48 h-48 rounded-3xl bg-accent-muted rotate-12 opacity-60"></div>
+      <div class="absolute bottom-1/4 right-[5%] w-32 h-32 rounded-full border border-accent/30"></div>
+    </div>
+
+    <div class="relative w-full max-w-6xl mx-auto px-5 py-16 md:py-24">
+      <p class="hero-enter text-xs font-semibold tracking-widest uppercase text-accent mb-4">
+        Estudio Jurídico Adaro López Calot
+      </p>
+      <h1 class="hero-enter hero-enter-d1 font-display text-[clamp(2rem,7vw,3.5rem)] font-medium leading-tight text-primary max-w-2xl mb-5">
+        Tu problema legal, con la claridad y el acompañamiento que merece
+      </h1>
+      <p class="hero-enter hero-enter-d2 text-base md:text-lg text-muted leading-relaxed max-w-xl mb-8">
+        Asesoramiento jurídico cercano y directo, especializado en Derecho de Familia. Presencial u online.
+      </p>
+      <a
+        data-wa
+        href="#"
+        class="hero-enter hero-enter-d3 inline-flex items-center justify-center gap-3 w-full sm:w-auto min-h-[52px] px-8 py-4 text-base font-semibold text-primary bg-accent hover:bg-accent-hover rounded-lg shadow-soft transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      >
+        <!-- ícono WhatsApp -->
+        <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Contanos tu situación por WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══ SOBRE NOSOTROS ═══ -->
+    <section id="nosotros" class="py-16 md:py-24 bg-white scroll-mt-16 md:scroll-mt-[4.5rem]" aria-labelledby="about-title">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center mb-12" data-reveal>
+          <p class="text-xs font-semibold tracking-widest uppercase text-accent mb-3">Quiénes somos</p>
+          <h2 id="about-title" class="font-display text-3xl md:text-4xl font-medium text-primary">
+            Sobre nosotros
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-10" data-reveal>
+          <!-- Candelaria -->
+          <article class="p-6 md:p-8 rounded-2xl border border-border bg-cream/50">
+            <div class="w-14 h-14 rounded-full bg-accent-muted flex items-center justify-center mb-5">
+              <span class="font-display text-2xl text-primary">CL</span>
+            </div>
+            <h3 class="font-display text-2xl font-medium text-primary mb-1">Candelaria López Calot</h3>
+            <p class="text-sm text-accent font-medium mb-4">Abogada — Derecho de Familia</p>
+            <p class="text-sm text-muted leading-relaxed">
+              Graduada de la UBA con posgrado en Derecho de Familia. Más de 10 años acompañando a familias en procesos de divorcio, alimentos, tenencia y acuerdos. Su enfoque combina rigor técnico con una escucha genuina de cada situación.
+            </p>
+          </article>
+
+          <!-- Lucas -->
+          <article class="p-6 md:p-8 rounded-2xl border border-border bg-cream/50">
+            <div class="w-14 h-14 rounded-full bg-accent-muted flex items-center justify-center mb-5">
+              <span class="font-display text-2xl text-primary">LA</span>
+            </div>
+            <h3 class="font-display text-2xl font-medium text-primary mb-1">Lucas Adaro</h3>
+            <p class="text-sm text-accent font-medium mb-4">Abogado — Derecho Laboral y Civil</p>
+            <p class="text-sm text-muted leading-relaxed">
+              Especialista en conflictos laborales, contratos y sucesiones. Formación en la UBA y experiencia en litigios y mediación. Cree en explicar el derecho en palabras simples para que cada cliente tome decisiones informadas.
+            </p>
+          </article>
+        </div>
+
+        <p class="text-center text-sm text-muted max-w-2xl mx-auto leading-relaxed" data-reveal>
+          Trabajamos en equipo y, cuando el caso lo requiere, articulamos con profesionales matriculados asociados en otras áreas del derecho para brindar una respuesta integral.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICIOS ═══ -->
+    <section id="servicios" class="py-16 md:py-24 scroll-mt-16 md:scroll-mt-[4.5rem]" aria-labelledby="services-title">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center mb-12" data-reveal>
+          <p class="text-xs font-semibold tracking-widest uppercase text-accent mb-3">Áreas de práctica</p>
+          <h2 id="services-title" class="font-display text-3xl md:text-4xl font-medium text-primary">
+            Servicios
+          </h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          <!-- Card destacada: Familia -->
+          <article class="lg:row-span-2 p-7 md:p-9 rounded-2xl bg-primary text-cream relative overflow-hidden" data-reveal>
+            <span class="inline-block text-xs font-semibold tracking-widest uppercase bg-accent text-primary px-3 py-1 rounded-full mb-5">
+              Especialidad
+            </span>
+            <h3 class="font-display text-2xl md:text-3xl font-medium mb-4">Derecho de Familia</h3>
+            <p class="text-sm leading-relaxed text-cream/80 mb-6">
+              Divorcios, régimen de comunicación, alimentos, tenencia, adopciones y acuerdos familiares. Le acompañamos con sensibilidad en los momentos más difíciles, buscando soluciones justas y duraderas.
+            </p>
+            <ul class="text-sm text-cream/70 space-y-2 mb-8">
+              <li class="flex items-start gap-2"><span class="text-accent mt-0.5">—</span> Divorcios y separaciones</li>
+              <li class="flex items-start gap-2"><span class="text-accent mt-0.5">—</span> Alimentos y cuota alimentaria</li>
+              <li class="flex items-start gap-2"><span class="text-accent mt-0.5">—</span> Régimen de visitas y tenencia</li>
+              <li class="flex items-start gap-2"><span class="text-accent mt-0.5">—</span> Violencia familiar y medidas cautelares</li>
+            </ul>
+            <a data-wa href="#" class="inline-flex items-center gap-2 min-h-[48px] px-6 py-3 text-sm font-semibold bg-accent text-primary rounded-lg hover:bg-accent-hover transition-colors duration-300">
+              Consultar por WhatsApp
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-accent/10 pointer-events-none" aria-hidden="true"></div>
+          </article>
+
+          <!-- Tres cards secundarias -->
+          <article class="p-6 rounded-2xl border border-border bg-white hover:shadow-soft transition-shadow duration-300" data-reveal>
+            <h3 class="font-display text-xl font-medium text-primary mb-2">Derecho Laboral</h3>
+            <p class="text-sm text-muted leading-relaxed mb-5">
+              Despidos, accidentes de trabajo, diferencias salariales y asesoramiento a empleados y empleadores.
+            </p>
+            <a data-wa href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:text-primary transition-colors">
+              Consultar <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+
+          <article class="p-6 rounded-2xl border border-border bg-white hover:shadow-soft transition-shadow duration-300" data-reveal>
+            <h3 class="font-display text-xl font-medium text-primary mb-2">Derecho Civil</h3>
+            <p class="text-sm text-muted leading-relaxed mb-5">
+              Contratos, daños y perjuicios, responsabilidad civil y conflictos entre particulares.
+            </p>
+            <a data-wa href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:text-primary transition-colors">
+              Consultar <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+
+          <article class="p-6 rounded-2xl border border-border bg-white hover:shadow-soft transition-shadow duration-300 lg:col-start-2" data-reveal>
+            <h3 class="font-display text-xl font-medium text-primary mb-2">Sucesiones</h3>
+            <p class="text-sm text-muted leading-relaxed mb-5">
+              Tramitación de herencias, testamentos y planificación sucesoria con claridad y acompañamiento.
+            </p>
+            <a data-wa href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:text-primary transition-colors">
+              Consultar <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ POR QUÉ ELEGIRNOS ═══ -->
+    <section class="py-16 md:py-24 bg-white" aria-labelledby="why-title">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center mb-12" data-reveal>
+          <p class="text-xs font-semibold tracking-widest uppercase text-accent mb-3">Nuestra forma de trabajar</p>
+          <h2 id="why-title" class="font-display text-3xl md:text-4xl font-medium text-primary">
+            Por qué elegirnos
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8" data-reveal>
+          <!-- Cercanía -->
+          <div class="text-center p-4">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-accent-muted flex items-center justify-center text-accent">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="font-display text-lg font-medium text-primary mb-2">Cercanía</h3>
+            <p class="text-xs md:text-sm text-muted leading-relaxed">Hablamos en tu idioma, sin tecnicismos innecesarios.</p>
+          </div>
+          <!-- Profesionalismo -->
+          <div class="text-center p-4">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-accent-muted flex items-center justify-center text-accent">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="font-display text-lg font-medium text-primary mb-2">Profesionalismo</h3>
+            <p class="text-xs md:text-sm text-muted leading-relaxed">Formación sólida y experiencia en cada área que atendemos.</p>
+          </div>
+          <!-- Empatía -->
+          <div class="text-center p-4">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-accent-muted flex items-center justify-center text-accent">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="font-display text-lg font-medium text-primary mb-2">Empatía</h3>
+            <p class="text-xs md:text-sm text-muted leading-relaxed">Entendemos que detrás de cada caso hay personas y emociones.</p>
+          </div>
+          <!-- Rapidez -->
+          <div class="text-center p-4">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-accent-muted flex items-center justify-center text-accent">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="font-display text-lg font-medium text-primary mb-2">Rapidez</h3>
+            <p class="text-xs md:text-sm text-muted leading-relaxed">Respondemos a la brevedad. Su consulta no queda en espera.</p>
+          </div>
+          <!-- Transparencia -->
+          <div class="text-center p-4">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-accent-muted flex items-center justify-center text-accent">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="font-display text-lg font-medium text-primary mb-2">Transparencia</h3>
+            <p class="text-xs md:text-sm text-muted leading-relaxed">Honorarios y pasos claros desde el primer contacto.</p>
+          </div>
+          <!-- Confianza -->
+          <div class="text-center p-4">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-accent-muted flex items-center justify-center text-accent">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="font-display text-lg font-medium text-primary mb-2">Confianza</h3>
+            <p class="text-xs md:text-sm text-muted leading-relaxed">Confidencialidad absoluta. Su información está protegida.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CÓMO TRABAJAMOS ═══ -->
+    <section id="proceso" class="py-16 md:py-24 scroll-mt-16 md:scroll-mt-[4.5rem]" aria-labelledby="process-title">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center mb-12" data-reveal>
+          <p class="text-xs font-semibold tracking-widest uppercase text-accent mb-3">Simple y directo</p>
+          <h2 id="process-title" class="font-display text-3xl md:text-4xl font-medium text-primary">
+            Cómo trabajamos
+          </h2>
+        </div>
+
+        <ol class="grid md:grid-cols-3 gap-8 md:gap-6 relative" data-reveal>
+          <!-- línea conectora desktop -->
+          <div class="hidden md:block absolute top-8 left-[16%] right-[16%] h-px bg-border" aria-hidden="true"></div>
+
+          <li class="relative text-center md:text-left">
+            <div class="w-16 h-16 mx-auto md:mx-0 mb-5 rounded-full bg-primary text-cream flex items-center justify-center font-display text-2xl font-medium relative z-10">1</div>
+            <h3 class="font-display text-xl font-medium text-primary mb-2">Nos escribís por WhatsApp</h3>
+            <p class="text-sm text-muted leading-relaxed">Contanos tu situación con la confianza de que leemos cada mensaje con atención.</p>
+          </li>
+
+          <li class="relative text-center md:text-left">
+            <div class="w-16 h-16 mx-auto md:mx-0 mb-5 rounded-full bg-primary text-cream flex items-center justify-center font-display text-2xl font-medium relative z-10">2</div>
+            <h3 class="font-display text-xl font-medium text-primary mb-2">Te respondemos con claridad</h3>
+            <p class="text-sm text-muted leading-relaxed">Te explicamos qué opciones tenés, qué pasos seguir y qué podés esperar.</p>
+          </li>
+
+          <li class="relative text-center md:text-left">
+            <div class="w-16 h-16 mx-auto md:mx-0 mb-5 rounded-full bg-primary text-cream flex items-center justify-center font-display text-2xl font-medium relative z-10">3</div>
+            <h3 class="font-display text-xl font-medium text-primary mb-2">Avanzamos juntos</h3>
+            <p class="text-sm text-muted leading-relaxed">Presencial u online, a tu ritmo. Sin presiones ni compromisos antes de tiempo.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══ MODALIDAD Y DISPONIBILIDAD ═══ -->
+    <section class="py-16 md:py-20 bg-white" aria-labelledby="availability-title">
+      <div class="max-w-3xl mx-auto px-5 text-center" data-reveal>
+        <p class="text-xs font-semibold tracking-widest uppercase text-accent mb-3">Disponibilidad</p>
+        <h2 id="availability-title" class="font-display text-3xl md:text-4xl font-medium text-primary mb-6">
+          Modalidad y horarios
+        </h2>
+        <div class="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-8 p-6 md:p-8 rounded-2xl border border-border bg-cream/50">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-accent-muted flex items-center justify-center text-accent shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="text-left">
+              <p class="text-sm font-semibold text-primary">Presencial u online</p>
+              <p class="text-xs text-muted">Consultas por videollamada o en persona</p>
+            </div>
+          </div>
+          <div class="hidden sm:block w-px h-10 bg-border" aria-hidden="true"></div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-accent-muted flex items-center justify-center text-accent shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="text-left">
+              <p class="text-sm font-semibold text-primary">Lunes a viernes</p>
+              <p class="text-xs text-muted">De 8:00 a 18:00 hs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA FINAL ═══ -->
+    <section id="contacto" class="py-16 md:py-24 bg-primary scroll-mt-16 md:scroll-mt-[4.5rem]" aria-labelledby="cta-title">
+      <div class="max-w-3xl mx-auto px-5 text-center" data-reveal>
+        <h2 id="cta-title" class="font-display text-3xl md:text-4xl font-medium text-cream mb-4">
+          Sin vueltas, sin compromiso.<br>Contanos tu caso.
+        </h2>
+        <p class="text-sm text-cream/70 mb-8 max-w-md mx-auto">
+          Escribinos por WhatsApp y en minutos sabrás si podemos ayudarte. La primera orientación es sin cargo.
+        </p>
+        <a
+          data-wa
+          href="#"
+          class="inline-flex items-center justify-center gap-3 w-full sm:w-auto min-h-[56px] px-10 py-4 text-base font-semibold text-primary bg-accent hover:bg-accent-hover rounded-lg shadow-soft transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        >
+          <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Escribinos por WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="py-10 bg-primary-dark text-cream/60">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8">
+        <div>
+          <p class="font-display text-xl text-cream mb-1">Adaro López Calot</p>
+          <p class="text-sm">Estudio Jurídico — Derecho de Familia y más</p>
+        </div>
+        <div class="text-sm">
+          <p class="text-cream/80 font-medium mb-1">Horario de atención</p>
+          <p>Lunes a viernes, 8:00 a 18:00 hs</p>
+          <p class="mt-1">Presencial u online</p>
+        </div>
+        <!-- Redes sociales (opcional — descomentar y agregar URLs) -->
+        <!--
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-cream transition-colors" aria-label="Instagram">IG</a>
+          <a href="#" class="hover:text-cream transition-colors" aria-label="LinkedIn">IN</a>
+        </div>
+        -->
+      </div>
+      <p class="text-xs text-cream/40 border-t border-cream/10 pt-6">
+        © 2026 Adaro López Calot. Todos los derechos reservados. La información de este sitio no constituye asesoramiento legal. Consulte con un profesional matriculado.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ═══ WHATSAPP FLOTANTE (sticky) ═══ -->
+  <a
+    id="waFloat"
+    data-wa
+    href="#"
+    aria-label="Contactar por WhatsApp"
+    class="fixed bottom-5 right-5 z-50 flex items-center justify-center w-14 h-14 min-w-[56px] min-h-[56px] bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#1fb855] transition-all duration-300 opacity-0 translate-y-3 pointer-events-none"
+  >
+    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ═══ SCRIPTS: scroll reveal + botón flotante ═══ -->
+  <script>
+    // Fade-in al scroll
+    (function () {
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const els = document.querySelectorAll('[data-reveal]');
+      if (reduced) { els.forEach(el => el.classList.add('is-visible')); return; }
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          e.target.classList.add('is-visible');
+          obs.unobserve(e.target);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+      els.forEach(el => obs.observe(el));
+    })();
+
+    // Botón flotante visible tras scroll
+    (function () {
+      const btn = document.getElementById('waFloat');
+      if (!btn) return;
+      const show = () => {
+        const visible = window.scrollY > 200;
+        btn.classList.toggle('opacity-100', visible);
+        btn.classList.toggle('translate-y-0', visible);
+        btn.classList.toggle('pointer-events-auto', visible);
+        btn.classList.toggle('opacity-0', !visible);
+        btn.classList.toggle('translate-y-3', !visible);
+        btn.classList.toggle('pointer-events-none', !visible);
+      };
+      window.addEventListener('scroll', show, { passive: true });
+      show();
+    })();
+
+    // Navbar: menú móvil, scroll suave, link activo, sombra al scroll
+    (function () {
+      const navbar = document.getElementById('navbar');
+      const navToggle = document.getElementById('navToggle');
+      const navMobile = document.getElementById('navMobile');
+      const navLinks = document.querySelectorAll('[data-nav-link]');
+      const sectionIds = ['inicio', 'nosotros', 'servicios', 'proceso', 'contacto'];
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const closeMenu = () => {
+        if (!navToggle || !navMobile) return;
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+        navMobile.classList.add('translate-y-[-110%]', 'opacity-0', 'invisible', 'pointer-events-none');
+        navMobile.classList.remove('translate-y-0', 'opacity-100', 'visible', 'pointer-events-auto');
+        navMobile.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('nav-open');
+      };
+
+      const openMenu = () => {
+        if (!navToggle || !navMobile) return;
+        navToggle.setAttribute('aria-expanded', 'true');
+        navToggle.setAttribute('aria-label', 'Cerrar menú');
+        navMobile.classList.remove('translate-y-[-110%]', 'opacity-0', 'invisible', 'pointer-events-none');
+        navMobile.classList.add('translate-y-0', 'opacity-100', 'visible', 'pointer-events-auto');
+        navMobile.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('nav-open');
+      };
+
+      navToggle?.addEventListener('click', () => {
+        navToggle.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
+      });
+
+      navMobile?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1024) closeMenu();
+      });
+
+      const setActiveLink = () => {
+        const offset = (navbar?.offsetHeight ?? 72) + 32;
+        const scrollPos = window.scrollY + offset;
+        let current = 'inicio';
+        sectionIds.forEach(id => {
+          const el = document.getElementById(id);
+          if (el && el.offsetTop <= scrollPos) current = id;
+        });
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href')?.slice(1);
+          link.classList.toggle('is-active', href === current);
+          if (href === current) {
+            link.classList.add('text-primary');
+            link.classList.remove('text-muted');
+          } else if (link.classList.contains('nav-link')) {
+            link.classList.remove('text-primary');
+            link.classList.add('text-muted');
+          }
+        });
+      };
+
+      const onScroll = () => {
+        navbar?.classList.toggle('border-border', window.scrollY > 10);
+        navbar?.classList.toggle('shadow-card', window.scrollY > 10);
+        setActiveLink();
+      };
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+          const id = anchor.getAttribute('href');
+          if (!id || id === '#') return;
+          const target = document.querySelector(id);
+          if (!target) return;
+          e.preventDefault();
+          const top = target.getBoundingClientRect().top + window.scrollY - (navbar?.offsetHeight ?? 72);
+          window.scrollTo({ top, behavior: reduced ? 'auto' : 'smooth' });
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

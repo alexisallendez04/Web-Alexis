@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://mvg-estudio-legal.tudominio.com/sitemap.xml

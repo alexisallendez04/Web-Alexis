@@ -1,0 +1,10 @@
+{
+  "slug": "{{SLUG}}",
+  "nombre": "{{NOMBRE}}",
+  "rubro": "abogado",
+  "estado": "borrador",
+  "creado": "{{FECHA}}",
+  "contactado": null,
+  "url_demo": "",
+  "notas": ""
+}

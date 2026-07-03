@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MVG Estudio Legal — Especialistas en Derecho de Familia. Asesoramiento cercano, claro y confidencial en divorcios, alimentos, régimen de visitas y más.">
+  <meta name="theme-color" content="#3A3A3A">
+  <title>MVG Estudio Legal | Derecho de Familia</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#3A3A3A', hover: '#8E7644' },
+            secondary: '#F7F4EF',
+            accent: { DEFAULT: '#B89B5E', hover: '#8E7644', muted: 'rgba(184,155,94,0.15)' },
+            ink: '#202020',
+            muted: '#6F6F6F',
+            border: '#E8E5E0',
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          maxWidth: { site: '1200px' },
+          boxShadow: {
+            card: '0 2px 12px rgba(32,32,32,0.04)',
+            'card-hover': '0 8px 24px rgba(32,32,32,0.06)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html.lenis, html.lenis body { height: auto; }
+    .lenis.lenis-smooth { scroll-behavior: auto !important; }
+    html { scroll-padding-top: 5rem; }
+
+    /* ── Scrollbar personalizada ── */
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: #B89B5E #F7F4EF;
+    }
+    ::-webkit-scrollbar { width: 9px; }
+    ::-webkit-scrollbar-track {
+      background: #F7F4EF;
+      border-left: 1px solid #E8E5E0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #B89B5E 0%, #8E7644 100%);
+      border-radius: 100px;
+      border: 2px solid #F7F4EF;
+    }
+    ::-webkit-scrollbar-thumb:hover { background: #3A3A3A; }
+
+    /* ── Reveal tipo Framer ── */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(36px) scale(0.98);
+      transition:
+        opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    [data-reveal-child] {
+      opacity: 0;
+      transform: translateY(28px) scale(0.98);
+      transition:
+        opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: calc(var(--i, 0) * 0.09s);
+      will-change: opacity, transform;
+    }
+    [data-reveal-stagger].is-visible [data-reveal-child] {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    [data-parallax] {
+      transition: transform 0.1s linear;
+      will-change: transform;
+    }
+
+    .hero-enter { opacity: 0; animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .hero-enter-d1 { animation-delay: 0.1s; }
+    .hero-enter-d2 { animation-delay: 0.22s; }
+    .hero-enter-d3 { animation-delay: 0.34s; }
+    .hero-enter-d4 { animation-delay: 0.46s; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px) scale(0.98); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      [data-reveal], [data-reveal-child], .hero-enter {
+        opacity: 1; transform: none; animation: none; transition: none;
+      }
+      .testimonials-track { animation: none !important; }
+      [data-parallax] { transform: none !important; }
+    }
+
+    .skip-link {
+      position: absolute; top: -100%; left: 1rem; z-index: 100;
+      padding: 0.625rem 1rem; background: #3A3A3A; color: #fff;
+      font-size: 0.875rem; font-weight: 500; border-radius: 10px;
+      transition: top 0.3s ease;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: ''; position: absolute; left: 0; bottom: -3px; width: 100%; height: 1px;
+      background: #B89B5E; transform: scaleX(0); transform-origin: right;
+      transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
+    }
+    .nav-link:hover::after, .nav-link.is-active::after {
+      transform: scaleX(1); transform-origin: left;
+    }
+
+    .nav-toggle-bar { transition: transform 0.3s ease, opacity 0.3s ease; }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    body.nav-open { overflow: hidden; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 1rem 2rem; border-radius: 10px; font-weight: 500; font-size: 0.9375rem;
+      background: #3A3A3A; color: #fff;
+      transition: background 0.3s cubic-bezier(0.16,1,0.3,1), transform 0.3s cubic-bezier(0.16,1,0.3,1);
+    }
+    .btn-primary:hover { background: #8E7644; }
+
+    .btn-whatsapp {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 1rem 2rem; border-radius: 10px; font-weight: 500; font-size: 0.9375rem;
+      background: #3A3A3A; color: #fff;
+      transition: background 0.3s cubic-bezier(0.16,1,0.3,1);
+    }
+    .btn-whatsapp:hover { background: #8E7644; }
+
+    .wa-float {
+      background: #3A3A3A;
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(32,32,32,0.18);
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .wa-float:hover {
+      background: #8E7644;
+      box-shadow: 0 12px 32px rgba(32,32,32,0.22);
+    }
+
+    .btn-outline-light {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0.75rem 1.5rem; border-radius: 10px; font-weight: 500; font-size: 0.875rem;
+      background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.35);
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+    .btn-outline-light:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #B89B5E;
+    }
+
+    /* Ícono WhatsApp dorado minimalista */
+    .wa-icon {
+      width: 1.05rem;
+      height: 1.05rem;
+      flex-shrink: 0;
+      color: #B89B5E;
+      transition: color 0.3s ease;
+    }
+    .wa-icon--float {
+      width: 1.375rem;
+      height: 1.375rem;
+    }
+    .btn-primary:hover .wa-icon,
+    .btn-whatsapp:hover .wa-icon,
+    .wa-float:hover .wa-icon {
+      color: #E8D5B0;
+    }
+    .btn-outline-light .wa-icon { color: #B89B5E; }
+    .btn-outline-light:hover .wa-icon { color: #E8D5B0; }
+    .btn-ghost .wa-icon { color: #B89B5E; }
+    .btn-ghost:hover .wa-icon { color: #8E7644; }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.875rem; font-weight: 500; color: #3A3A3A;
+      transition: color 0.25s ease, gap 0.25s ease;
+    }
+    .btn-ghost:hover { color: #8E7644; gap: 0.5rem; }
+
+    .cta-band {
+      margin-top: 3rem;
+      padding: 2rem;
+      border-radius: 18px;
+      border: 1px solid #E8E5E0;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+    @media (min-width: 640px) {
+      .cta-band { flex-direction: row; justify-content: space-between; text-align: left; }
+    }
+
+    .trust-pill {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.5rem 1rem; border-radius: 100px;
+      background: rgba(184,155,94,0.12); color: #8E7644;
+      font-size: 0.8125rem; font-weight: 500;
+    }
+
+    .btn-secondary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 1rem 2rem; border-radius: 10px; font-weight: 500; font-size: 0.9375rem;
+      background: transparent; color: #3A3A3A; border: 1px solid #3A3A3A;
+      transition: background 0.3s cubic-bezier(0.16,1,0.3,1), color 0.3s cubic-bezier(0.16,1,0.3,1);
+    }
+    .btn-secondary:hover { background: #3A3A3A; color: #fff; }
+
+    .card {
+      background: #fff; border: 1px solid #E8E5E0; border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(32,32,32,0.04);
+      transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s cubic-bezier(0.16,1,0.3,1);
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(32,32,32,0.06); }
+
+    .section-pad { padding-top: 4.375rem; padding-bottom: 4.375rem; }
+    @media (min-width: 768px) { .section-pad { padding-top: 5.625rem; padding-bottom: 5.625rem; } }
+    @media (min-width: 1024px) { .section-pad { padding-top: 7.5rem; padding-bottom: 7.5rem; } }
+
+    .site-x { padding-left: 1.5rem; padding-right: 1.5rem; }
+    @media (min-width: 768px) { .site-x { padding-left: 3rem; padding-right: 3rem; } }
+    @media (min-width: 1024px) { .site-x { padding-left: 5rem; padding-right: 5rem; } }
+
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.16,1,0.3,1); }
+    .faq-item.is-open .faq-answer { max-height: 20rem; }
+    .faq-item.is-open .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); }
+
+    .gold-line { width: 40px; height: 1px; background: #B89B5E; }
+    .gold-line--long { width: 64px; }
+
+    /* ── Textura y detalles visuales ── */
+    .bg-texture {
+      background-color: #F7F4EF;
+      background-image: radial-gradient(rgba(184,155,94,0.055) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .bg-texture-light {
+      background-image: radial-gradient(rgba(184,155,94,0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    .section-divider {
+      display: flex; align-items: center; justify-content: center;
+      gap: 1rem; padding-block: 0.25rem;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: ''; flex: 1; max-width: 120px; height: 1px;
+      background: linear-gradient(90deg, transparent, #E8E5E0, transparent);
+    }
+    .section-divider span {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #B89B5E; opacity: 0.7;
+    }
+
+    .icon-line {
+      width: 1.25rem; height: 1.25rem;
+      color: #B89B5E; flex-shrink: 0;
+    }
+
+    /* Panel gráfico de marca (sin foto) */
+    .brand-panel {
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 420px;
+      padding: 3rem 2rem;
+    }
+    .brand-panel--hero { min-height: 480px; max-height: 560px; }
+    .brand-panel__frame {
+      position: relative;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      width: 100%; max-width: 340px;
+      aspect-ratio: 4/5;
+      border: 1px solid #E8E5E0;
+      border-radius: 18px;
+      background: #fff;
+      overflow: hidden;
+    }
+    .brand-panel__frame::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(184,155,94,0.08) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .brand-panel__ring {
+      position: absolute;
+      border: 1px solid rgba(184,155,94,0.2);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .brand-panel__ring--1 { width: 88%; height: 88%; top: 6%; left: 6%; }
+    .brand-panel__ring--2 { width: 62%; height: 62%; top: 19%; left: 19%; opacity: 0.6; }
+    .brand-panel__monogram {
+      position: relative; z-index: 2;
+      font-size: 3.25rem; font-weight: 600;
+      color: #3A3A3A; letter-spacing: 0.14em;
+      line-height: 1;
+    }
+    .brand-panel__monogram span { color: #B89B5E; font-style: italic; font-weight: 400; }
+    .brand-panel__tagline {
+      position: relative; z-index: 2;
+      margin-top: 0.5rem;
+      font-size: 0.6875rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: #6F6F6F;
+    }
+    .brand-panel__scale {
+      position: relative; z-index: 2;
+      width: 2.5rem; height: 2.5rem;
+      margin-top: 1.75rem;
+      color: #B89B5E;
+      opacity: 0.85;
+    }
+    .brand-panel__corner {
+      position: absolute; width: 2.5rem; height: 2.5rem;
+      border-color: rgba(184,155,94,0.35); border-style: solid;
+      pointer-events: none;
+    }
+    .brand-panel__corner--tl { top: 1rem; left: 1rem; border-width: 1px 0 0 1px; }
+    .brand-panel__corner--br { bottom: 1rem; right: 1rem; border-width: 0 1px 1px 0; }
+
+    .info-block {
+      display: flex; gap: 1rem; padding: 1.25rem 0;
+      border-bottom: 1px solid #E8E5E0;
+    }
+    .info-block:last-child { border-bottom: none; padding-bottom: 0; }
+    .info-block__icon {
+      width: 2.5rem; height: 2.5rem;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid #E8E5E0; border-radius: 10px;
+      background: #fff; flex-shrink: 0;
+    }
+    .info-block__title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.125rem; font-weight: 600;
+      color: #202020; margin-bottom: 0.25rem;
+    }
+    .info-block__text { font-size: 0.875rem; color: #6F6F6F; line-height: 1.6; }
+
+    .footer-wordmark {
+      display: flex; align-items: center; justify-content: center;
+      width: 3rem; height: 3rem;
+      border: 1px solid rgba(184,155,94,0.45);
+      border-radius: 50%;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 0.875rem; font-weight: 600;
+      letter-spacing: 0.08em; color: #fff;
+      transition: border-color 0.3s ease, color 0.3s ease;
+    }
+    .footer-wordmark span { color: #B89B5E; font-style: italic; font-weight: 400; }
+    .footer-wordmark:hover { border-color: #B89B5E; color: #E8D5B0; }
+
+    input, textarea {
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    input:focus, textarea:focus {
+      outline: none; border-color: #B89B5E;
+      box-shadow: 0 0 0 3px rgba(184,155,94,0.15);
+    }
+
+    /* ── Navbar: logo centrado ── */
+    .nav-inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .nav-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.3s ease;
+    }
+    .nav-logo:hover { opacity: 0.85; }
+    .nav-wordmark {
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; line-height: 1.1;
+    }
+    .nav-wordmark__name {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.375rem; font-weight: 600;
+      letter-spacing: 0.1em; color: #202020;
+    }
+    .nav-wordmark__name span { color: #B89B5E; font-style: italic; font-weight: 400; }
+    .nav-wordmark__sub {
+      font-size: 0.5625rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: #6F6F6F; margin-top: 0.125rem;
+    }
+    @media (min-width: 1024px) {
+      .nav-wordmark__name { font-size: 1.5rem; }
+    }
+    .nav-left, .nav-right {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+    }
+    .nav-left { flex: 1; }
+    .nav-right { flex: 1; justify-content: flex-end; }
+
+    /* ── Testimonios: una sola fila ── */
+    .testimonials-wrap {
+      mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    }
+    .testimonials-track {
+      display: flex;
+      gap: 1.25rem;
+      width: max-content;
+      padding-block: 0.25rem;
+      animation: marquee-left 70s linear infinite;
+    }
+    .testimonials-wrap:hover .testimonials-track {
+      animation-play-state: paused;
+    }
+    @keyframes marquee-left {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    .testimonial-card {
+      flex: 0 0 auto;
+      width: min(340px, 82vw);
+      background: #fff;
+      border: 1px solid #E8E5E0;
+      border-radius: 18px;
+      padding: 1.75rem;
+      box-shadow: 0 2px 12px rgba(32,32,32,0.04);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 12px 32px rgba(32,32,32,0.08);
+    }
+
+    @media (max-width: 1023px) {
+      .testimonials-static {
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: #B89B5E #F7F4EF;
+      }
+      .testimonials-static .testimonial-card {
+        scroll-snap-align: start;
+        width: min(300px, 85vw);
+      }
+      .testimonials-static::-webkit-scrollbar { height: 6px; }
+      .testimonials-static::-webkit-scrollbar-track { background: #F7F4EF; border-radius: 100px; }
+      .testimonials-static::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, #B89B5E, #8E7644);
+        border-radius: 100px;
+      }
+      .testimonials-wrap { display: none; }
+    }
+    @media (min-width: 1024px) {
+      .testimonials-static { display: none; }
+    }
+  </style>
+</head>
+
+<body class="font-body text-ink bg-white antialiased">
+
+  <a href="#inicio" class="skip-link">Ir al contenido</a>
+
+  <script>
+    const WHATSAPP_NUMBER = '5491100000000';
+    const WHATSAPP_MESSAGE = 'Hola, quisiera solicitar una consulta con MVG Estudio Legal.';
+    const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+    document.addEventListener('DOMContentLoaded', () => {
+      const WA_ICON = '<svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
+
+      document.querySelectorAll('[data-wa]').forEach(el => {
+        const msg = el.dataset.waMsg || WHATSAPP_MESSAGE;
+        el.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+        if (el.tagName === 'A') { el.target = '_blank'; el.rel = 'noopener noreferrer'; }
+
+        if (el.querySelector('.wa-icon')) return;
+
+        if (el.id === 'waFloat') {
+          el.innerHTML = WA_ICON.replace('wa-icon', 'wa-icon wa-icon--float');
+          return;
+        }
+
+        if (el.classList.contains('btn-ghost')) {
+          const arrow = el.querySelector('span[aria-hidden="true"]');
+          if (arrow) arrow.remove();
+          el.insertAdjacentHTML('afterbegin', WA_ICON);
+          return;
+        }
+
+        if (el.classList.contains('btn-primary') || el.classList.contains('btn-whatsapp') || el.classList.contains('btn-secondary') || el.classList.contains('btn-outline-light')) {
+          el.insertAdjacentHTML('afterbegin', WA_ICON);
+        }
+      });
+    });
+  </script>
+
+  <!-- HEADER -->
+  <header
+    id="navbar"
+    class="fixed top-0 inset-x-0 z-50 h-20 bg-white/95 backdrop-blur-sm border-b border-transparent transition-shadow duration-300"
+    aria-label="Navegación principal"
+  >
+    <div class="max-w-site mx-auto site-x nav-inner">
+
+      <!-- Izquierda: links + menú móvil -->
+      <div class="nav-left gap-4">
+        <button
+          id="navToggle" type="button"
+          class="nav-toggle lg:hidden flex flex-col justify-center gap-[5px] w-11 h-11 p-2.5 rounded-[10px] hover:bg-secondary transition-colors shrink-0"
+          aria-label="Abrir menú" aria-expanded="false" aria-controls="navMobile"
+        >
+          <span class="nav-toggle-bar block w-full h-0.5 bg-primary rounded-full"></span>
+          <span class="nav-toggle-bar block w-full h-0.5 bg-primary rounded-full"></span>
+          <span class="nav-toggle-bar block w-full h-0.5 bg-primary rounded-full"></span>
+        </button>
+
+        <ul class="hidden lg:flex items-center gap-6 xl:gap-8">
+          <li><a href="#areas" class="nav-link text-sm font-medium text-muted hover:text-ink transition-colors" data-nav-link>Áreas</a></li>
+          <li><a href="#proceso" class="nav-link text-sm font-medium text-muted hover:text-ink transition-colors" data-nav-link>Proceso</a></li>
+          <li><a href="#faq" class="nav-link text-sm font-medium text-muted hover:text-ink transition-colors" data-nav-link>FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Centro: marca tipográfica -->
+      <a href="#inicio" class="nav-logo" aria-label="MVG Estudio Legal — Inicio">
+        <span class="nav-wordmark">
+          <span class="nav-wordmark__name font-display">M<span>V</span>G</span>
+          <span class="nav-wordmark__sub">Estudio Legal</span>
+        </span>
+      </a>
+
+      <!-- Derecha: links + CTA -->
+      <div class="nav-right gap-4 xl:gap-6">
+        <a data-wa href="#" class="hidden lg:inline-flex btn-whatsapp text-sm min-h-[44px] py-3 px-6 shrink-0">
+          Consultar ahora
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Menú móvil -->
+  <div
+    id="navMobile"
+    class="fixed inset-x-0 top-20 z-40 lg:hidden bg-white border-b border-border shadow-card translate-y-[-110%] opacity-0 invisible transition-all duration-300 pointer-events-none"
+    aria-hidden="true"
+  >
+    <ul class="max-w-site mx-auto site-x py-4 flex flex-col">
+      <li><a href="#areas" class="block py-3.5 text-base font-medium text-ink border-b border-border" data-nav-link>Áreas</a></li>
+      <li><a href="#proceso" class="block py-3.5 text-base font-medium text-ink border-b border-border" data-nav-link>Proceso</a></li>
+      <li><a href="#testimonios" class="block py-3.5 text-base font-medium text-ink border-b border-border" data-nav-link>Testimonios</a></li>
+      <li><a href="#faq" class="block py-3.5 text-base font-medium text-ink border-b border-border" data-nav-link>FAQ</a></li>
+      <li class="pt-4 flex flex-col gap-3">
+        <a data-wa href="#" class="btn-whatsapp w-full text-center justify-center">Solicitar consulta</a>
+        <a href="#contacto" class="btn-secondary w-full text-center justify-center">Formulario de contacto</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="inicio" class="relative pt-20 min-h-[92svh] flex items-center bg-white bg-texture-light scroll-mt-20 overflow-hidden">
+    <div class="max-w-site mx-auto site-x w-full py-16 lg:py-24">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <div class="hero-enter flex items-center gap-3 mb-6">
+            <span class="gold-line"></span>
+            <p class="text-xs font-semibold tracking-[0.15em] uppercase text-accent">Derecho de Familia</p>
+          </div>
+          <h1 class="hero-enter hero-enter-d1 font-display text-[clamp(2.25rem,5.5vw,3.75rem)] font-semibold leading-[1.1] text-ink mb-5">
+            Resolvé tu situación familiar con un abogado que te escucha
+          </h1>
+          <p class="hero-enter hero-enter-d2 text-base lg:text-lg text-muted leading-relaxed max-w-lg mb-6">
+            Divorcios, alimentos, visitas y más. Asesoramiento claro, humano y confidencial — presencial u online.
+          </p>
+          <p class="hero-enter hero-enter-d2 trust-pill mb-8">
+            Primera consulta sin compromiso
+          </p>
+          <div class="hero-enter hero-enter-d3 flex flex-col sm:flex-row gap-4">
+            <a data-wa href="#" class="btn-whatsapp min-h-[52px]">
+              Solicitar consulta
+            </a>
+            <a href="#areas" class="btn-secondary min-h-[52px]">Ver áreas de práctica</a>
+          </div>
+        </div>
+
+        <div class="hero-enter hero-enter-d4 brand-panel brand-panel--hero" data-parallax data-parallax-speed="0.08">
+          <div class="brand-panel__frame">
+            <span class="brand-panel__ring brand-panel__ring--1" aria-hidden="true"></span>
+            <span class="brand-panel__ring brand-panel__ring--2" aria-hidden="true"></span>
+            <span class="brand-panel__corner brand-panel__corner--tl" aria-hidden="true"></span>
+            <span class="brand-panel__corner brand-panel__corner--br" aria-hidden="true"></span>
+            <p class="brand-panel__monogram font-display">M<span>V</span>G</p>
+            <p class="brand-panel__tagline">Estudio Legal</p>
+            <svg class="brand-panel__scale" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" aria-hidden="true">
+              <line x1="12" y1="3" x2="12" y2="21"/>
+              <path d="M5 7h14M7 7a5 5 0 0 0 10 0"/>
+              <path d="M6 17h12M8 17a4 4 0 0 0 8 0"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- SOBRE EL ESTUDIO -->
+    <section id="nosotros" class="section-pad bg-secondary bg-texture scroll-mt-20" aria-labelledby="about-title">
+      <div class="max-w-site mx-auto site-x">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div data-reveal>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="gold-line gold-line--long"></span>
+              <p class="text-xs font-semibold tracking-[0.15em] uppercase text-accent">Sobre el estudio</p>
+            </div>
+            <h2 id="about-title" class="font-display text-3xl lg:text-[2.75rem] font-semibold text-ink leading-tight mb-5">
+              Abogados de familia que hablan claro
+            </h2>
+            <p class="text-muted leading-relaxed mb-8">
+              En MVG Estudio Legal acompañamos a personas en momentos difíciles con rigor técnico, trato directo y total confidencialidad. Sin tecnicismos innecesarios: le explicamos sus opciones para que decida con tranquilidad.
+            </p>
+
+            <div class="mb-8">
+              <div class="info-block">
+                <div class="info-block__icon">
+                  <img src="assets/icons/icon-briefcase.svg" alt="" class="icon-line" width="20" height="20">
+                </div>
+                <div>
+                  <h3 class="info-block__title">Experiencia</h3>
+                  <p class="info-block__text">Trayectoria en Derecho de Familia con enfoque en divorcios, alimentos, régimen de visitas y acuerdos entre partes.</p>
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="info-block__icon">
+                  <img src="assets/icons/icon-scale.svg" alt="" class="icon-line" width="20" height="20">
+                </div>
+                <div>
+                  <h3 class="info-block__title">Especialidades</h3>
+                  <p class="info-block__text">Divorcio, cuota alimentaria, tenencia y visitas, violencia familiar, adopción y mediación pre-judicial.</p>
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="info-block__icon">
+                  <img src="assets/icons/icon-shield.svg" alt="" class="icon-line" width="20" height="20">
+                </div>
+                <div>
+                  <h3 class="info-block__title">Valores</h3>
+                  <p class="info-block__text">Confidencialidad, empatía y claridad. Cada caso se trata con la seriedad y el respeto que merece.</p>
+                </div>
+              </div>
+            </div>
+
+            <a data-wa href="#" class="btn-primary min-h-[48px]">Agendar consulta gratuita</a>
+          </div>
+
+          <div class="brand-panel" data-reveal>
+            <div class="brand-panel__frame">
+              <span class="brand-panel__ring brand-panel__ring--1" aria-hidden="true"></span>
+              <span class="brand-panel__ring brand-panel__ring--2" aria-hidden="true"></span>
+              <span class="brand-panel__corner brand-panel__corner--tl" aria-hidden="true"></span>
+              <span class="brand-panel__corner brand-panel__corner--br" aria-hidden="true"></span>
+              <p class="brand-panel__monogram font-display">M<span>V</span>G</p>
+              <p class="brand-panel__tagline">Estudio Legal</p>
+              <svg class="brand-panel__scale" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" aria-hidden="true">
+                <line x1="12" y1="3" x2="12" y2="21"/>
+                <path d="M5 7h14M7 7a5 5 0 0 0 10 0"/>
+                <path d="M6 17h12M8 17a4 4 0 0 0 8 0"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider bg-white" aria-hidden="true"><span></span></div>
+
+    <!-- ÁREAS DE PRÁCTICA -->
+    <section id="areas" class="section-pad bg-white scroll-mt-20" aria-labelledby="areas-title">
+      <div class="max-w-site mx-auto site-x">
+        <div class="max-w-2xl mb-14" data-reveal>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="gold-line"></span>
+            <p class="text-xs font-semibold tracking-[0.15em] uppercase text-accent">Áreas de Práctica</p>
+          </div>
+          <h2 id="areas-title" class="font-display text-3xl lg:text-[2.75rem] font-semibold text-ink leading-tight mb-3">
+            ¿En qué podemos ayudarle?
+          </h2>
+          <p class="text-muted leading-relaxed">Seleccione su situación y consulte sin compromiso.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-reveal-stagger>
+          <article class="card p-7 flex flex-col" data-reveal-child style="--i:0">
+            <div class="w-10 h-10 rounded-[10px] bg-accent-muted flex items-center justify-center text-accent mb-5">
+              <img src="assets/icons/icon-document.svg" alt="" class="w-5 h-5" width="20" height="20">
+            </div>
+            <h3 class="font-display text-xl font-semibold text-ink mb-2">Divorcios</h3>
+            <p class="text-sm text-muted leading-relaxed mb-5 flex-1">Común acuerdo o unilateral. Lo guiamos en cada paso.</p>
+            <a data-wa data-wa-msg="Hola, necesito asesoramiento sobre un divorcio." href="#" class="btn-ghost">Consultar <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card p-7 flex flex-col" data-reveal-child style="--i:1">
+            <div class="w-10 h-10 rounded-[10px] bg-accent-muted flex items-center justify-center text-accent mb-5">
+              <img src="assets/icons/icon-scale.svg" alt="" class="w-5 h-5" width="20" height="20">
+            </div>
+            <h3 class="font-display text-xl font-semibold text-ink mb-2">Cuota Alimentaria</h3>
+            <p class="text-sm text-muted leading-relaxed mb-5 flex-1">Fijación, revisión y ejecución de alimentos.</p>
+            <a data-wa data-wa-msg="Hola, necesito asesoramiento sobre cuota alimentaria." href="#" class="btn-ghost">Consultar <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card p-7 flex flex-col" data-reveal-child style="--i:2">
+            <div class="w-10 h-10 rounded-[10px] bg-accent-muted flex items-center justify-center text-accent mb-5">
+              <img src="assets/icons/icon-users.svg" alt="" class="w-5 h-5" width="20" height="20">
+            </div>
+            <h3 class="font-display text-xl font-semibold text-ink mb-2">Régimen de Visitas</h3>
+            <p class="text-sm text-muted leading-relaxed mb-5 flex-1">Tenencia, cuidado personal y comunicación con los hijos.</p>
+            <a data-wa data-wa-msg="Hola, necesito asesoramiento sobre régimen de visitas." href="#" class="btn-ghost">Consultar <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card p-7 flex flex-col" data-reveal-child style="--i:3">
+            <div class="w-10 h-10 rounded-[10px] bg-accent-muted flex items-center justify-center text-accent mb-5">
+              <img src="assets/icons/icon-home.svg" alt="" class="w-5 h-5" width="20" height="20">
+            </div>
+            <h3 class="font-display text-xl font-semibold text-ink mb-2">Sucesiones</h3>
+            <p class="text-sm text-muted leading-relaxed mb-5 flex-1">Herencias y declaratoria de herederos con claridad.</p>
+            <a data-wa data-wa-msg="Hola, necesito asesoramiento sobre una sucesión." href="#" class="btn-ghost">Consultar <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card p-7 flex flex-col sm:col-span-2 lg:col-span-2" data-reveal-child style="--i:4">
+            <div class="w-10 h-10 rounded-[10px] bg-accent-muted flex items-center justify-center text-accent mb-5">
+              <img src="assets/icons/icon-shield.svg" alt="" class="w-5 h-5" width="20" height="20">
+            </div>
+            <h3 class="font-display text-xl font-semibold text-ink mb-2">Violencia Familiar</h3>
+            <p class="text-sm text-muted leading-relaxed mb-5 flex-1">Medidas cautelares y protección inmediata. Actuamos con urgencia y sensibilidad.</p>
+            <a data-wa data-wa-msg="Hola, necesito asesoramiento urgente sobre violencia familiar." href="#" class="btn-ghost">Consultar con urgencia <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider bg-white" aria-hidden="true"><span></span></div>
+
+    <!-- CÓMO TRABAJAMOS -->
+    <section id="proceso" class="section-pad bg-secondary bg-texture scroll-mt-20" aria-labelledby="process-title">
+      <div class="max-w-site mx-auto site-x">
+        <div class="text-center max-w-2xl mx-auto mb-14" data-reveal>
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <span class="gold-line"></span>
+            <p class="text-xs font-semibold tracking-[0.15em] uppercase text-accent">Cómo Trabajamos</p>
+            <span class="gold-line"></span>
+          </div>
+          <h2 id="process-title" class="font-display text-3xl lg:text-[2.75rem] font-semibold text-ink leading-tight">
+            Así de simple es empezar
+          </h2>
+        </div>
+
+        <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative" data-reveal-stagger>
+          <li class="card p-7 relative" data-reveal-child style="--i:0">
+            <span class="font-display text-3xl font-semibold text-accent mb-4 block">01</span>
+            <h3 class="font-display text-lg font-semibold text-ink mb-2">Nos escribe</h3>
+            <p class="text-sm text-muted leading-relaxed">Por WhatsApp o formulario. Cuéntenos su situación en pocas palabras.</p>
+          </li>
+          <li class="card p-7" data-reveal-child style="--i:1">
+            <span class="font-display text-3xl font-semibold text-accent mb-4 block">02</span>
+            <h3 class="font-display text-lg font-semibold text-ink mb-2">Evaluamos su caso</h3>
+            <p class="text-sm text-muted leading-relaxed">Le decimos qué opciones tiene y qué pasos seguir.</p>
+          </li>
+          <li class="card p-7" data-reveal-child style="--i:2">
+            <span class="font-display text-3xl font-semibold text-accent mb-4 block">03</span>
+            <h3 class="font-display text-lg font-semibold text-ink mb-2">Definimos estrategia</h3>
+            <p class="text-sm text-muted leading-relaxed">Un plan claro, explicado sin tecnicismos.</p>
+          </li>
+          <li class="card p-7" data-reveal-child style="--i:3">
+            <span class="font-display text-3xl font-semibold text-accent mb-4 block">04</span>
+            <h3 class="font-display text-lg font-semibold text-ink mb-2">Lo acompañamos</h3>
+            <p class="text-sm text-muted leading-relaxed">Hasta resolver su situación, con comunicación constante.</p>
+          </li>
+        </ol>
+
+        <div class="cta-band bg-white" data-reveal>
+          <div>
+            <p class="font-medium text-ink mb-1">¿Listo para dar el primer paso?</p>
+            <p class="text-sm text-muted">Respuesta en menos de 24 hs. Sin compromiso.</p>
+          </div>
+          <a data-wa href="#" class="btn-whatsapp shrink-0 min-h-[48px]">Agendar consulta</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider bg-secondary bg-texture" aria-hidden="true"><span></span></div>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="section-pad bg-secondary bg-texture overflow-hidden" aria-labelledby="testimonials-title">
+      <div class="max-w-site mx-auto site-x mb-14">
+        <div class="text-center max-w-2xl mx-auto" data-reveal>
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <span class="gold-line"></span>
+            <p class="text-xs font-semibold tracking-[0.15em] uppercase text-accent">Testimonios</p>
+            <span class="gold-line"></span>
+          </div>
+          <h2 id="testimonials-title" class="font-display text-3xl lg:text-[2.75rem] font-semibold text-ink leading-tight">
+            Lo que dicen quienes confiaron en nosotros
+          </h2>
+        </div>
+      </div>
+
+      <!-- Mobile: grid estático -->
+      <div class="testimonials-static max-w-site mx-auto site-x" data-reveal-stagger>
+        <blockquote class="testimonial-card" data-reveal-child style="--i:0">
+          <div class="flex gap-0.5 text-accent mb-4 text-sm" aria-hidden="true">★★★★★</div>
+          <p class="text-sm text-muted leading-relaxed mb-5">"Me explicaron todo con mucha paciencia. Sentí que realmente se preocupaban por mi situación y la de mis hijos."</p>
+          <footer><p class="font-medium text-ink text-sm">María G.</p><p class="text-xs text-muted">Divorcio y régimen de visitas</p></footer>
+        </blockquote>
+        <blockquote class="testimonial-card" data-reveal-child style="--i:1">
+          <div class="flex gap-0.5 text-accent mb-4 text-sm" aria-hidden="true">★★★★★</div>
+          <p class="text-sm text-muted leading-relaxed mb-5">"Profesionales, cercanos y siempre disponibles. Resolvieron mi caso de alimentos de forma clara y eficiente."</p>
+          <footer><p class="font-medium text-ink text-sm">Carlos R.</p><p class="text-xs text-muted">Cuota alimentaria</p></footer>
+        </blockquote>
+        <blockquote class="testimonial-card" data-reveal-child style="--i:2">
+          <div class="flex gap-0.5 text-accent mb-4 text-sm" aria-hidden="true">★★★★★</div>
+          <p class="text-sm text-muted leading-relaxed mb-5">"En un momento muy difícil, encontré el apoyo legal que necesitaba. Recomiendo totalmente el estudio."</p>
+          <footer><p class="font-medium text-ink text-sm">Laura M.</p><p class="text-xs text-muted">Medidas cautelares</p></footer>
+        </blockquote>
+        <blockquote class="testimonial-card" data-reveal-child style="--i:3">
+          <div class="flex gap-0.5 text-accent mb-4 text-sm" aria-hidden="true">★★★★★</div>
+          <p class="text-sm text-muted leading-relaxed mb-5">"La tramitación de la sucesión fue mucho más llevadera de lo que imaginaba. Siempre me mantuvieron informada."</p>
+          <footer><p class="font-medium text-ink text-sm">Patricia S.</p><p class="text-xs text-muted">Sucesión</p></footer>
+        </blockquote>
+        <blockquote class="testimonial-card" data-reveal-child style="--i:4">
+          <div class="flex gap-0.5 text-accent mb-4 text-sm" aria-hidden="true">★★★★★</div>
+          <p class="text-sm text-muted leading-relaxed mb-5">"Logramos un régimen de comunicación justo para mis hijos. El trato fue impecable de principio a fin."</p>
+          <footer><p class="font-medium text-ink text-sm">Roberto D.</p><p class="text-xs text-muted">Régimen de comunicación</p></footer>
+        </blockquote>
+        <blockquote class="testimonial-card" data-reveal-child style="--i:5">
+          <div class="flex gap-0.5 text-accent mb-4 text-sm" aria-hidden="true">★★★★★</div>
+          <p class="text-sm text-muted leading-relaxed mb-5">"El divorcio de común acuerdo fue rápido y sin conflictos innecesarios. Muy agradecida por la contención."</p>
+          <footer><p class="font-medium text-ink text-sm">Ana V.</p><p class="text-xs text-muted">Divorcio de común acuerdo</p></footer>
+        </blockquote>
+        <blockquote class="testimonial-card" data-reveal-child style="--i:6">
+          <div class="flex gap-0.5 text-accent mb-4 text-sm" aria-hidden="true">★★★★★</div>
+          <p class="text-sm text-muted leading-relaxed mb-5">"Me sentí escuchado y protegido en todo momento. Actuaron con rapidez y mucha sensibilidad."</p>
+          <footer><p class="font-medium text-ink text-sm">Diego F.</p><p class="text-xs text-muted">Violencia familiar</p></footer>
+        </blockquote>
+        <blockquote class="testimonial-card" data-reveal-child style="--i:7">
+          <div class="flex gap-0.5 text-accent mb-4 text-sm" aria-hidden="true">★★★★★</div>
+          <p class="text-sm text-muted leading-relaxed mb-5">"Resolvieron la tenencia con un enfoque centrado en el bienestar de mis hijos. Excelente asesoramiento."</p>
+          <footer><p class="font-medium text-ink text-sm">Silvia T.</p><p class="text-xs text-muted">Tenencia y cuidado personal</p></footer>
+        </blockquote>
+      </div>
+
+      <!-- Desktop: marquee una sola fila -->
+      <div class="testimonials-wrap" data-reveal>
+        <div class="testimonials-track">
+          <blockquote class="testimonial-card"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"Me explicaron todo con mucha paciencia. Sentí que realmente se preocupaban por mi situación y la de mis hijos."</p><footer><p class="font-medium text-ink text-sm">María G.</p><p class="text-xs text-muted">Divorcio y régimen de visitas</p></footer></blockquote>
+          <blockquote class="testimonial-card"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"Profesionales, cercanos y siempre disponibles. Resolvieron mi caso de alimentos de forma clara y eficiente."</p><footer><p class="font-medium text-ink text-sm">Carlos R.</p><p class="text-xs text-muted">Cuota alimentaria</p></footer></blockquote>
+          <blockquote class="testimonial-card"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"En un momento muy difícil, encontré el apoyo legal que necesitaba. Recomiendo totalmente el estudio."</p><footer><p class="font-medium text-ink text-sm">Laura M.</p><p class="text-xs text-muted">Medidas cautelares</p></footer></blockquote>
+          <blockquote class="testimonial-card"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"La tramitación de la sucesión fue mucho más llevadera de lo que imaginaba. Siempre me mantuvieron informada."</p><footer><p class="font-medium text-ink text-sm">Patricia S.</p><p class="text-xs text-muted">Sucesión</p></footer></blockquote>
+          <blockquote class="testimonial-card"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"Logramos un régimen de comunicación justo para mis hijos. El trato fue impecable de principio a fin."</p><footer><p class="font-medium text-ink text-sm">Roberto D.</p><p class="text-xs text-muted">Régimen de comunicación</p></footer></blockquote>
+          <blockquote class="testimonial-card"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"El divorcio de común acuerdo fue rápido y sin conflictos innecesarios. Muy agradecida por la contención."</p><footer><p class="font-medium text-ink text-sm">Ana V.</p><p class="text-xs text-muted">Divorcio de común acuerdo</p></footer></blockquote>
+          <blockquote class="testimonial-card"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"Me sentí escuchado y protegido en todo momento. Actuaron con rapidez y mucha sensibilidad."</p><footer><p class="font-medium text-ink text-sm">Diego F.</p><p class="text-xs text-muted">Violencia familiar</p></footer></blockquote>
+          <blockquote class="testimonial-card"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"Resolvieron la tenencia con un enfoque centrado en el bienestar de mis hijos. Excelente asesoramiento."</p><footer><p class="font-medium text-ink text-sm">Silvia T.</p><p class="text-xs text-muted">Tenencia y cuidado personal</p></footer></blockquote>
+          <!-- duplicados para loop infinito -->
+          <blockquote class="testimonial-card" aria-hidden="true"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"Me explicaron todo con mucha paciencia. Sentí que realmente se preocupaban por mi situación y la de mis hijos."</p><footer><p class="font-medium text-ink text-sm">María G.</p><p class="text-xs text-muted">Divorcio y régimen de visitas</p></footer></blockquote>
+          <blockquote class="testimonial-card" aria-hidden="true"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"Profesionales, cercanos y siempre disponibles. Resolvieron mi caso de alimentos de forma clara y eficiente."</p><footer><p class="font-medium text-ink text-sm">Carlos R.</p><p class="text-xs text-muted">Cuota alimentaria</p></footer></blockquote>
+          <blockquote class="testimonial-card" aria-hidden="true"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"En un momento muy difícil, encontré el apoyo legal que necesitaba. Recomiendo totalmente el estudio."</p><footer><p class="font-medium text-ink text-sm">Laura M.</p><p class="text-xs text-muted">Medidas cautelares</p></footer></blockquote>
+          <blockquote class="testimonial-card" aria-hidden="true"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"La tramitación de la sucesión fue mucho más llevadera de lo que imaginaba. Siempre me mantuvieron informada."</p><footer><p class="font-medium text-ink text-sm">Patricia S.</p><p class="text-xs text-muted">Sucesión</p></footer></blockquote>
+          <blockquote class="testimonial-card" aria-hidden="true"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"Logramos un régimen de comunicación justo para mis hijos. El trato fue impecable de principio a fin."</p><footer><p class="font-medium text-ink text-sm">Roberto D.</p><p class="text-xs text-muted">Régimen de comunicación</p></footer></blockquote>
+          <blockquote class="testimonial-card" aria-hidden="true"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"El divorcio de común acuerdo fue rápido y sin conflictos innecesarios. Muy agradecida por la contención."</p><footer><p class="font-medium text-ink text-sm">Ana V.</p><p class="text-xs text-muted">Divorcio de común acuerdo</p></footer></blockquote>
+          <blockquote class="testimonial-card" aria-hidden="true"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"Me sentí escuchado y protegido en todo momento. Actuaron con rapidez y mucha sensibilidad."</p><footer><p class="font-medium text-ink text-sm">Diego F.</p><p class="text-xs text-muted">Violencia familiar</p></footer></blockquote>
+          <blockquote class="testimonial-card" aria-hidden="true"><div class="text-accent text-sm mb-4">★★★★★</div><p class="text-sm text-muted leading-relaxed mb-5">"Resolvieron la tenencia con un enfoque centrado en el bienestar de mis hijos. Excelente asesoramiento."</p><footer><p class="font-medium text-ink text-sm">Silvia T.</p><p class="text-xs text-muted">Tenencia y cuidado personal</p></footer></blockquote>
+        </div>
+      </div>
+
+      <div class="max-w-site mx-auto site-x mt-12" data-reveal>
+        <div class="cta-band">
+          <div>
+            <p class="font-display text-xl font-semibold text-ink mb-1">¿Quiere resultados como estos?</p>
+            <p class="text-sm text-muted">Cuéntenos su caso. Le respondemos a la brevedad.</p>
+          </div>
+          <a data-wa href="#" class="btn-primary shrink-0 min-h-[48px]">Solicitar consulta</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider bg-white" aria-hidden="true"><span></span></div>
+
+    <!-- FAQ -->
+    <section id="faq" class="section-pad bg-white bg-texture-light scroll-mt-20" aria-labelledby="faq-title">
+      <div class="max-w-site mx-auto site-x">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+          <div data-reveal>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="gold-line"></span>
+              <p class="text-xs font-semibold tracking-[0.15em] uppercase text-accent">Preguntas Frecuentes</p>
+            </div>
+            <h2 id="faq-title" class="font-display text-3xl lg:text-[2.75rem] font-semibold text-ink leading-tight mb-4">
+              Preguntas frecuentes
+            </h2>
+            <p class="text-muted leading-relaxed mb-6">Resolvemos las dudas más comunes antes de su consulta.</p>
+            <a data-wa href="#" class="btn-whatsapp min-h-[48px]">Consultar ahora</a>
+          </div>
+
+          <div class="space-y-3" data-reveal id="faqList">
+            <div class="faq-item border border-border rounded-[18px] overflow-hidden">
+              <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-5 text-left font-medium text-ink text-sm hover:bg-secondary/50 transition-colors" aria-expanded="false">
+                ¿Cómo solicito una consulta?
+                <span class="faq-icon text-accent text-xl leading-none shrink-0">+</span>
+              </button>
+              <div class="faq-answer">
+                <p class="px-5 pb-5 text-sm text-muted leading-relaxed">Puede escribirnos por WhatsApp, completar el formulario de contacto o llamarnos directamente. Le responderemos a la brevedad para coordinar una consulta inicial.</p>
+              </div>
+            </div>
+
+            <div class="faq-item border border-border rounded-[18px] overflow-hidden">
+              <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-5 text-left font-medium text-ink text-sm hover:bg-secondary/50 transition-colors" aria-expanded="false">
+                ¿Trabajan de manera online?
+                <span class="faq-icon text-accent text-xl leading-none shrink-0">+</span>
+              </button>
+              <div class="faq-answer">
+                <p class="px-5 pb-5 text-sm text-muted leading-relaxed">Sí. Ofrecemos consultas presenciales y por videollamada, según su preferencia y ubicación. La modalidad se acuerda en la primera consulta.</p>
+              </div>
+            </div>
+
+            <div class="faq-item border border-border rounded-[18px] overflow-hidden">
+              <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-5 text-left font-medium text-ink text-sm hover:bg-secondary/50 transition-colors" aria-expanded="false">
+                ¿Qué documentación necesito?
+                <span class="faq-icon text-accent text-xl leading-none shrink-0">+</span>
+              </button>
+              <div class="faq-answer">
+                <p class="px-5 pb-5 text-sm text-muted leading-relaxed">Depende del tipo de caso. En la consulta inicial le indicaremos exactamente qué documentos necesita presentar para avanzar con su situación.</p>
+              </div>
+            </div>
+
+            <div class="faq-item border border-border rounded-[18px] overflow-hidden">
+              <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 p-5 text-left font-medium text-ink text-sm hover:bg-secondary/50 transition-colors" aria-expanded="false">
+                ¿Cuánto demora el proceso?
+                <span class="faq-icon text-accent text-xl leading-none shrink-0">+</span>
+              </button>
+              <div class="faq-answer">
+                <p class="px-5 pb-5 text-sm text-muted leading-relaxed">Los tiempos varían según el tipo de trámite y la complejidad del caso. Le daremos un estimado realista desde la evaluación inicial.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider bg-secondary bg-texture" aria-hidden="true"><span></span></div>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section-pad bg-secondary bg-texture scroll-mt-20" aria-labelledby="cta-title">
+      <div class="max-w-site mx-auto site-x">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div data-reveal>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="gold-line"></span>
+              <p class="text-xs font-semibold tracking-[0.15em] uppercase text-accent">Contacto</p>
+            </div>
+            <h2 id="cta-title" class="font-display text-3xl lg:text-4xl font-semibold text-ink leading-tight mb-4">
+              Cuéntenos su situación
+            </h2>
+            <p class="text-muted leading-relaxed mb-8">
+              La forma más rápida es por WhatsApp. También puede llamarnos o completar el formulario.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 mb-8">
+              <a data-wa href="#" class="btn-primary min-h-[52px] justify-center flex-1 sm:flex-none">
+                Escribir mensaje
+              </a>
+              <a href="tel:+541100000000" class="btn-secondary min-h-[52px] justify-center">Llamar ahora</a>
+            </div>
+
+            <ul class="space-y-3 text-sm text-muted">
+              <li class="flex items-center gap-2">
+                <img src="assets/icons/icon-mail.svg" alt="" class="w-4 h-4 opacity-60" width="16" height="16">
+                <a href="mailto:contacto@mvgestudiolegal.com" class="hover:text-ink transition-colors">contacto@mvgestudiolegal.com</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <img src="assets/icons/icon-clock.svg" alt="" class="w-4 h-4 opacity-60" width="16" height="16">
+                Lun a Vie, 9:00–18:00 hs · Presencial u online
+              </li>
+            </ul>
+          </div>
+
+          <div class="card p-7 lg:p-8" data-reveal>
+            <p class="font-medium text-ink mb-5">O déjenos sus datos y le contactamos</p>
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Demo: formulario de contacto. Conectar con backend o servicio de email.');">
+              <div>
+                <label for="nombre" class="block text-sm font-medium text-ink mb-1.5">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Su nombre" required class="w-full px-4 py-3 rounded-[10px] border border-border bg-white text-sm text-ink placeholder:text-muted/60">
+              </div>
+              <div>
+                <label for="telefono" class="block text-sm font-medium text-ink mb-1.5">Teléfono / WhatsApp</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+54 11 0000-0000" required class="w-full px-4 py-3 rounded-[10px] border border-border bg-white text-sm text-ink placeholder:text-muted/60">
+              </div>
+              <div>
+                <label for="mensaje" class="block text-sm font-medium text-ink mb-1.5">¿En qué podemos ayudarle?</label>
+                <textarea id="mensaje" name="mensaje" rows="3" placeholder="Ej: necesito iniciar un divorcio..." required class="w-full px-4 py-3 rounded-[10px] border border-border bg-white text-sm text-ink placeholder:text-muted/60 resize-none"></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full min-h-[52px]">Enviar consulta</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary text-white/70 pt-12 pb-8">
+    <div class="max-w-site mx-auto site-x">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 mb-10">
+        <div class="flex items-center gap-4">
+          <a href="#inicio" class="footer-wordmark font-display" aria-label="MVG Estudio Legal">M<span>V</span>G</a>
+          <div>
+            <p class="text-white font-medium text-sm">MVG Estudio Legal</p>
+            <p class="text-xs">Derecho de Familia · Buenos Aires</p>
+          </div>
+        </div>
+        <a data-wa href="#" class="btn-outline-light min-h-[44px] self-start lg:self-center">Consultar</a>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-8 mb-10 text-sm">
+        <div>
+          <p class="text-white font-medium mb-3">Contacto</p>
+          <ul class="space-y-2">
+            <li><a href="tel:+541100000000" class="hover:text-accent transition-colors">+54 11 0000-0000</a></li>
+            <li><a href="mailto:contacto@mvgestudiolegal.com" class="hover:text-accent transition-colors">contacto@mvgestudiolegal.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-medium mb-3">Horarios</p>
+          <ul class="space-y-2">
+            <li>Lun – Vie, 9 a 18 hs</li>
+            <li>Presencial u online</li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-medium mb-3">Secciones</p>
+          <ul class="space-y-2">
+            <li><a href="#areas" class="hover:text-accent transition-colors">Áreas</a></li>
+            <li><a href="#proceso" class="hover:text-accent transition-colors">Proceso</a></li>
+            <li><a href="#contacto" class="hover:text-accent transition-colors">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-white/40">
+        <p>© 2026 MVG Estudio Legal</p>
+        <p>La información no constituye asesoramiento legal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a
+    id="waFloat" data-wa href="#"
+    aria-label="Contactar por WhatsApp"
+    class="fixed bottom-5 right-5 z-50 wa-float flex items-center justify-center w-14 h-14 rounded-full opacity-0 translate-y-3 pointer-events-none"
+  ></a>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script>
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let lenis = null;
+
+    // ── Lenis: scroll premium con inercia ──
+    if (!reducedMotion && typeof Lenis !== 'undefined') {
+      lenis = new Lenis({
+        duration: 1.65,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        wheelMultiplier: 0.82,
+        touchMultiplier: 1.4,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    }
+
+    const getScrollY = () => lenis ? lenis.scroll : window.scrollY;
+
+    // ── Scroll reveal + stagger ──
+    (function () {
+      const targets = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+      if (reducedMotion) {
+        targets.forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          e.target.classList.add('is-visible');
+          obs.unobserve(e.target);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      targets.forEach(el => obs.observe(el));
+    })();
+
+    // ── Parallax sutil ──
+    (function () {
+      if (reducedMotion) return;
+      const items = document.querySelectorAll('[data-parallax]');
+      if (!items.length) return;
+
+      const onScroll = () => {
+        const scroll = getScrollY();
+        items.forEach(el => {
+          const speed = parseFloat(el.dataset.parallaxSpeed || '0.1');
+          const rect = el.getBoundingClientRect();
+          const offset = (rect.top + scroll - window.innerHeight * 0.5) * speed * -0.15;
+          el.style.transform = `translateY(${offset}px)`;
+        });
+      };
+
+      const tick = () => { onScroll(); requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    })();
+
+    // ── WhatsApp flotante ──
+    (function () {
+      const btn = document.getElementById('waFloat');
+      if (!btn) return;
+      const show = () => {
+        const visible = getScrollY() > 300;
+        btn.classList.toggle('opacity-100', visible);
+        btn.classList.toggle('translate-y-0', visible);
+        btn.classList.toggle('pointer-events-auto', visible);
+        btn.classList.toggle('opacity-0', !visible);
+        btn.classList.toggle('translate-y-3', !visible);
+        btn.classList.toggle('pointer-events-none', !visible);
+      };
+      if (lenis) lenis.on('scroll', show);
+      else window.addEventListener('scroll', show, { passive: true });
+      show();
+    })();
+
+    // ── FAQ accordion ──
+    document.querySelectorAll('.faq-trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('is-open');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('is-open');
+          i.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('is-open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // ── Navbar ──
+    (function () {
+      const navbar = document.getElementById('navbar');
+      const navToggle = document.getElementById('navToggle');
+      const navMobile = document.getElementById('navMobile');
+      const navLinks = document.querySelectorAll('[data-nav-link]');
+      const sectionIds = ['inicio', 'nosotros', 'areas', 'proceso', 'testimonios', 'faq', 'contacto'];
+
+      const closeMenu = () => {
+        if (!navToggle || !navMobile) return;
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+        navMobile.classList.add('translate-y-[-110%]', 'opacity-0', 'invisible', 'pointer-events-none');
+        navMobile.classList.remove('translate-y-0', 'opacity-100', 'visible', 'pointer-events-auto');
+        navMobile.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('nav-open');
+        lenis?.start();
+      };
+
+      const openMenu = () => {
+        if (!navToggle || !navMobile) return;
+        navToggle.setAttribute('aria-expanded', 'true');
+        navToggle.setAttribute('aria-label', 'Cerrar menú');
+        navMobile.classList.remove('translate-y-[-110%]', 'opacity-0', 'invisible', 'pointer-events-none');
+        navMobile.classList.add('translate-y-0', 'opacity-100', 'visible', 'pointer-events-auto');
+        navMobile.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('nav-open');
+        lenis?.stop();
+      };
+
+      navToggle?.addEventListener('click', () => {
+        navToggle.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
+      });
+      navMobile?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      window.addEventListener('resize', () => { if (window.innerWidth >= 1024) closeMenu(); });
+
+      const setActiveLink = () => {
+        const offset = (navbar?.offsetHeight ?? 80) + 32;
+        const scrollPos = getScrollY() + offset;
+        let current = 'inicio';
+        sectionIds.forEach(id => {
+          const el = document.getElementById(id);
+          if (el && el.offsetTop <= scrollPos) current = id;
+        });
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href')?.slice(1);
+          link.classList.toggle('is-active', href === current);
+          link.classList.toggle('text-ink', href === current);
+          link.classList.toggle('text-muted', href !== current);
+        });
+      };
+
+      const onScroll = () => {
+        navbar?.classList.toggle('border-border', getScrollY() > 10);
+        navbar?.classList.toggle('shadow-card', getScrollY() > 10);
+        setActiveLink();
+      };
+
+      if (lenis) lenis.on('scroll', onScroll);
+      else window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+          const id = anchor.getAttribute('href');
+          if (!id || id === '#') return;
+          const target = document.querySelector(id);
+          if (!target) return;
+          e.preventDefault();
+          const top = target.getBoundingClientRect().top + getScrollY() - (navbar?.offsetHeight ?? 80);
+          if (lenis) lenis.scrollTo(top, { duration: reducedMotion ? 0 : 1.8 });
+          else window.scrollTo({ top, behavior: reducedMotion ? 'auto' : 'smooth' });
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
