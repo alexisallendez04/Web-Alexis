@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es-AR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contadora Pública en San Martín, Buenos Aires. Asesoramiento contable para emprendedores, comercios y monotributistas. Atención 100% digital.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#CA9291">
+  <meta name="author" content="Milagros Perez">
+  <title>Contadora en San Martín | Milagros Perez — Monotributo y Emprendedores</title>
+
+  <link rel="canonical" href="https://milagrosperez.com/">
+
+  <meta property="og:title" content="Milagros Perez | Contadora Pública en San Martín">
+  <meta property="og:description" content="Asesoramiento contable para emprendedores, comercios y monotributistas. Atención 100% digital en San Martín y todo el país.">
+  <meta property="og:image" content="https://milagrosperez.com/assets/images/Milagrosperez.jpeg">
+  <meta property="og:url" content="https://milagrosperez.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Milagros Perez">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Milagros Perez | Contadora Pública en San Martín">
+  <meta name="twitter:description" content="Asesoramiento contable para emprendedores, comercios y monotributistas. Atención 100% digital.">
+  <meta name="twitter:image" content="https://milagrosperez.com/assets/images/Milagrosperez.jpeg">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/images/Milagrosperez.jpeg" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <script type="application/ld+json" src="js/schema.json"></script>
+</head>
+
+<body class="font-body text-ink bg-warm antialiased">
+
+  <a href="#main" class="skip-link">Ir al contenido</a>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav
+    id="navbar"
+    class="navbar fixed top-0 inset-x-0 z-50 h-16 md:h-[4.5rem] bg-warm/95 backdrop-blur-sm border-b border-transparent"
+    aria-label="Navegación principal"
+  >
+    <div class="max-w-content mx-auto px-5 md:px-8 lg:px-16 h-full flex items-center justify-between gap-4">
+      <a href="#inicio" class="flex items-center gap-3 shrink-0 group min-w-0" aria-label="Milagros Perez — Inicio">
+        <img
+          src="assets/images/logo.jpeg"
+          alt=""
+          width="40"
+          height="40"
+          decoding="async"
+          class="h-9 w-9 md:h-10 md:w-10 rounded-full object-cover ring-1 ring-border shrink-0"
+        >
+        <span class="font-display text-base sm:text-lg md:text-xl font-medium text-ink group-hover:text-primary transition-colors truncate">
+          Milagros <span class="text-primary">Perez</span>
+        </span>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-7">
+        <li>
+          <a href="#inicio" class="nav-link text-sm font-medium text-muted hover:text-ink transition-colors" data-nav-link>Inicio</a>
+        </li>
+        <li>
+          <a href="#servicios" class="nav-link text-sm font-medium text-muted hover:text-ink transition-colors" data-nav-link>Servicios</a>
+        </li>
+        <li>
+          <a href="#quien-esta" class="nav-link text-sm font-medium text-muted hover:text-ink transition-colors" data-nav-link>Quién soy</a>
+        </li>
+        <li>
+          <a href="#proceso" class="nav-link text-sm font-medium text-muted hover:text-ink transition-colors" data-nav-link>Proceso</a>
+        </li>
+        <li>
+          <a href="#contacto" class="nav-link text-sm font-medium text-muted hover:text-ink transition-colors" data-nav-link>Contacto</a>
+        </li>
+      </ul>
+
+      <a
+        data-wa
+        href="#"
+        class="btn-cta btn-cta--compact hidden lg:inline-flex shrink-0"
+      >
+        Consultá ahora
+      </a>
+
+      <button
+        id="navToggle"
+        type="button"
+        class="nav-toggle lg:hidden flex flex-col justify-center gap-[5px] w-11 h-11 p-2.5 rounded-lg hover:bg-primary/5 transition-colors shrink-0"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="navMobile"
+      >
+        <span class="nav-toggle-bar block w-full h-0.5 bg-primary rounded-full"></span>
+        <span class="nav-toggle-bar block w-full h-0.5 bg-primary rounded-full"></span>
+        <span class="nav-toggle-bar block w-full h-0.5 bg-primary rounded-full"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div
+    id="navMobile"
+    class="fixed inset-x-0 top-16 md:top-[4.5rem] z-40 lg:hidden bg-warm border-b border-border shadow-soft translate-y-[-110%] opacity-0 invisible transition-all duration-300 pointer-events-none max-h-[calc(100svh-4rem)] overflow-y-auto"
+    aria-hidden="true"
+  >
+    <ul class="max-w-content mx-auto px-5 py-4 flex flex-col">
+      <li>
+        <a href="#inicio" class="block py-3.5 text-base font-medium text-ink border-b border-border/60" data-nav-link>Inicio</a>
+      </li>
+      <li>
+        <a href="#servicios" class="block py-3.5 text-base font-medium text-ink border-b border-border/60" data-nav-link>Servicios</a>
+      </li>
+      <li>
+        <a href="#quien-esta" class="block py-3.5 text-base font-medium text-ink border-b border-border/60" data-nav-link>Quién soy</a>
+      </li>
+      <li>
+        <a href="#proceso" class="block py-3.5 text-base font-medium text-ink border-b border-border/60" data-nav-link>Proceso</a>
+      </li>
+      <li>
+        <a href="#contacto" class="block py-3.5 text-base font-medium text-ink border-b border-border/60" data-nav-link>Contacto</a>
+      </li>
+      <li class="pt-4 pb-2">
+        <a data-wa href="#" class="btn-cta w-full">
+          Consultá ahora
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <header
+    id="inicio"
+    class="hero pt-16 md:pt-[4.5rem] scroll-mt-16 md:scroll-mt-[4.5rem]"
+  >
+    <div class="hero__decor" aria-hidden="true">
+      <div class="hero__decor-blob hero__decor-blob--1"></div>
+      <div class="hero__decor-blob hero__decor-blob--2"></div>
+      <div class="hero__decor-line"></div>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__grid">
+        <div class="hero__content">
+          <p class="hero__eyebrow">
+            Contadora Pública · San Martín
+          </p>
+
+          <h1 class="hero__title">
+            Que lo impositivo deje de ser tu problema.
+          </h1>
+
+          <p class="hero__subtitle">
+            Asesoramiento contable para emprendedores, comercios y monotributistas. Vos te ocupás de hacer crecer tu negocio. Nosotras nos ocupamos de que AFIP no te sorprenda.
+          </p>
+
+          <div class="hero__actions">
+            <a data-wa href="#" class="btn-cta w-full sm:w-auto">
+              Consultá ahora
+            </a>
+            <p class="hero__microcopy">Contanos tu situación, sin compromiso.</p>
+          </div>
+
+          <ul class="hero__trust" aria-label="Señales de confianza">
+            <li class="hero__trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              10 años de experiencia
+            </li>
+            <li class="hero__trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+              Monotributo y RI
+            </li>
+            <li class="hero__trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+              Atención 100% digital
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" data-reveal="fade-right">
+          <div class="hero__photo-wrap" aria-hidden="true">
+            <div class="hero__photo-backdrop"></div>
+          </div>
+          <div class="hero__photo-frame">
+            <img
+              src="assets/images/Milagrosperez.jpeg"
+              alt="Milagros Perez, Contadora Pública en San Martín"
+              class="hero__photo"
+              width="560"
+              height="700"
+              fetchpriority="high"
+              decoding="async"
+            >
+            <div class="hero__photo-badge">
+              <strong>Milagros Perez</strong>
+              Contadora Pública · Equipo de dos profesionales
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ═══ PROBLEMA ═══ -->
+    <section
+      id="problema"
+      class="section bg-cream"
+      aria-labelledby="problema-title"
+    >
+      <div class="section__inner">
+        <header class="section__header section__header--center" data-reveal>
+          <p class="section__eyebrow">Situaciones frecuentes</p>
+          <h2 id="problema-title" class="section__title">
+            No sabés si estás bien categorizado, y nadie te lo explica de forma clara.
+          </h2>
+        </header>
+
+        <ul class="pain-grid" data-reveal-stagger>
+          <li class="pain-card">
+            <div class="pain-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-shield.svg" alt="" width="22" height="22">
+            </div>
+            <p class="pain-card__text">
+              Te da miedo que algo se te esté pasando por alto y enterarte cuando ya es tarde, con una intimación, una multa o una exclusión.
+            </p>
+          </li>
+          <li class="pain-card">
+            <div class="pain-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-users.svg" alt="" width="22" height="22">
+            </div>
+            <p class="pain-card__text">
+              Sentís que estás solo con el tema de los impuestos: no tenés a quién preguntarle algo simple sin sentir que molestás.
+            </p>
+          </li>
+          <li class="pain-card">
+            <div class="pain-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-clock.svg" alt="" width="22" height="22">
+            </div>
+            <p class="pain-card__text">
+              Ya pasaste por la experiencia de escribirle a un contador y esperar días por una respuesta.
+            </p>
+          </li>
+          <li class="pain-card">
+            <div class="pain-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-briefcase.svg" alt="" width="22" height="22">
+            </div>
+            <p class="pain-card__text">
+              Querés vender, atender clientes y hacer crecer tu negocio, no perder horas en trámites.
+            </p>
+          </li>
+        </ul>
+
+        <p class="section__closing section__closing--center" data-reveal>
+          No es que no te importe. Es que todavía no recibiste una explicación clara y ordenada.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ SOLUCIÓN ═══ -->
+    <section
+      id="solucion"
+      class="section bg-warm"
+      aria-labelledby="solucion-title"
+    >
+      <div class="section__inner">
+        <header class="section__header section__header--center" data-reveal>
+          <h2 id="solucion-title" class="section__title">
+            Asesoramiento contable pensado para vos, no para una gran empresa.
+          </h2>
+          <p class="section__lead">
+            Trabajamos con emprendedores, comercios y monotributistas. No somos un estudio genérico: este es el segmento en el que nos especializamos.
+          </p>
+        </header>
+
+        <div class="benefit-grid" data-reveal-stagger>
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-clock.svg" alt="" width="28" height="28">
+            </div>
+            <h3 class="benefit-card__title">Rapidez</h3>
+            <p class="benefit-card__text">
+              Somos un equipo de dos profesionales. Siempre hay alguien disponible para responderte, sin esperas innecesarias.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-document.svg" alt="" width="28" height="28">
+            </div>
+            <h3 class="benefit-card__title">Claridad</h3>
+            <p class="benefit-card__text">
+              Te explicamos qué te cobramos y por qué, con claridad y sin tecnicismos innecesarios.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-heart.svg" alt="" width="28" height="28">
+            </div>
+            <h3 class="benefit-card__title">Acompañamiento</h3>
+            <p class="benefit-card__text">
+              No aparecemos solo cuando hay que pagar honorarios. Te avisamos antes de que algo se convierta en un problema.
+            </p>
+          </article>
+        </div>
+
+        <div class="section__actions" data-reveal>
+          <a href="#proceso" class="btn-outline w-full sm:w-auto">
+            Conocé cómo trabajamos
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICIOS ═══ -->
+    <section
+      id="servicios"
+      class="section bg-cream scroll-mt-16 md:scroll-mt-[4.5rem]"
+      aria-labelledby="servicios-title"
+    >
+      <div class="section__inner">
+        <header class="section__header section__header--center" data-reveal>
+          <h2 id="servicios-title" class="section__title">
+            Todo lo que necesitás, organizado por categoría.
+          </h2>
+        </header>
+
+        <div class="service-grid" data-reveal-stagger>
+          <article class="service-card">
+            <span class="service-card__badge">Monotributo</span>
+            <div class="service-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-home.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="service-card__title">Para monotributistas</h3>
+            <p class="service-card__text">
+              Alta y recategorización, control de límites de facturación, DDJJ y trámites del régimen simplificado, para que nunca te enteres tarde de una recategorización.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-card__badge">Responsable inscripto</span>
+            <div class="service-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-briefcase.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="service-card__title">Para responsables inscriptos</h3>
+            <p class="service-card__text">
+              IVA, Ganancias, Bienes Personales, Convenio Multilateral, IIBB y Balances, con gestión integral.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-card__badge">Gestiones</span>
+            <div class="service-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-document.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="service-card__title">Trámites puntuales</h3>
+            <p class="service-card__text">
+              Certificaciones, marcas, jubilaciones y otras gestiones que van surgiendo en el camino de tu negocio.
+            </p>
+          </article>
+        </div>
+
+        <p class="section__closing section__closing--center" data-reveal>
+          Si no sabés en cuál categoría estás o cuál te conviene, contanoslo y te orientamos con claridad.
+        </p>
+
+        <div class="section__actions" data-reveal>
+          <a href="#proceso" class="btn-outline w-full sm:w-auto">
+            Ver cómo empezamos a trabajar juntos
+          </a>
+          <a data-wa href="#" class="btn-cta w-full sm:w-auto">
+            Consultá ahora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PROCESO ═══ -->
+    <section
+      id="proceso"
+      class="section bg-warm scroll-mt-16 md:scroll-mt-[4.5rem]"
+      aria-labelledby="proceso-title"
+    >
+      <div class="section__inner">
+        <header class="section__header section__header--center" data-reveal>
+          <p class="section__eyebrow">Cómo trabajamos</p>
+          <h2 id="proceso-title" class="section__title">
+            Tres pasos para comenzar.
+          </h2>
+        </header>
+
+        <ol class="process-timeline" data-reveal-stagger>
+          <li class="process-step">
+            <div class="process-step__number" aria-hidden="true">1</div>
+            <h3 class="process-step__title">Nos contactás</h3>
+            <p class="process-step__text">
+              Nos contactás y nos contás tu situación actual, sin compromiso.
+            </p>
+          </li>
+          <li class="process-step">
+            <div class="process-step__number" aria-hidden="true">2</div>
+            <h3 class="process-step__title">Armamos tu plan</h3>
+            <p class="process-step__text">
+              Te respondemos rápido y armamos un plan concreto para tu caso: qué necesitás, qué falta resolver y cómo seguimos.
+            </p>
+          </li>
+          <li class="process-step">
+            <div class="process-step__number" aria-hidden="true">3</div>
+            <h3 class="process-step__title">Trabajás tranquilo</h3>
+            <p class="process-step__text">
+              Empezás a trabajar tranquilo, sabiendo que alguien está mirando la parte impositiva por vos.
+            </p>
+          </li>
+        </ol>
+
+        <div class="section__actions" data-reveal>
+          <a data-wa href="#" class="btn-cta w-full sm:w-auto">
+            Consultá ahora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SOBRE MÍ ═══ -->
+    <section
+      id="quien-esta"
+      class="section bg-cream scroll-mt-16 md:scroll-mt-[4.5rem]"
+      aria-labelledby="about-title"
+    >
+      <div class="section__inner">
+        <div class="about-grid">
+          <aside class="about-trust" data-reveal="fade-right" aria-label="Credenciales profesionales">
+            <div class="about-trust__card">
+              <p class="about-trust__name">Milagros Perez</p>
+              <p class="about-trust__role">Contadora Pública</p>
+              <ul class="about-trust__list">
+                <li class="about-trust__item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span>10 años de trayectoria</span>
+                </li>
+                <li class="about-trust__item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                  <span>Equipo de dos profesionales</span>
+                </li>
+                <li class="about-trust__item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>San Martín, Buenos Aires</span>
+                </li>
+                <li class="about-trust__item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                  <span>Matrícula N.º <span class="field-pending">pendiente</span></span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+          <div class="about-content" data-reveal="fade-left">
+            <header class="section__header">
+              <p class="section__eyebrow">Quién soy</p>
+              <h2 id="about-title" class="section__title">
+                Profesionales matriculadas, con trato directo.
+              </h2>
+            </header>
+
+            <div class="about-content__body">
+              <p>
+                Soy Milagros Perez, Contadora Pública con 10 años de trayectoria. Junto a mi socia, formamos un equipo pensado para que nunca te quedes sin respuesta: mientras una está ocupada, la otra está disponible para vos.
+              </p>
+              <p>
+                Nos especializamos en emprendedores y comercios, no en empresas grandes con departamento administrativo propio. Conocemos lo que implica atender un negocio y, al mismo tiempo, cumplir con AFIP.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TESTIMONIOS ═══ -->
+    <section
+      id="testimonios"
+      class="section bg-warm"
+      aria-labelledby="testimonios-title"
+    >
+      <div class="section__inner">
+        <header class="section__header section__header--center" data-reveal>
+          <p class="section__eyebrow">Confianza</p>
+          <h2 id="testimonios-title" class="section__title">
+            Lo que dicen quienes ya trabajan con nosotras.
+          </h2>
+        </header>
+
+        <div class="testimonials-pending" data-reveal>
+          <div class="testimonials-pending__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+          </div>
+          <p class="testimonials-pending__title">Testimonios en preparación</p>
+          <p class="testimonials-pending__text">
+            Esta sección se completará con experiencias reales de clientes, con nombre y rubro. No publicamos testimonios genéricos ni inventados.
+          </p>
+          <p class="testimonials-pending__note">
+            ¿Ya trabajás con nosotras? Contactanos si querés compartir tu experiencia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section
+      id="faq"
+      class="section bg-cream"
+      aria-labelledby="faq-title"
+    >
+      <div class="section__inner">
+        <header class="section__header section__header--center" data-reveal>
+          <p class="section__eyebrow">Preguntas frecuentes</p>
+          <h2 id="faq-title" class="section__title">
+            Dudas comunes antes de contactarnos
+          </h2>
+        </header>
+
+        <div class="faq" data-reveal>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿Cuánto cuesta el servicio?
+              <svg class="faq-question__icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer__inner">
+                <p class="faq-answer__text">
+                  No publicamos un precio único: depende de tu categoría impositiva y de lo que necesités resolver. Contactanos, contanos tu situación y te explicamos qué incluye el servicio y por qué.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              Ya tengo contador, ¿vale la pena cambiar?
+              <svg class="faq-question__icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer__inner">
+                <p class="faq-answer__text">
+                  Si sentís que tu contador actual no te da respuestas rápidas o claras, podemos ser la alternativa que buscás. No competimos solo por precio. Apostamos a la atención, la cercanía y a anticiparnos antes de que un tema se convierta en un problema.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿Trabajan de forma online?
+              <svg class="faq-question__icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer__inner">
+                <p class="faq-answer__text">
+                  Sí. La atención es 100% digital. No necesitás ir a una oficina. Nos contactás, compartimos la documentación necesaria y te acompañamos desde donde estés. Estamos en San Martín, Buenos Aires, y trabajamos con clientes de distintas zonas.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿Atienden monotributistas y responsables inscriptos?
+              <svg class="faq-question__icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer__inner">
+                <p class="faq-answer__text">
+                  Sí, ese es nuestro foco principal: emprendedores, comercios y personas con actividad propia en monotributo o como responsables inscriptos. No somos un estudio pensado para empresas grandes con departamento administrativo propio.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿Cuánto tardan en responder?
+              <svg class="faq-question__icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer__inner">
+                <p class="faq-answer__text">
+                  Somos un equipo de dos profesionales, así que siempre hay alguien disponible para responderte. Nuestro objetivo es que no quedes esperando días por una consulta. La rapidez y la claridad son parte de cómo trabajamos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              ¿Qué pasa en el primer contacto?
+              <svg class="faq-question__icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer__inner">
+                <p class="faq-answer__text">
+                  Nos contás tu situación actual, sin compromiso. Te respondemos con rapidez, vemos qué necesitás resolver y armamos un plan concreto para tu caso. A partir de ahí, si decidís avanzar, empezamos a trabajar juntas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA FINAL ═══ -->
+    <section
+      id="contacto"
+      class="section cta-final bg-beige scroll-mt-16 md:scroll-mt-[4.5rem]"
+      aria-labelledby="contacto-title"
+    >
+      <div class="cta-final__decor" aria-hidden="true">
+        <div class="cta-final__decor-blob"></div>
+      </div>
+
+      <div class="section__inner">
+        <div class="cta-final__inner" data-reveal>
+          <h2 id="contacto-title" class="cta-final__title">
+            Dejá de pensar en impuestos.
+          </h2>
+          <p class="cta-final__text">
+            Contanos tu situación hoy y armamos juntas un plan para que lo impositivo deje de ser algo que te preocupa.
+          </p>
+          <div class="cta-final__actions">
+            <a data-wa href="#" class="btn-cta w-full sm:w-auto">
+              Consultá ahora
+            </a>
+            <p class="cta-final__microcopy">Contanos tu situación, sin compromiso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div>
+          <p class="site-footer__brand-name">Milagros Perez</p>
+          <p class="site-footer__brand-tagline">Contadora Pública · San Martín, Buenos Aires</p>
+          <nav class="site-footer__nav" aria-label="Enlaces del sitio">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#quien-esta">Quién soy</a>
+            <a href="#proceso">Proceso</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
+        </div>
+        <div class="site-footer__meta">
+          <p class="site-footer__meta-title">Atención</p>
+          <p>Atención 100% digital</p>
+          <p>Emprendedores, comercios y monotributistas</p>
+        </div>
+      </div>
+      <p class="site-footer__legal">
+        © 2026 Milagros Perez. Todos los derechos reservados. La información de este sitio no constituye asesoramiento impositivo ni contable. Consultá con un profesional matriculado para tu caso particular.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ═══ CONTACTO FLOTANTE ═══ -->
+  <a
+    id="waFloat"
+    data-wa
+    href="#"
+    aria-label="Contactar"
+    class="wa-float fixed z-50 opacity-0 translate-y-3 pointer-events-none"
+  >
+    <svg class="wa-float__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+  </a>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AccountingService",
+      "@id": "https://milagrosperez.com/#business",
+      "name": "Milagros Perez",
+      "description": "Asesoramiento contable para emprendedores, comercios y monotributistas en San Martín, Buenos Aires. Atención 100% digital.",
+      "url": "https://milagrosperez.com",
+      "image": "https://milagrosperez.com/assets/images/Milagrosperez.jpeg",
+      "telephone": "+54-11-0000-0000",
+      "email": "contacto@milagrosperez.com",
+      "areaServed": [
+        { "@type": "City", "name": "San Martín" },
+        { "@type": "State", "name": "Buenos Aires" }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Martín",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "serviceType": [
+        "Asesoramiento contable",
+        "Monotributo",
+        "Responsables inscriptos",
+        "Liquidación de sueldos",
+        "Constitución de sociedades"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Milagros Perez",
+        "jobTitle": "Contadora Pública"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://milagrosperez.com/#website",
+      "url": "https://milagrosperez.com",
+      "name": "Milagros Perez | Contadora Pública",
+      "inLanguage": "es-AR",
+      "publisher": { "@id": "https://milagrosperez.com/#business" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://milagrosperez.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta el servicio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No publicamos un precio único: depende de tu categoría impositiva y de lo que necesités resolver. Contactanos, contanos tu situación y te explicamos qué incluye el servicio y por qué."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Trabajan de forma online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. La atención es 100% digital. No necesitás ir a una oficina. Nos contactás, compartimos la documentación necesaria y te acompañamos desde donde estés."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Atienden monotributistas y responsables inscriptos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, ese es nuestro foco principal: emprendedores, comercios y personas con actividad propia en monotributo o como responsables inscriptos."
+          }
+        }
+      ]
+    }
+  ]
+}

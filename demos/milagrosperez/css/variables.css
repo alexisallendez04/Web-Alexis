@@ -1,0 +1,84 @@
+:root {
+  /* ── Paleta de marca ── */
+  --color-primary: #ca9291;
+  --color-primary-dark: #b97e7d;
+  --color-primary-light: rgba(202, 146, 145, 0.1);
+  --color-rose-light: #e7c5c4;
+  --color-beige: #efe5e2;
+  --color-bg: #fefdf9;
+  --color-bg-alt: #f7f2ef;
+  --color-surface: #fefdf9;
+  --color-text: #2f3136;
+  --color-muted: #6e6e73;
+  --color-text-inverse: #ffffff;
+  --color-border: #e7dfda;
+  --color-border-subtle: rgba(231, 223, 218, 0.7);
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #1fb855;
+
+  /* Alias de compatibilidad */
+  --color-accent: var(--color-primary);
+  --color-accent-hover: var(--color-primary-dark);
+  --color-accent-muted: var(--color-primary-light);
+  --color-secondary: var(--color-muted);
+
+  /* ── Tipografía ── */
+  --font-hero: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: clamp(1.5rem, 3vw, 1.875rem);
+  --text-3xl: clamp(1.875rem, 4vw, 2.5rem);
+  --text-4xl: clamp(2.25rem, 5vw, 3.25rem);
+  --text-display: clamp(2.75rem, 6vw, 4.5rem);
+
+  --leading-tight: 1.15;
+  --leading-normal: 1.65;
+  --leading-relaxed: 1.8;
+  --tracking-wide: 0.1em;
+  --tracking-tight: -0.02em;
+
+  /* ── Espaciado ── */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: clamp(4rem, 8vw, 6rem);
+  --space-3xl: clamp(5rem, 10vw, 8rem);
+
+  /* ── Layout ── */
+  --container: min(1140px, 100% - 2.5rem);
+  --container-narrow: min(720px, 100% - 2.5rem);
+  --header-h: 80px;
+
+  /* ── Forma (boutique: 16–20 px) ── */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 18px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* ── Sombras sutiles ── */
+  --shadow-sm: 0 1px 3px rgba(47, 49, 54, 0.04);
+  --shadow-md: 0 8px 28px rgba(47, 49, 54, 0.06);
+  --shadow-lg: 0 20px 48px rgba(47, 49, 54, 0.08);
+  --shadow-accent: 0 6px 20px rgba(202, 146, 145, 0.18);
+
+  /* ── Transiciones (300 ms) ── */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration: 0.3s;
+  --duration-slow: 0.5s;
+
+  /* ── Breakpoints (referencia) ── */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+}

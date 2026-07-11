@@ -1,0 +1,27 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Estudio Contable Guerineau y Asociados",
+  "description": "Asesoramiento contable, impositivo y societario para empresas, profesionales y emprendedores en CABA y online.",
+  "url": "https://joseguerineau.com",
+  "areaServed": [
+    { "@type": "City", "name": "Buenos Aires" },
+    { "@type": "State", "name": "Buenos Aires" }
+  ],
+  "serviceType": [
+    "Asesoramiento contable e impositivo",
+    "Constitución de sociedades",
+    "Comercio exterior"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "José Guerineau",
+    "jobTitle": "Contador Público"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  }
+}
