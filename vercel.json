@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/demos/:slug((?!.*\\.).*)",
+      "destination": "/demos/:slug/",
+      "permanent": true
+    }
+  ]
+}

@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var path = location.pathname;
+      if (path.slice(-1) !== "/" && !/\.[a-z0-9]+$/i.test(path)) {
+        location.replace(path + "/" + location.search + location.hash);
+      }
+    })();
+  </script>
   <meta name="description" content="Contador en CABA y online. Asesoramiento contable, impositivo y societario para empresas, profesionales y emprendedores. José Guerineau — Estudio Contable Guerineau y Asociados.">
   <meta name="theme-color" content="#0F3460">
   <title>Contador CABA Online | José Guerineau — Asesoramiento Contable e Impositivo</title>
