@@ -6,6 +6,10 @@
   <script>
     (function () {
       var path = location.pathname;
+      if (/\/index\.html$/i.test(path)) {
+        location.replace(path.replace(/\/index\.html$/i, "/") + location.search + location.hash);
+        return;
+      }
       if (path.slice(-1) !== "/" && !/\.[a-z0-9]+$/i.test(path)) {
         location.replace(path + "/" + location.search + location.hash);
       }
