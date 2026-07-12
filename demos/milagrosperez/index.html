@@ -3,6 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var path = location.pathname;
+      if (/\/index\.html$/i.test(path)) {
+        location.replace(path.replace(/\/index\.html$/i, "/") + location.search + location.hash);
+        return;
+      }
+      if (path.slice(-1) !== "/" && !/\.[a-z0-9]+$/i.test(path)) {
+        location.replace(path + "/" + location.search + location.hash);
+      }
+    })();
+  </script>
   <meta name="description" content="Contadora Pública en San Martín, Buenos Aires. Asesoramiento contable para emprendedores, comercios y monotributistas. Atención 100% digital.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#CA9291">
