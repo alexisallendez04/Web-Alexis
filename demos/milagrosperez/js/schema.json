@@ -5,7 +5,7 @@
       "@type": "AccountingService",
       "@id": "https://milagrosperez.com/#business",
       "name": "Milagros Perez",
-      "description": "Asesoramiento contable para emprendedores, comercios y monotributistas en San Martín, Buenos Aires. Atención 100% digital.",
+      "description": "Estudio contable integral de Milagros Perez para emprendedores, profesionales independientes, comercios y PyMEs en San Martín, Buenos Aires. Atención 100% digital.",
       "url": "https://milagrosperez.com",
       "image": "https://milagrosperez.com/assets/images/Milagrosperez.jpeg",
       "telephone": "+54-11-0000-0000",
@@ -24,6 +24,7 @@
         "Asesoramiento contable",
         "Monotributo",
         "Responsables inscriptos",
+        "Gestión impositiva para PyMEs",
         "Liquidación de sueldos",
         "Constitución de sociedades"
       ],
@@ -50,23 +51,31 @@
           "name": "¿Cuánto cuesta el servicio?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No publicamos un precio único: depende de tu categoría impositiva y de lo que necesités resolver. Contactanos, contanos tu situación y te explicamos qué incluye el servicio y por qué."
+            "text": "No publico un precio único: depende de tu categoría impositiva y de lo que necesités resolver. Contactame, contame tu situación y te explico qué incluye el servicio y por qué."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Trabajan de forma online?",
+          "name": "¿Trabajás de forma online?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. La atención es 100% digital. No necesitás ir a una oficina. Nos contactás, compartimos la documentación necesaria y te acompañamos desde donde estés."
+            "text": "Sí. La atención es 100% digital. No necesitás ir a una oficina. Me contactás, compartimos la documentación necesaria y te acompaño desde donde estés."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Atienden monotributistas y responsables inscriptos?",
+          "name": "¿A qué tipo de clientes atendés?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, ese es nuestro foco principal: emprendedores, comercios y personas con actividad propia en monotributo o como responsables inscriptos."
+            "text": "Brindo asesoramiento tanto a Monotributistas y Responsables Inscriptos como a PyMEs, comercios y empresas en marcha. Adapto mis servicios impositivos, contables y de liquidación de sueldos según la escala y las necesidades operativas de cada negocio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuáles son los horarios de atención y cuánto tardás en responder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Podés enviarme tu consulta por WhatsApp o correo electrónico en cualquier momento, todos los días. Me comprometo a analizar tu caso y responderte dentro de las 24 horas hábiles con la rapidez y claridad que tu negocio necesita."
           }
         }
       ]

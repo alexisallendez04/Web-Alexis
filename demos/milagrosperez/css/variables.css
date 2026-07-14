@@ -1,18 +1,18 @@
 :root {
   /* ── Paleta de marca ── */
-  --color-primary: #ca9291;
-  --color-primary-dark: #b97e7d;
-  --color-primary-light: rgba(202, 146, 145, 0.1);
-  --color-rose-light: #e7c5c4;
-  --color-beige: #efe5e2;
+  --color-primary: #be7574;
+  --color-primary-dark: #a45c5b;
+  --color-primary-light: rgba(190, 117, 116, 0.14);
+  --color-rose-light: #e3b3b2;
+  --color-beige: #efe0dc;
   --color-bg: #fefdf9;
-  --color-bg-alt: #f7f2ef;
+  --color-bg-alt: #f4ebe7;
   --color-surface: #fefdf9;
   --color-text: #2f3136;
-  --color-muted: #6e6e73;
+  --color-muted: #5f5f64;
   --color-text-inverse: #ffffff;
-  --color-border: #e7dfda;
-  --color-border-subtle: rgba(231, 223, 218, 0.7);
+  --color-border: #e3d6d0;
+  --color-border-subtle: rgba(227, 214, 208, 0.75);
   --color-whatsapp: #25d366;
   --color-whatsapp-hover: #1fb855;
 
@@ -65,10 +65,10 @@
   --radius-full: 9999px;
 
   /* ── Sombras sutiles ── */
-  --shadow-sm: 0 1px 3px rgba(47, 49, 54, 0.04);
-  --shadow-md: 0 8px 28px rgba(47, 49, 54, 0.06);
-  --shadow-lg: 0 20px 48px rgba(47, 49, 54, 0.08);
-  --shadow-accent: 0 6px 20px rgba(202, 146, 145, 0.18);
+  --shadow-sm: 0 1px 3px rgba(47, 49, 54, 0.05);
+  --shadow-md: 0 8px 28px rgba(47, 49, 54, 0.08);
+  --shadow-lg: 0 20px 48px rgba(47, 49, 54, 0.1);
+  --shadow-accent: 0 8px 24px rgba(190, 117, 116, 0.28);
 
   /* ── Transiciones (300 ms) ── */
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
