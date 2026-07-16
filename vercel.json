@@ -1,0 +1,21 @@
+{
+  "trailingSlash": true,
+  "headers": [
+    {
+      "source": "/demos/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/demos/:slug/index.html",
+      "destination": "/demos/:slug/",
+      "permanent": true
+    }
+  ]
+}

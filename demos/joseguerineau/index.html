@@ -8,6 +8,14 @@
       var path = location.pathname;
       if (/\/index\.html$/i.test(path)) {
         location.replace(path.replace(/\/index\.html$/i, "/") + location.search + location.hash);
+        return;
+      }
+      // Sin barra final, las rutas relativas (css/, js/, assets/) se resuelven mal.
+      // Usamos <base> en lugar de redirect para evitar bucles con el hosting.
+      if (path.slice(-1) !== "/" && !/\.[a-z0-9]+$/i.test(path)) {
+        var base = document.createElement("base");
+        base.href = location.origin + path + "/";
+        document.head.insertBefore(base, document.head.firstChild);
       }
     })();
   </script>
@@ -77,7 +85,7 @@
     <div class="container hero__inner">
       <div class="hero__content">
         <p class="eyebrow hero-enter">Estudio Contable Guerineau y Asociados</p>
-        <h1 class="display h1 hero-enter hero-enter-d1">Asesoramientoooooooooooo contable e impositivo para empresas, profesionales y emprendedores.</h1>
+        <h1 class="display h1 hero-enter hero-enter-d1">Asesoramiento contable e impositivo para empresas, profesionales y emprendedores.</h1>
         <p class="lead hero-enter hero-enter-d2">Te acompañamos en la gestión contable, impositiva y societaria para que puedas enfocarte en hacer crecer tu actividad.</p>
         <div class="hero__actions hero-enter hero-enter-d3">
           <a data-wa href="#" class="btn btn--cta">Solicitar asesoramiento</a>
