@@ -6,12 +6,12 @@ export const SITE = {
   locale: "es-AR",
 
   contact: {
-    phone: "+54 11 0000-0000",
-    whatsapp: "5491100000000",
+    phone: "+54 9 2396 46-7140",
+    whatsapp: "5492396467140",
     whatsappMessage:
       "Hola, quisiera solicitar asesoramiento contable. Quiero contarles mi situación.",
-    email: "contacto@joseguerineau.com",
-    address: "Capital Federal (CABA) — Atención 100% online",
+    email: "consultas.guerineauyasociados@gmail.com",
+    address: "Capital Federal (CABA)",
     schedule: "Lunes a viernes, 9:00 a 18:00 hs",
   },
 

@@ -49,7 +49,7 @@
       </div>
 
       <a href="#inicio" class="navbar-logo" aria-label="Estudio Contable Guerineau y Asociados — Inicio">
-        <img src="assets/images/logo.png" alt="Estudio Contable Guerineau y Asociados" width="160" height="120" fetchpriority="high">
+        <img src="assets/images/logosinfondo.png" alt="Estudio Contable Guerineau y Asociados" width="160" height="120" fetchpriority="high">
       </a>
 
       <div class="site-header__actions">
@@ -74,19 +74,14 @@
   </div>
 
   <section id="inicio" class="hero">
-    <div class="container">
-      <div class="hero__grid">
-        <div class="hero__content">
-          <p class="eyebrow hero-enter">Estudio Contable Guerineau y Asociados</p>
-          <h1 class="display h1 hero-enter hero-enter-d1">Asesoramiento contable e impositivo para empresas, profesionales y emprendedores.</h1>
-          <p class="lead hero-enter hero-enter-d2">Te acompañamos en la gestión contable, impositiva y societaria para que puedas enfocarte en hacer crecer tu actividad.</p>
-          <div class="hero__actions hero-enter hero-enter-d3">
-            <a data-wa href="#" class="btn btn--cta">Solicitar asesoramiento</a>
-            <a href="#servicios" class="btn btn--outline">Ver servicios</a>
-          </div>
-        </div>
-        <div class="hero__visual hero-enter hero-enter-d4">
-          <img src="assets/images/hero-visual.svg" alt="Visual abstracto de orden, precisión y crecimiento contable" width="800" height="1000">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="eyebrow hero-enter">Estudio Contable Guerineau y Asociados</p>
+        <h1 class="display h1 hero-enter hero-enter-d1">Asesoramiento contable e impositivo para empresas, profesionales y emprendedores.</h1>
+        <p class="lead hero-enter hero-enter-d2">Te acompañamos en la gestión contable, impositiva y societaria para que puedas enfocarte en hacer crecer tu actividad.</p>
+        <div class="hero__actions hero-enter hero-enter-d3">
+          <a data-wa href="#" class="btn btn--cta">Solicitar asesoramiento</a>
+          <a href="#servicios" class="btn btn--outline">Ver servicios</a>
         </div>
       </div>
     </div>
@@ -109,19 +104,19 @@
         <ol class="problem-list" data-reveal-stagger>
           <li class="problem-list__item">
             <span class="problem-list__num">01</span>
-            <p class="problem-list__text">No entendés bien qué te pide AFIP ni por qué</p>
+            <p class="problem-list__text">No sabés si estás pagando más impuestos de los que corresponden.</p>
           </li>
           <li class="problem-list__item">
             <span class="problem-list__num">02</span>
-            <p class="problem-list__text">Te da miedo cometer un error y terminar con una multa</p>
+            <p class="problem-list__text">Recibiste una notificación de ARCA y no sabés cómo resolverla.</p>
           </li>
           <li class="problem-list__item">
             <span class="problem-list__num">03</span>
-            <p class="problem-list__text">Tu contador actual tarda en responder o no te explica nada</p>
+            <p class="problem-list__text">Tu contador actual tarda en responder o no te explica nada.</p>
           </li>
           <li class="problem-list__item">
             <span class="problem-list__num">04</span>
-            <p class="problem-list__text">Estás por armar una sociedad y no sabés qué estructura te conviene</p>
+            <p class="problem-list__text">Estás por constituir una sociedad y no sabés qué estructura te conviene.</p>
           </li>
         </ol>
       </div>
@@ -131,48 +126,56 @@
       <div class="container">
         <header class="section-header section-header--center" data-reveal>
           <span class="eyebrow">Qué hacemos</span>
-          <h2 id="services-title" class="display h2 h2--center">Todo lo que necesitás para estar en regla y crecer tranquilo</h2>
+          <h2 id="services-title" class="display h2 h2--center">Todo lo que necesitás para cumplir, crecer y tomar mejores decisiones</h2>
         </header>
 
         <div class="services-grid" data-reveal-stagger>
           <article class="module module--service">
-            <div class="module__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <div class="module__media">
+              <img src="assets/images/services/contable.jpg" alt="" width="800" height="500" loading="lazy" decoding="async">
             </div>
-            <h3 class="module__title">Asesoramiento contable e impositivo</h3>
-            <span class="module__tag">Cumplí en tiempo y forma, sin sorpresas</span>
-            <p class="module__text">Monotributo, Régimen General, inscripciones, recategorizaciones, Ganancias y Bienes Personales. Obligaciones fiscales al día, sin sustos de último momento.</p>
-            <a data-wa href="#" data-wa-message="Hola, quisiera consultar sobre asesoramiento contable e impositivo." class="module__link">Consultar</a>
+            <div class="module__body">
+              <h3 class="module__title">Asesoramiento contable e impositivo</h3>
+              <span class="module__tag">Cumplí en tiempo y forma, evitá multas.</span>
+              <p class="module__text">Monotributo, Régimen General, inscripciones, recategorizaciones, Ganancias y Bienes Personales. Obligaciones fiscales al día, sin complicaciones.</p>
+              <a data-wa href="#" data-wa-message="Hola, quisiera consultar sobre asesoramiento contable e impositivo." class="module__link">Consultar</a>
+            </div>
           </article>
 
           <article class="module module--service">
-            <div class="module__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m8 0H8m8 0v2a2 2 0 01-2 2H10a2 2 0 01-2-2V6"/></svg>
+            <div class="module__media">
+              <img src="assets/images/services/societario.jpg" alt="" width="800" height="500" loading="lazy" decoding="async">
             </div>
-            <h3 class="module__title">Constitución y trámites societarios</h3>
-            <span class="module__tag">Arrancá con la estructura correcta desde el día uno</span>
-            <p class="module__text">SAS, SRL y SA, inscripciones ante IGJ, reformas estatutarias y regularización de sociedades.</p>
-            <a data-wa href="#" data-wa-message="Hola, quisiera consultar sobre constitución y trámites societarios." class="module__link">Consultar</a>
+            <div class="module__body">
+              <h3 class="module__title">Constitución y trámites societarios</h3>
+              <span class="module__tag">Arrancá con la estructura correcta desde el día uno</span>
+              <p class="module__text">SAS, SRL y SA, inscripciones ante IGJ, reformas estatutarias y regularización de sociedades.</p>
+              <a data-wa href="#" data-wa-message="Hola, quisiera consultar sobre constitución y trámites societarios." class="module__link">Consultar</a>
+            </div>
           </article>
 
           <article class="module module--service">
-            <div class="module__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            <div class="module__media">
+              <img src="assets/images/services/comercio.jpg" alt="" width="800" height="500" loading="lazy" decoding="async">
             </div>
-            <h3 class="module__title">Comercio exterior</h3>
-            <span class="module__tag">Exportá sin dolores de cabeza impositivos</span>
-            <p class="module__text">Asesoramiento impositivo para exportadores de bienes y servicios, recupero de IVA y coordinación con despachantes de aduana.</p>
-            <a data-wa href="#" data-wa-message="Hola, quisiera consultar sobre comercio exterior." class="module__link">Consultar</a>
+            <div class="module__body">
+              <h3 class="module__title">Comercio exterior</h3>
+              <span class="module__tag">Exportá con tranquilidad.</span>
+              <p class="module__text">Asesoramiento impositivo para exportadores de bienes y servicios, recupero de IVA y coordinación con despachantes de aduana.</p>
+              <a data-wa href="#" data-wa-message="Hola, quisiera consultar sobre comercio exterior." class="module__link">Consultar</a>
+            </div>
           </article>
 
           <article class="module module--service">
-            <div class="module__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <div class="module__media">
+              <img src="assets/images/services/acompanamiento.jpg" alt="" width="800" height="500" loading="lazy" decoding="async">
             </div>
-            <h3 class="module__title">Acompañamiento integral</h3>
-            <span class="module__tag">Un aliado permanente, no solo en marzo</span>
-            <p class="module__text">Seguimiento durante todo el año, prevención de contingencias y trabajo interdisciplinario con abogados cuando el caso lo requiere.</p>
-            <a data-wa href="#" data-wa-message="Hola, quisiera consultar sobre acompañamiento integral." class="module__link">Consultar</a>
+            <div class="module__body">
+              <h3 class="module__title">Acompañamiento integral</h3>
+              <span class="module__tag">Un aliado estratégico para tu negocio.</span>
+              <p class="module__text">Te acompañamos de forma permanente en la toma de decisiones, el crecimiento de tu empresa y el cumplimiento de tus obligaciones.</p>
+              <a data-wa href="#" data-wa-message="Hola, quisiera consultar sobre acompañamiento integral." class="module__link">Consultar</a>
+            </div>
           </article>
         </div>
 
@@ -186,29 +189,33 @@
       <div class="container">
         <header class="section-header section-header--center" data-reveal>
           <span class="eyebrow">Por qué elegirnos</span>
-          <h2 id="why-title" class="display h2 h2--center display--light">¿Por qué trabajar con nosotros?</h2>
+          <h2 id="why-title" class="display h2 h2--center display--light">¿Por qué confiar en nosotros?</h2>
         </header>
 
         <div class="diff-grid" data-reveal-stagger>
           <article class="module module--navy">
-            <h3 class="module__title">Matrícula profesional vigente</h3>
-            <p class="module__text">Habilitado en CABA y Provincia de Buenos Aires. Contador Público egresado de la UBA.</p>
+            <h3 class="module__title">Contador público matriculado</h3>
+            <p class="module__text">Matrícula vigente en CABA y Provincia de Buenos Aires. Contador Público egresado de la UBA.</p>
           </article>
           <article class="module module--navy">
             <h3 class="module__title">Más de 7 años de experiencia</h3>
-            <p class="module__text">Trayectoria en impositivo, contable, societario y previsional.</p>
+            <p class="module__text">Amplia trayectoria en temas impositivos, contables, societarios y previsionales.</p>
           </article>
           <article class="module module--navy">
             <h3 class="module__title">Atención personalizada</h3>
-            <p class="module__text">Trato directo con José, sin intermediarios ni cartera masiva.</p>
+            <p class="module__text">Trato directo con José, sin intermediarios.</p>
           </article>
           <article class="module module--navy">
-            <h3 class="module__title">Transparencia total</h3>
-            <p class="module__text">Te explicamos el porqué de cada recomendación, no solo el qué.</p>
+            <h3 class="module__title">Transparencia</h3>
+            <p class="module__text">Creemos que un buen asesoramiento comienza por una comunicación clara y honesta. Nos tomamos el tiempo necesario para que entiendas cada aspecto contable, impositivo o societario antes de tomar una decisión.</p>
           </article>
           <article class="module module--navy">
             <h3 class="module__title">Trabajo interdisciplinario</h3>
-            <p class="module__text">Articulamos con profesionales del área legal cuando el caso lo requiere.</p>
+            <p class="module__text">Trabajamos junto a abogados, escribanos y otros especialistas cuando la situación lo amerita.</p>
+          </article>
+          <article class="module module--navy">
+            <h3 class="module__title">Compromiso permanente</h3>
+            <p class="module__text">Construimos relaciones a largo plazo basadas en la confianza y el seguimiento continuo. Buscamos oportunidades para optimizar la carga tributaria y acompañarte en el crecimiento de tu negocio.</p>
           </article>
         </div>
       </div>
@@ -227,21 +234,44 @@
           <h2 id="testimonials-title" class="display h2 h2--center">Lo que dicen quienes ya confían en nosotros</h2>
         </header>
 
-        <div class="testimonials-grid" data-reveal-stagger>
-          <blockquote class="quote">
-            <p class="quote__text">"Como representante de Aura, estamos muy conformes con el profesionalismo, la dedicación y el compromiso del Estudio Contable. Prolijidad, asesoramiento adecuado y disponibilidad permanente son algunas de sus principales características."</p>
-            <footer>
-              <cite class="quote__name">Alfonso Rodríguez</cite>
-              <p class="quote__role">Socio Gerente — AURA DX S.R.L.</p>
-            </footer>
-          </blockquote>
-          <blockquote class="quote">
-            <p class="quote__text">"Excelentes profesionales, muy responsables y comprometidos con su trabajo. Se aseguran de que sus clientes comprendan todo a la perfección, son proactivos y enfocados en resolver. Cada año renovamos el compromiso debido a la calidad humana y de los servicios ofrecidos."</p>
-            <footer>
-              <cite class="quote__name">Tomás Álvarez</cite>
-              <p class="quote__role">CEO — Solvence Argentina</p>
-            </footer>
-          </blockquote>
+        <div class="testimonials-carousel" data-carousel data-reveal>
+          <div class="testimonials-carousel__viewport">
+            <div class="testimonials-carousel__track" data-carousel-track>
+              <blockquote class="quote testimonials-carousel__slide">
+                <p class="quote__text">"Como representante de Aura, estamos muy conformes con el profesionalismo, la dedicación y el compromiso del Estudio Contable. Prolijidad, asesoramiento adecuado y disponibilidad permanente son algunas de sus principales características."</p>
+                <footer>
+                  <cite class="quote__name">Alfonso Rodríguez</cite>
+                  <p class="quote__role">Socio Gerente — AURA DX S.R.L.</p>
+                </footer>
+              </blockquote>
+
+              <blockquote class="quote testimonials-carousel__slide">
+                <p class="quote__text">"Excelentes profesionales, muy responsables y comprometidos con su trabajo. Se aseguran de que sus clientes comprendan todo a la perfección, son proactivos y enfocados en resolver. Cada año renovamos el compromiso debido a la calidad humana y de los servicios ofrecidos."</p>
+                <footer>
+                  <cite class="quote__name">Tomás Álvarez</cite>
+                  <p class="quote__role">CEO — Solvence Argentina</p>
+                </footer>
+              </blockquote>
+
+              <blockquote class="quote testimonials-carousel__slide">
+                <p class="quote__text">"Estamos muy satisfechos con la atención, la información siempre precisa, la mejor predisposición para explicarnos las cosas correctamente, desde que arrancamos excelentes en todo."</p>
+                <footer>
+                  <cite class="quote__name">Ana Laura Britos</cite>
+                  <p class="quote__role">Socia Gerente — Britgrams SRL</p>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="testimonials-carousel__controls">
+            <button type="button" class="testimonials-carousel__btn" data-carousel-prev aria-label="Testimonio anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="testimonials-carousel__dots" data-carousel-dots role="tablist" aria-label="Navegación de testimonios"></div>
+            <button type="button" class="testimonials-carousel__btn" data-carousel-next aria-label="Siguiente testimonio">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -301,8 +331,9 @@
           </div>
 
           <div class="about-body" data-reveal>
-            <p class="text-body">Soy José Guerineau, Contador Público egresado de la UBA, con más de 7 años de experiencia en impositivo, contable, societario y previsional.</p>
-            <p class="text-body">Dirijo Estudio Contable Guerineau y Asociados con un objetivo simple: que cada cliente entienda su situación y tenga en mí un aliado para crecer con tranquilidad.</p>
+            <p class="text-body">Soy José Guerineau, Contador Público egresado de la Universidad de Buenos Aires, con más de siete años de experiencia asesorando a profesionales, emprendedores y empresas en materia impositiva, contable, societaria y previsional.</p>
+            <p class="text-body">Creo que un buen asesoramiento no consiste únicamente en cumplir con las obligaciones fiscales, sino en brindar información clara para que cada cliente pueda tomar mejores decisiones y desarrollar su actividad con seguridad.</p>
+            <p class="text-body">En Estudio Contable Guerineau y Asociados trabajamos con un enfoque cercano, transparente y personalizado, acompañando a cada cliente en el crecimiento de su proyecto y convirtiéndonos en un aliado de largo plazo.</p>
             <a data-wa href="#" class="btn btn--ghost-light">Ponete en contacto →</a>
           </div>
         </div>
@@ -319,34 +350,34 @@
         <div class="faq" data-reveal>
           <div class="faq-item">
             <button type="button" class="faq-question" aria-expanded="false">
-              ¿Trabajan con monotributistas o solo empresas grandes?
+              ¿Trabajan con monotributistas o solo grandes empresas?
               <svg class="faq-question__icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
             </button>
             <div class="faq-answer" role="region">
               <div class="faq-answer__inner">
-                <p class="faq-answer__text">Acompañamos estructuras de cualquier tamaño, desde el monotributo hasta sociedades constituidas.</p>
+                <p class="faq-answer__text">Acompañamos estructuras de cualquier tamaño, desde monotributistas hasta grandes empresas.</p>
               </div>
             </div>
           </div>
           <div class="faq-item">
             <button type="button" class="faq-question" aria-expanded="false">
-              ¿Cómo es la atención online?
+              ¿Qué pasa si ya tengo contador?
               <svg class="faq-question__icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
             </button>
             <div class="faq-answer" role="region">
               <div class="faq-answer__inner">
-                <p class="faq-answer__text">La atención es 100% online, con comunicación directa y videollamadas cuando lo necesitás. Respuestas ágiles y seguimiento constante.</p>
+                <p class="faq-answer__text">Podemos analizar tu situación sin compromiso. Si decidís cambiar de estudio, nos ocupamos de coordinar la transición para que sea simple y ordenada.</p>
               </div>
             </div>
           </div>
           <div class="faq-item">
             <button type="button" class="faq-question" aria-expanded="false">
-              ¿Puedo cambiarme de contador sin problemas?
+              ¿También realizan certificaciones y balances?
               <svg class="faq-question__icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
             </button>
             <div class="faq-answer" role="region">
               <div class="faq-answer__inner">
-                <p class="faq-answer__text">Sí, coordinamos el traspaso de forma ordenada para no perder continuidad ni historial.</p>
+                <p class="faq-answer__text">Sí. Emitimos certificaciones contables, informes profesionales, balances, legalizaciones y demás trabajos requeridos por organismos públicos, bancos y entidades privadas.</p>
               </div>
             </div>
           </div>
@@ -357,7 +388,7 @@
             </button>
             <div class="faq-answer" role="region">
               <div class="faq-answer__inner">
-                <p class="faq-answer__text">Sí. La matrícula habilita CABA y PBA, y la modalidad online permite trabajar con cualquier ubicación.</p>
+                <p class="faq-answer__text">Sí. La matrícula habilita CABA y PBA, y la modalidad online permite trabajar con clientes de cualquier ubicación.</p>
               </div>
             </div>
           </div>
@@ -388,12 +419,16 @@
           <p class="site-footer__brand">Estudio Contable Guerineau y Asociados</p>
           <p class="site-footer__meta">José Guerineau — Contador Público (UBA)</p>
           <p class="site-footer__note">Matrícula CABA y Provincia de Buenos Aires</p>
+          <ul class="site-footer__contact">
+            <li>
+              <a href="mailto:consultas.guerineauyasociados@gmail.com" class="site-footer__link">consultas.guerineauyasociados@gmail.com</a>
+            </li>
+            <li>
+              <a data-wa href="#" class="site-footer__link" id="footer-phone">+54 9 2396 46-7140</a>
+            </li>
+          </ul>
         </div>
-        <div>
-          <p class="site-footer__label">Horario de atención</p>
-          <p>Lunes a viernes, 9:00 a 18:00 hs</p>
-          <p class="site-footer__sub">Atención 100% online</p>
-        </div>
+       
         <div id="footer-social"></div>
       </div>
       <p class="site-footer__legal">© 2026 Estudio Contable Guerineau y Asociados. Todos los derechos reservados.</p>

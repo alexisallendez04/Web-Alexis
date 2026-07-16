@@ -254,6 +254,28 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.module__media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: rgba(15, 52, 96, 0.04);
+}
+
+.module__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--motion-hover-duration) var(--ease-motion);
+}
+
+.module__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.75rem;
 }
 
 .module--service .module__text {
@@ -357,55 +379,135 @@ body {
 /* ── Hero ── */
 .hero {
   position: relative;
-  min-height: calc(100svh - 7.25rem);
+  isolation: isolate;
+  min-height: 100svh;
   display: flex;
   align-items: center;
-  padding-block: clamp(3rem, 6vw, 5rem);
-  padding-top: calc(6.25rem + clamp(2rem, 4vw, 3rem));
+  padding-block: clamp(5.5rem, 14vh, 8rem) clamp(2.5rem, 5vw, 4rem);
   overflow: hidden;
+  background-color: #071623;
+  background-image: url("../assets/images/tuki.png");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
 }
 
-.hero__grid {
-  display: grid;
-  gap: clamp(2.5rem, 5vw, 4rem);
-  align-items: center;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 22, 35, 0.92) 0%,
+    rgba(7, 22, 35, 0.82) 35%,
+    rgba(7, 22, 35, 0.55) 60%,
+    rgba(7, 22, 35, 0.2) 100%
+  );
+  pointer-events: none;
 }
 
-@media (min-width: 1024px) {
-  .hero__grid {
-    grid-template-columns: 1fr 1fr;
-  }
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  width: min(72rem, 100% - clamp(2rem, 5vw, 4rem));
+  margin-inline: auto;
+}
+
+.hero__content {
+  max-width: 38.75rem;
+  margin-right: auto;
+}
+
+.hero .eyebrow {
+  position: relative;
+  margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
+  padding-bottom: clamp(1rem, 2vw, 1.25rem);
+  letter-spacing: 0.16em;
+  transition: opacity var(--motion-hover-duration) var(--ease-motion);
+}
+
+.hero .eyebrow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2.75rem;
+  height: 1px;
+  background: var(--color-accent);
+  opacity: 0.9;
+  transform-origin: left;
+  transition: width var(--motion-hover-duration) var(--ease-motion);
+}
+
+.hero .display.h1 {
+  max-width: 38.75rem;
+  margin: 0;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  color: var(--color-text-inverse);
+}
+
+.hero .lead {
+  max-width: 34rem;
+  margin-top: clamp(1.375rem, 2.8vw, 1.875rem);
+  line-height: 1.72;
+  color: rgba(250, 250, 250, 0.84);
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2rem;
+  align-items: center;
+  gap: clamp(0.875rem, 2vw, 1.125rem);
+  margin-top: clamp(2rem, 4vw, 2.75rem);
 }
 
-.hero .h1 {
-  max-width: 20ch;
+.hero .btn--outline {
+  color: rgba(250, 250, 250, 0.92);
+  border-color: rgba(250, 250, 250, 0.34);
 }
 
-.hero .lead {
-  max-width: 34rem;
-  margin-top: 1.5rem;
+.hero .btn--outline:hover {
+  background: rgba(250, 250, 250, 0.08);
 }
 
-.hero__visual {
-  position: relative;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  aspect-ratio: 4 / 5;
-  max-height: 32rem;
+@media (min-width: 768px) {
+  .hero {
+    padding-block: clamp(6rem, 14vh, 8.5rem) clamp(2.75rem, 5vw, 4.5rem);
+  }
 }
 
-.hero__visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+@media (max-width: 767px) {
+  .hero {
+    background-position: 62% center;
+    align-items: flex-end;
+    padding-bottom: clamp(2.5rem, 8vw, 3.5rem);
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      180deg,
+      rgba(7, 22, 35, 0.88) 0%,
+      rgba(7, 22, 35, 0.78) 42%,
+      rgba(7, 22, 35, 0.52) 72%,
+      rgba(7, 22, 35, 0.28) 100%
+    );
+  }
+
+  .hero .display.h1 {
+    line-height: 1.16;
+  }
+
+  .hero .lead {
+    line-height: 1.68;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    background-position: center center;
+  }
 }
 
 /* ── Problema: filas tipo libro ── */
@@ -531,6 +633,7 @@ body {
   font-size: 1.125rem;
   font-weight: 500;
   color: var(--color-primary);
+  font-style: normal;
 }
 
 .quote__role {
@@ -539,6 +642,100 @@ body {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-muted);
+}
+
+.testimonials-carousel {
+  position: relative;
+}
+
+.testimonials-carousel__viewport {
+  overflow: hidden;
+}
+
+.testimonials-carousel__track {
+  display: flex;
+  gap: 1.25rem;
+  transition: transform 0.55s var(--ease-motion);
+  will-change: transform;
+}
+
+.testimonials-carousel__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .testimonials-carousel__slide {
+    flex: 0 0 calc((100% - 1.25rem) / 2);
+  }
+}
+
+.testimonials-carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.testimonials-carousel__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition:
+    border-color var(--motion-hover-duration) var(--ease-motion),
+    background-color var(--motion-hover-duration) var(--ease-motion),
+    color var(--motion-hover-duration) var(--ease-motion),
+    opacity var(--motion-hover-duration) var(--ease-motion);
+}
+
+.testimonials-carousel__btn svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.testimonials-carousel__btn:hover {
+  border-color: rgba(15, 52, 96, 0.35);
+  background: rgba(15, 52, 96, 0.03);
+}
+
+.testimonials-carousel__dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.testimonials-carousel__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(15, 52, 96, 0.2);
+  cursor: pointer;
+  transition:
+    background-color var(--motion-hover-duration) var(--ease-motion),
+    transform var(--motion-hover-duration) var(--ease-motion);
+}
+
+.testimonials-carousel__dot[aria-selected="true"] {
+  background: var(--color-accent);
+  transform: scale(1.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-carousel__track {
+    transition: none;
+  }
 }
 
 /* ── Proceso ── */
@@ -723,6 +920,14 @@ body {
   opacity: 0.7;
 }
 
+.site-footer__contact {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
 .site-footer__label {
   color: rgba(250, 250, 250, 0.85);
   font-weight: 500;
@@ -749,17 +954,6 @@ body {
   color: rgba(250, 250, 250, 0.4);
 }
 
-.testimonials-grid {
-  display: grid;
-  gap: 1.25rem;
-}
-
-@media (min-width: 768px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .diff-grid {
   display: grid;
   gap: 1px;
@@ -784,9 +978,6 @@ body {
   background: #0c2a4d;
 }
 
-.diff-grid > .module--navy:last-child {
-  grid-column: 1 / -1;
-}
 
 .stat-wrap {
   margin-top: 1.5rem;

@@ -25,6 +25,7 @@ const SECTION_IDS = [
 export function initWhatsAppLinks() {
   const phone = SITE.contact.whatsapp;
   const defaultMessage = SITE.contact.whatsappMessage;
+  const displayPhone = SITE.contact.phone;
 
   document.querySelectorAll("[data-wa]").forEach((el) => {
     const message = el.dataset.waMessage?.trim() || defaultMessage;
@@ -36,6 +37,11 @@ export function initWhatsAppLinks() {
       el.rel = "noopener noreferrer";
     }
   });
+
+  const footerPhone = document.getElementById("footer-phone");
+  if (footerPhone && displayPhone) {
+    footerPhone.textContent = displayPhone;
+  }
 }
 
 export function initNavigation() {
