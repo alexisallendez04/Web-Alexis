@@ -86,6 +86,20 @@ body.nav-open {
   padding-inline: 1rem;
 }
 
+@media (max-width: 1023px) {
+  .site-header__inner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .site-header__actions {
+    display: none;
+  }
+
+  .navbar-logo {
+    justify-self: end;
+  }
+}
+
 .site-header__nav {
   display: none;
   align-items: center;
@@ -118,20 +132,9 @@ body.nav-open {
   display: none;
 }
 
-.nav-cta-mobile {
-  width: 2.75rem;
-  height: 2.75rem;
-  min-height: 2.75rem;
-  padding: 0;
-}
-
 @media (min-width: 1024px) {
   .nav-cta-desktop {
     display: inline-flex;
-  }
-
-  .nav-cta-mobile {
-    display: none;
   }
 }
 
