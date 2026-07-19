@@ -6,8 +6,8 @@ export const SITE = {
   locale: "es-AR",
 
   contact: {
-    phone: "+54 9 2396 46-7140",
-    whatsapp: "5492396467140",
+    phone: "+54 9 11 6530-2326",
+    whatsapp: "5491165302326",
     whatsappMessage:
       "Hola, quisiera solicitar asesoramiento contable. Quiero contarles mi situación.",
     email: "consultas.guerineauyasociados@gmail.com",

@@ -23,6 +23,18 @@ export function initTestimonialsCarousel() {
     return Math.max(0, slides.length - perView);
   }
 
+  function equalizeHeights() {
+    slides.forEach((slide) => {
+      slide.style.height = "";
+    });
+    const maxHeight = Math.max(
+      ...slides.map((slide) => slide.getBoundingClientRect().height)
+    );
+    slides.forEach((slide) => {
+      slide.style.height = `${maxHeight}px`;
+    });
+  }
+
   function buildDots() {
     if (!dotsWrap) return;
     dotsWrap.innerHTML = "";
@@ -106,10 +118,12 @@ export function initTestimonialsCarousel() {
       index = Math.min(index, maxIndex());
       buildDots();
     }
+    equalizeHeights();
     update();
   });
 
   buildDots();
+  equalizeHeights();
   update();
   restartAuto();
 }

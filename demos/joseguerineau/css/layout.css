@@ -606,7 +606,6 @@ body {
 .quote {
   display: flex;
   flex-direction: column;
-  height: 100%;
   padding: 1.75rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
@@ -621,7 +620,7 @@ body {
 }
 
 .quote__text {
-  flex: 1;
+  flex: 1 1 auto;
   margin-bottom: 1.5rem;
   font-size: 0.9375rem;
   line-height: 1.65;
@@ -654,16 +653,22 @@ body {
 
 .testimonials-carousel__track {
   display: flex;
+  align-items: stretch;
   gap: 1.25rem;
   transition: transform 0.55s var(--ease-motion);
   will-change: transform;
 }
 
 .testimonials-carousel__slide {
+  display: flex;
+  flex-direction: column;
   flex: 0 0 100%;
   min-width: 0;
-  min-height: 100%;
   box-sizing: border-box;
+}
+
+.testimonials-carousel__slide > footer {
+  margin-top: auto;
 }
 
 @media (min-width: 768px) {
