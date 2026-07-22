@@ -156,23 +156,46 @@ function equalizeSlideHeights(slides) {
   });
 }
 
+function getSnapAlign() {
+  return window.matchMedia("(min-width: 768px)").matches ? "start" : "center";
+}
+
+function getMaxIndex(slides) {
+  const perView = window.matchMedia("(min-width: 768px)").matches ? 2 : 1;
+  return Math.max(0, slides.length - perView);
+}
+
 function getActiveIndex(track, slides) {
+  const align = getSnapAlign();
   const trackRect = track.getBoundingClientRect();
-  const trackCenter = trackRect.left + trackRect.width / 2;
   let bestIndex = 0;
   let bestDistance = Infinity;
 
   slides.forEach((slide, index) => {
     const rect = slide.getBoundingClientRect();
-    const center = rect.left + rect.width / 2;
-    const distance = Math.abs(center - trackCenter);
+    const distance =
+      align === "center"
+        ? Math.abs(rect.left + rect.width / 2 - (trackRect.left + trackRect.width / 2))
+        : Math.abs(rect.left - trackRect.left);
+
     if (distance < bestDistance) {
       bestDistance = distance;
       bestIndex = index;
     }
   });
 
-  return bestIndex;
+  return Math.min(bestIndex, getMaxIndex(slides));
+}
+
+function getScrollLeftForSlide(track, slide, align) {
+  // Posición estable (no depende del scroll a medias)
+  const left = slide.offsetLeft;
+
+  if (align === "center") {
+    return left - (track.clientWidth - slide.offsetWidth) / 2;
+  }
+
+  return left;
 }
 
 function initQuotesCarousel() {
@@ -190,6 +213,8 @@ function initQuotesCarousel() {
   const reduced = prefersReducedMotion();
   let activeIndex = 0;
   let scrollRaf = 0;
+  let programmatic = false;
+  let programmaticTimer = 0;
 
   const setActive = (index) => {
     activeIndex = index;
@@ -200,13 +225,14 @@ function initQuotesCarousel() {
     });
 
     if (prevBtn) prevBtn.disabled = index <= 0;
-    if (nextBtn) nextBtn.disabled = index >= slides.length - 1;
+    if (nextBtn) nextBtn.disabled = index >= getMaxIndex(slides);
   };
 
   const buildDots = () => {
     dotsWrap.replaceChildren();
+    const count = getMaxIndex(slides) + 1;
 
-    slides.forEach((_, index) => {
+    for (let index = 0; index < count; index++) {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "testimonials-quotes__dot";
@@ -214,23 +240,44 @@ function initQuotesCarousel() {
       btn.setAttribute("aria-label", `Ir al testimonio ${index + 1}`);
       btn.addEventListener("click", () => goTo(index));
       dotsWrap.appendChild(btn);
-    });
+    }
 
-    setActive(activeIndex);
+    setActive(Math.min(activeIndex, getMaxIndex(slides)));
+  };
+
+  const endProgrammatic = () => {
+    programmatic = false;
+    if (programmaticTimer) {
+      window.clearTimeout(programmaticTimer);
+      programmaticTimer = 0;
+    }
+    setActive(getActiveIndex(track, slides));
+  };
+
+  const snapTo = (index, behavior = "auto") => {
+    const next = Math.min(Math.max(index, 0), getMaxIndex(slides));
+    const align = getSnapAlign();
+    const left = Math.max(0, getScrollLeftForSlide(track, slides[next], align));
+
+    programmatic = true;
+    if (programmaticTimer) window.clearTimeout(programmaticTimer);
+    setActive(next);
+    track.scrollTo({ left, behavior });
+
+    if (behavior === "auto") {
+      endProgrammatic();
+      return;
+    }
+
+    programmaticTimer = window.setTimeout(endProgrammatic, 450);
   };
 
   const goTo = (index) => {
-    const next = Math.min(Math.max(index, 0), slides.length - 1);
-    const behavior = reduced ? "auto" : "smooth";
-    slides[next].scrollIntoView({
-      behavior,
-      inline: "center",
-      block: "nearest",
-    });
-    setActive(next);
+    snapTo(index, reduced ? "auto" : "smooth");
   };
 
   const syncFromScroll = () => {
+    if (programmatic) return;
     setActive(getActiveIndex(track, slides));
   };
 
@@ -242,6 +289,8 @@ function initQuotesCarousel() {
     },
     { passive: true }
   );
+
+  track.addEventListener("scrollend", endProgrammatic);
 
   track.addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight") {
@@ -258,11 +307,13 @@ function initQuotesCarousel() {
 
   const refresh = () => {
     equalizeSlideHeights(slides);
-    syncFromScroll();
+    buildDots();
+    snapTo(Math.min(activeIndex, getMaxIndex(slides)), "auto");
   };
 
   buildDots();
-  refresh();
+  equalizeSlideHeights(slides);
+  snapTo(0, "auto");
 
   window.addEventListener("resize", refresh);
 

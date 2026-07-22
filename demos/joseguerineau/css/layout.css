@@ -388,7 +388,7 @@ body {
   padding-bottom: clamp(2.5rem, 5vw, 4rem);
   overflow: hidden;
   background-color: #0a1a2e;
-  background-image: url("../assets/images/hero.png");
+  background-image: url("../assets/images/hero.jpg");
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
