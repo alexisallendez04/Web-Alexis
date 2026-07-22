@@ -144,12 +144,20 @@
     transform: translateY(-2px) scale(1.03);
   }
 
-  .about-photo {
+  .about-portrait {
     transition: transform var(--motion-hover-duration) var(--ease-motion);
   }
 
-  .about-photo:hover {
-    transform: translateY(-4px) scale(1.015);
+  .about-portrait:hover {
+    transform: translateY(-4px);
+  }
+
+  .about-portrait:hover .about-portrait__media img {
+    transform: scale(1.03);
+  }
+
+  .about-portrait:hover .about-portrait__accent {
+    border-color: rgba(201, 162, 75, 0.65);
   }
 }
 
@@ -193,11 +201,15 @@
   .problem-list__item:hover,
   .process__step:hover,
   .stat:hover,
-  .about-photo:hover,
+  .about-portrait:hover,
   .wa-float:hover {
     transform: none;
     padding-left: inherit;
     background: inherit;
+  }
+
+  .about-portrait:hover .about-portrait__media img {
+    transform: none;
   }
 
   .navbar-logo:hover::before,

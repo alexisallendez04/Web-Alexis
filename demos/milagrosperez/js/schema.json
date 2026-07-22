@@ -5,12 +5,14 @@
       "@type": "AccountingService",
       "@id": "https://milagrosperez.com/#business",
       "name": "Milagros Perez",
-      "description": "Estudio contable integral de Milagros Perez para emprendedores, profesionales independientes, comercios y PyMEs en San Martín, Buenos Aires. Atención 100% digital.",
+      "description": "Estudio contable integral de Milagros Perez para emprendedores, profesionales independientes, comercios y PyMEs en Gran Buenos Aires y CABA. Atención 100% digital.",
       "url": "https://milagrosperez.com",
       "image": "https://milagrosperez.com/assets/images/Milagrosperez.jpeg",
       "telephone": "+54-11-0000-0000",
       "email": "contacto@milagrosperez.com",
       "areaServed": [
+        { "@type": "City", "name": "Buenos Aires" },
+        { "@type": "AdministrativeArea", "name": "Gran Buenos Aires" },
         { "@type": "City", "name": "San Martín" },
         { "@type": "State", "name": "Buenos Aires" }
       ],
@@ -51,7 +53,7 @@
           "name": "¿Cuánto cuesta el servicio?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No publico un precio único: depende de tu categoría impositiva y de lo que necesités resolver. Contactame, contame tu situación y te explico qué incluye el servicio y por qué."
+            "text": "Cada caso es diferente. Antes de comenzar, analizo tu situación y te envío un presupuesto personalizado, detallando el alcance del servicio, los honorarios y lo que incluye."
           }
         },
         {
@@ -67,7 +69,7 @@
           "name": "¿A qué tipo de clientes atendés?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Brindo asesoramiento tanto a Monotributistas y Responsables Inscriptos como a PyMEs, comercios y empresas en marcha. Adapto mis servicios impositivos, contables y de liquidación de sueldos según la escala y las necesidades operativas de cada negocio."
+            "text": "Atiendo tanto a quienes están dando sus primeros pasos como a empresas que necesitan un acompañamiento contable permanente. Mi objetivo es brindar un servicio cercano, claro y personalizado."
           }
         },
         {

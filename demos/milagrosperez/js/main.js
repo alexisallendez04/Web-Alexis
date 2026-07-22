@@ -5,6 +5,7 @@ import {
   initWhatsAppLinks,
 } from "./modules/navigation.js";
 import { initFaq, initContactForm } from "./modules/forms.js";
+import { initTestimonials } from "./modules/testimonials.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initWhatsAppLinks();
@@ -14,4 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initFaq();
   initContactForm();
   initWhatsAppFloat();
+  initTestimonials();
 });

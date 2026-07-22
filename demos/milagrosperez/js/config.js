@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Milagros Perez",
   tagline: "Contadora Pública",
-  location: "San Martín, Buenos Aires",
+  location: "Gran Buenos Aires y CABA",
   url: "https://milagrosperez.com",
   locale: "es-AR",
 
