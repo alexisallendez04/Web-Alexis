@@ -145,6 +145,13 @@ function equalizeSlideHeights(slides) {
     slide.style.minHeight = "";
   });
 
+  slides.forEach((slide) => {
+    const quote = slide.querySelector(".testimonial-card__quote");
+    const text = slide.querySelector(".testimonial-card__quote-text");
+    if (!quote || !text) return;
+    quote.classList.toggle("is-clamped", text.scrollHeight > text.clientHeight + 1);
+  });
+
   const maxHeight = Math.max(
     ...slides.map((slide) => slide.getBoundingClientRect().height)
   );
@@ -322,7 +329,108 @@ function initQuotesCarousel() {
   }
 }
 
+function initTestimonialModal() {
+  const modal = document.querySelector("[data-testimonial-modal]");
+  if (!modal) return;
+
+  const panel = modal.querySelector("[data-testimonial-modal-panel]");
+  const starsEl = modal.querySelector("[data-testimonial-modal-stars]");
+  const nameEl = modal.querySelector("[data-testimonial-modal-name]");
+  const roleEl = modal.querySelector("[data-testimonial-modal-role]");
+  const bodyEl = modal.querySelector("[data-testimonial-modal-body]");
+  const openButtons = document.querySelectorAll("[data-testimonial-open]");
+
+  if (!panel || !starsEl || !nameEl || !roleEl || !bodyEl || !openButtons.length) {
+    return;
+  }
+
+  let lastFocus = null;
+  let closing = false;
+
+  const fillFromCard = (card) => {
+    const stars = card.querySelector(".testimonial-card__stars");
+    const name = card.querySelector(".testimonial-card__name");
+    const role = card.querySelector(".testimonial-card__role");
+    const quoteText = card.querySelector(".testimonial-card__quote-text");
+
+    starsEl.replaceChildren();
+    if (stars) {
+      starsEl.append(...[...stars.querySelectorAll("svg")].map((svg) => svg.cloneNode(true)));
+    }
+
+    nameEl.textContent = name?.textContent?.trim() || "";
+    roleEl.textContent = role?.textContent?.trim() || "";
+    bodyEl.replaceChildren();
+
+    if (quoteText) {
+      quoteText.querySelectorAll("p").forEach((p) => {
+        const clone = document.createElement("p");
+        clone.textContent = p.textContent;
+        bodyEl.appendChild(clone);
+      });
+    }
+  };
+
+  const open = (card, trigger) => {
+    if (modal.classList.contains("is-open")) return;
+
+    fillFromCard(card);
+    lastFocus = trigger || document.activeElement;
+    modal.hidden = false;
+    document.body.classList.add("is-testimonial-modal-open");
+
+    requestAnimationFrame(() => {
+      modal.classList.add("is-open");
+      panel.focus({ preventScroll: true });
+    });
+  };
+
+  const close = () => {
+    if (!modal.classList.contains("is-open") || closing) return;
+    closing = true;
+    modal.classList.remove("is-open");
+    document.body.classList.remove("is-testimonial-modal-open");
+
+    const finish = () => {
+      modal.hidden = true;
+      closing = false;
+      if (lastFocus && typeof lastFocus.focus === "function") {
+        lastFocus.focus({ preventScroll: true });
+      }
+      lastFocus = null;
+    };
+
+    if (prefersReducedMotion()) {
+      finish();
+      return;
+    }
+
+    window.setTimeout(finish, 300);
+  };
+
+  openButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const card = btn.closest("[data-testimonial]");
+      if (card) open(card, btn);
+    });
+  });
+
+  modal.querySelectorAll("[data-testimonial-modal-dismiss]").forEach((el) => {
+    el.addEventListener("click", close);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("is-open")) {
+      e.preventDefault();
+      close();
+    }
+  });
+}
+
 export function initTestimonials() {
   initVideoTestimonials();
   initQuotesCarousel();
+  initTestimonialModal();
 }
