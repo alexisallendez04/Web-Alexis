@@ -35,9 +35,9 @@ export function initWhatsAppLinks() {
     }
   });
 
-  const footerPhone = document.getElementById("footer-phone");
-  if (footerPhone && displayPhone) {
-    footerPhone.textContent = displayPhone;
+  const footerPhoneLabel = document.getElementById("footer-phone-label");
+  if (footerPhoneLabel && displayPhone) {
+    footerPhoneLabel.textContent = displayPhone;
   }
 
   const footerInstagram = document.getElementById("footer-instagram");
