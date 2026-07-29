@@ -48,7 +48,7 @@ export function initGoogleReviewLinks() {
     if (!el.getAttribute("aria-label")) {
       el.setAttribute(
         "aria-label",
-        "Dejar una opinión en Google (se abre en una nueva pestaña)"
+        "Dejar una reseña en Google (se abre en una nueva pestaña)"
       );
     }
   });
