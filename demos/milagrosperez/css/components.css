@@ -1337,6 +1337,79 @@ body.nav-open {
   gap: 1rem;
 }
 
+/* ── CTA reseña Google (fin de testimonios) ── */
+.testimonials-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+  padding: clamp(1.5rem, 3.5vw, 2rem);
+  text-align: center;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.testimonials-review__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.testimonials-review__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.8vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-text);
+}
+
+.testimonials-review__text {
+  margin: 0.5rem 0 0;
+  max-width: 28rem;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--color-muted);
+}
+
+.testimonials-review__cta {
+  width: 100%;
+  max-width: 18rem;
+}
+
+.testimonials-review__icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .testimonials-review {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 1.75rem;
+    padding-inline: clamp(1.75rem, 3vw, 2.5rem);
+  }
+
+  .testimonials-review__copy {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .testimonials-review__cta {
+    width: auto;
+    max-width: none;
+    flex-shrink: 0;
+  }
+}
+
 .testimonials-quotes__nav {
   display: inline-flex;
   align-items: center;

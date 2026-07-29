@@ -35,6 +35,25 @@ export function initWhatsAppLinks() {
   });
 }
 
+export function initGoogleReviewLinks() {
+  const url = SITE.social?.googleReviews?.trim();
+  const links = document.querySelectorAll("[data-google-review]");
+
+  links.forEach((el) => {
+    if (!url || el.tagName !== "A") return;
+
+    el.href = url;
+    el.target = "_blank";
+    el.rel = "noopener noreferrer";
+    if (!el.getAttribute("aria-label")) {
+      el.setAttribute(
+        "aria-label",
+        "Dejar una opinión en Google (se abre en una nueva pestaña)"
+      );
+    }
+  });
+}
+
 export function initNavigation() {
   const navbar = document.getElementById("navbar");
   const navToggle = document.getElementById("navToggle");

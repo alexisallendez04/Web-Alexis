@@ -17,6 +17,8 @@ export const SITE = {
   social: {
     linkedin: "",
     instagram: "",
+    // Link de “Escribir una reseña” de Google Business Profile
+    googleReviews: "https://g.page/r/CfoDrZsZ5C4HEBI/review",
   },
 
   nav: {

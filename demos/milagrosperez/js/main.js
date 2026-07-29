@@ -1,5 +1,6 @@
 import { initAnimations, initMicrointeractions } from "./modules/animations.js";
 import {
+  initGoogleReviewLinks,
   initNavigation,
   initWhatsAppFloat,
   initWhatsAppLinks,
@@ -9,6 +10,7 @@ import { initTestimonials } from "./modules/testimonials.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initWhatsAppLinks();
+  initGoogleReviewLinks();
   initNavigation();
   initAnimations();
   initMicrointeractions();
