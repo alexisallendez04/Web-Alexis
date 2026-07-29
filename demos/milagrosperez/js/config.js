@@ -6,8 +6,8 @@ export const SITE = {
   locale: "es-AR",
 
   contact: {
-    phone: "+54 11 0000-0000",
-    whatsapp: "5491100000000",
+    phone: "+54 9 11 4159-6199",
+    whatsapp: "5491141596199",
     whatsappMessage:
       "Hola, quisiera consultar sobre asesoramiento contable y conocer cómo pueden ayudarme.",
     email: "contacto@milagrosperez.com",
@@ -16,7 +16,7 @@ export const SITE = {
 
   social: {
     linkedin: "",
-    instagram: "",
+    instagram: "https://www.instagram.com/contadorapm/",
     // Link de “Escribir una reseña” de Google Business Profile
     googleReviews: "https://g.page/r/CfoDrZsZ5C4HEBI/review",
   },

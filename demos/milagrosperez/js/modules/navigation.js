@@ -22,6 +22,7 @@ const FOCUSABLE =
 export function initWhatsAppLinks() {
   const url = `https://wa.me/${SITE.contact.whatsapp}?text=${encodeURIComponent(SITE.contact.whatsappMessage)}`;
   const externalLabel = "Consultar con Milagros Perez (se abre en una nueva pestaña)";
+  const displayPhone = SITE.contact.phone;
 
   document.querySelectorAll("[data-wa]").forEach((el) => {
     el.href = url;
@@ -33,6 +34,17 @@ export function initWhatsAppLinks() {
       }
     }
   });
+
+  const footerPhone = document.getElementById("footer-phone");
+  if (footerPhone && displayPhone) {
+    footerPhone.textContent = displayPhone;
+  }
+
+  const footerInstagram = document.getElementById("footer-instagram");
+  const instagramUrl = SITE.social?.instagram?.trim();
+  if (footerInstagram && instagramUrl) {
+    footerInstagram.href = instagramUrl;
+  }
 }
 
 export function initGoogleReviewLinks() {
