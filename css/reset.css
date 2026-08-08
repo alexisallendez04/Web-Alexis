@@ -7,8 +7,17 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   -webkit-text-size-adjust: 100%;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+html.has-smooth-scroll {
+  scroll-behavior: auto;
 }
 
 body {

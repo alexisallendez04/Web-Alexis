@@ -6,21 +6,76 @@
   const mobileNav = document.getElementById("mobileNav");
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const hero = document.querySelector(".hero");
+  const root = document.documentElement;
 
-  /* ── Scroll: header background ── */
-  const onScroll = () => {
-    header?.classList.toggle("is-scrolled", window.scrollY > 20);
+  const clamp01 = (n) => Math.min(Math.max(n, 0), 1);
+
+  /* ── Lenis smooth scroll ── */
+  let lenis = null;
+
+  const getScrollY = () => (lenis ? lenis.scroll : window.scrollY);
+
+  const updateHeaderState = (y) => {
+    const headerH = header?.offsetHeight ?? 88;
+    const heroEnd = hero ? hero.offsetTop + hero.offsetHeight : headerH;
+    const pastHero = y >= heroEnd - headerH - 12;
+    header?.classList.toggle("is-scrolled", pastHero);
   };
 
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  const applyScrollEffects = (y) => {
+    updateHeaderState(y);
+
+    const docHeight = Math.max(root.scrollHeight - window.innerHeight, 1);
+    root.style.setProperty("--page-progress", clamp01(y / docHeight).toFixed(4));
+
+    if (!hero || prefersReducedMotion) return;
+
+    const heroTravel = Math.max(hero.offsetHeight * 1.05, 1);
+    const raw = clamp01(y / heroTravel);
+    const exit = 1 - Math.pow(1 - raw, 1.7);
+    hero.style.setProperty("--hero-exit", exit.toFixed(4));
+  };
+
+  if (!prefersReducedMotion && typeof window.Lenis === "function") {
+    lenis = new window.Lenis({
+      duration: 1.4,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      wheelMultiplier: 0.85,
+      touchMultiplier: 1.15,
+      autoRaf: false,
+    });
+
+    lenis.on("scroll", ({ scroll }) => {
+      applyScrollEffects(scroll);
+    });
+
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
+    root.classList.add("has-smooth-scroll");
+  } else {
+    const onNativeScroll = () => applyScrollEffects(window.scrollY);
+    window.addEventListener("scroll", onNativeScroll, { passive: true });
+    window.addEventListener("resize", onNativeScroll, { passive: true });
+  }
+
+  applyScrollEffects(getScrollY());
+  window.addEventListener("resize", () => applyScrollEffects(getScrollY()), {
+    passive: true,
+  });
 
   /* ── Mobile menu ── */
   const closeMenu = () => {
     menuToggle?.classList.remove("is-open");
     menuToggle?.setAttribute("aria-expanded", "false");
     mobileNav?.classList.remove("is-open");
+    header?.classList.remove("is-menu-open");
     document.body.style.overflow = "";
+    lenis?.start();
     setTimeout(() => {
       if (!menuToggle?.classList.contains("is-open")) {
         mobileNav?.setAttribute("hidden", "");
@@ -31,9 +86,11 @@
   const openMenu = () => {
     menuToggle?.classList.add("is-open");
     menuToggle?.setAttribute("aria-expanded", "true");
+    header?.classList.add("is-menu-open");
     mobileNav?.removeAttribute("hidden");
     requestAnimationFrame(() => mobileNav?.classList.add("is-open"));
     document.body.style.overflow = "hidden";
+    lenis?.stop();
   };
 
   menuToggle?.addEventListener("click", () => {
@@ -45,7 +102,7 @@
     link.addEventListener("click", closeMenu);
   });
 
-  /* ── Smooth scroll ── */
+  /* ── Anchor smooth scroll ── */
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
       const id = anchor.getAttribute("href");
@@ -55,10 +112,20 @@
       if (!target) return;
 
       e.preventDefault();
-      const offset = header?.offsetHeight ?? 72;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: "smooth" });
       closeMenu();
+
+      const offset = header?.offsetHeight ?? 72;
+
+      if (lenis) {
+        lenis.scrollTo(target, {
+          offset: -offset,
+          duration: 1.55,
+          easing: (t) => 1 - Math.pow(1 - t, 4),
+        });
+      } else {
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: prefersReducedMotion ? "auto" : "smooth" });
+      }
     });
   });
 
@@ -77,7 +144,7 @@
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -5% 0px" }
+      { threshold: 0.22, rootMargin: "0px 0px -18% 0px" }
     );
 
     revealTargets.forEach((el) => observer.observe(el));
