@@ -92,6 +92,55 @@
     }
   });
 
+  /* ── Project panel tabs ── */
+  const projectPanel = document.querySelector("[data-project-panel]");
+  if (projectPanel) {
+    const tabs = [...projectPanel.querySelectorAll("[data-project-tab]")];
+    const views = [...projectPanel.querySelectorAll("[data-project-panel-view]")];
+
+    const activateProject = (id, { focusTab = false } = {}) => {
+      tabs.forEach((tab) => {
+        const isActive = tab.dataset.projectTab === id;
+        tab.classList.toggle("is-active", isActive);
+        tab.setAttribute("aria-selected", String(isActive));
+        tab.tabIndex = isActive ? 0 : -1;
+        if (isActive && focusTab) tab.focus();
+      });
+
+      views.forEach((view) => {
+        const isActive = view.dataset.projectPanelView === id;
+        view.classList.toggle("is-active", isActive);
+        view.hidden = !isActive;
+      });
+    };
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        activateProject(tab.dataset.projectTab);
+      });
+
+      tab.addEventListener("keydown", (e) => {
+        const currentIndex = tabs.indexOf(tab);
+        if (currentIndex < 0) return;
+
+        let nextIndex = null;
+        if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+          nextIndex = (currentIndex + 1) % tabs.length;
+        } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+          nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+        } else if (e.key === "Home") {
+          nextIndex = 0;
+        } else if (e.key === "End") {
+          nextIndex = tabs.length - 1;
+        }
+
+        if (nextIndex === null) return;
+        e.preventDefault();
+        activateProject(tabs[nextIndex].dataset.projectTab, { focusTab: true });
+      });
+    });
+  }
+
   /* ── WhatsApp flotante ── */
   const whatsappFloat = document.getElementById("whatsappFloat");
   if (whatsappFloat) {

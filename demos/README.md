@@ -4,62 +4,36 @@ Cada sitio de cliente vive en su propia carpeta dentro de `demos/`.
 
 ## Imágenes del portfolio
 
-Las capturas del hero para la landing principal están en `demos/imgdemos/`:
+Las capturas para la landing principal están en `demos/imgdemos/`:
 
 - `Gabriela.png`
 - `Antonella.png`
+- `Jose.png`
+- `Milagros.png`
 
-## Proyectos en producción
+## Proyectos destacados
 
 | Cliente | Rubro | URL |
 |---------|-------|-----|
 | Gabriela Catania | Abogada | https://gabrielacatania.com/ |
 | Antonela Foniciello | Nutricionista | https://www.antofoninutricion.com/ |
+| José Guerineau | Contador | https://www.guerineauyasociados.com.ar/ |
+| Milagros Perez | Contadora | https://milagrosperez.com/ |
 
 ## Estructura local
 
 ```
 demos/
+├── imgdemos/
 ├── gabrielacatania/
-│   ├── index.html
-│   ├── css/
-│   ├── js/
-│   └── assets/
-│       ├── icons/
-│       ├── images/
-│       └── fonts/
-└── antofoninutricion/
-    ├── index.html
-    ├── css/
-    │   ├── reset.css
-    │   ├── variables.css
-    │   ├── styles.css
-    │   └── animations.css
-    ├── js/
-    │   └── main.js
-    └── assets/
-        ├── icons/
-        ├── images/
-        ├── documents/
-        └── fonts/
-└── adarocalot/
-    ├── index.html
-    ├── css/
-    │   ├── reset.css
-    │   ├── variables.css
-    │   ├── styles.css
-    │   └── animations.css
-    ├── js/
-    │   └── main.js
-    └── assets/
-        ├── icons/
-        ├── images/
-        ├── documents/
-        └── fonts/
+├── antofoninutricion/
+├── joseguerineau/
+└── milagrosperez/
 ```
 
 ## Agregar un proyecto
 
 1. Creá la carpeta en `demos/` con el código fuente.
-2. Agregá una tarjeta en `#proyectos` del `index.html` principal con la **URL real en producción**.
-3. Incluí una imagen de preview (captura o foto representativa).
+2. Agregá una captura en `demos/imgdemos/`.
+3. Agregá una tarjeta en `#proyectos` del `index.html` principal con la **URL real en producción**.
+4. Actualizá la franja de clientes y el contador de proyectos si corresponde.

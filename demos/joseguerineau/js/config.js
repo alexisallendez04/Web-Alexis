@@ -2,7 +2,7 @@ export const SITE = {
   name: "Estudio Contable Guerineau y Asociados",
   shortName: "José Guerineau",
   tagline: "Contador Público — CABA y Provincia de Buenos Aires",
-  url: "https://joseguerineau.com",
+  url: "https://www.guerineauyasociados.com.ar",
   locale: "es-AR",
 
   contact: {

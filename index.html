@@ -85,10 +85,13 @@
         <div class="hero__visual" aria-hidden="true">
           <div class="hero-mockups">
             <figure class="hero-mockup hero-mockup--back">
+              <img src="demos/imgdemos/Jose.png" alt="" width="800" height="600" loading="eager">
+            </figure>
+            <figure class="hero-mockup hero-mockup--mid">
               <img src="demos/imgdemos/Antonella.png" alt="" width="800" height="600" loading="eager">
             </figure>
             <figure class="hero-mockup hero-mockup--front">
-              <img src="demos/imgdemos/Gabriela.png" alt="" width="800" height="600" loading="eager">
+              <img src="demos/imgdemos/Milagros.png" alt="" width="800" height="600" loading="eager">
             </figure>
           </div>
         </div>
@@ -102,8 +105,8 @@
       <div class="container social-proof__grid">
         <div class="social-stats reveal-stagger">
           <div class="social-stat">
-            <p class="social-stat__value">2+</p>
-            <p class="social-stat__label">Proyectos en producción</p>
+            <p class="social-stat__value">4</p>
+            <p class="social-stat__label">Proyectos destacados</p>
           </div>
           <div class="social-stat">
             <p class="social-stat__value">100%</p>
@@ -124,6 +127,8 @@
           <ul class="clients-strip__list">
             <li><span class="client-badge"><span class="client-badge__dot" aria-hidden="true"></span>Gabriela Catania · Abogada</span></li>
             <li><span class="client-badge"><span class="client-badge__dot" aria-hidden="true"></span>Antonela Foniciello · Nutricionista</span></li>
+            <li><span class="client-badge"><span class="client-badge__dot" aria-hidden="true"></span>José Guerineau · Contador</span></li>
+            <li><span class="client-badge"><span class="client-badge__dot" aria-hidden="true"></span>Milagros Perez · Contadora</span></li>
           </ul>
         </div>
 
@@ -147,60 +152,160 @@
           <p class="section-desc section-desc--center">Cada sitio está pensado para resolver un problema concreto y convertir visitas en consultas reales.</p>
         </header>
 
-        <div class="portfolio-list">
+        <div class="project-panel reveal" data-project-panel>
+          <nav class="project-panel__nav" aria-label="Seleccionar proyecto">
+            <p class="project-panel__nav-label">Proyectos</p>
+            <ul class="project-panel__list" role="tablist">
+              <li>
+                <button
+                  type="button"
+                  class="project-panel__tab is-active"
+                  role="tab"
+                  id="tab-gabriela"
+                  aria-selected="true"
+                  aria-controls="panel-gabriela"
+                  data-project-tab="gabriela"
+                >
+                  <span class="project-panel__tab-index">01</span>
+                  <span class="project-panel__tab-text">
+                    <span class="project-panel__tab-name">Gabriela Catania</span>
+                    <span class="project-panel__tab-role">Abogada</span>
+                  </span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="project-panel__tab"
+                  role="tab"
+                  id="tab-antonela"
+                  aria-selected="false"
+                  aria-controls="panel-antonela"
+                  data-project-tab="antonela"
+                  tabindex="-1"
+                >
+                  <span class="project-panel__tab-index">02</span>
+                  <span class="project-panel__tab-text">
+                    <span class="project-panel__tab-name">Antonela Foniciello</span>
+                    <span class="project-panel__tab-role">Nutricionista</span>
+                  </span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="project-panel__tab"
+                  role="tab"
+                  id="tab-jose"
+                  aria-selected="false"
+                  aria-controls="panel-jose"
+                  data-project-tab="jose"
+                  tabindex="-1"
+                >
+                  <span class="project-panel__tab-index">03</span>
+                  <span class="project-panel__tab-text">
+                    <span class="project-panel__tab-name">José Guerineau</span>
+                    <span class="project-panel__tab-role">Contador</span>
+                  </span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="project-panel__tab"
+                  role="tab"
+                  id="tab-milagros"
+                  aria-selected="false"
+                  aria-controls="panel-milagros"
+                  data-project-tab="milagros"
+                  tabindex="-1"
+                >
+                  <span class="project-panel__tab-index">04</span>
+                  <span class="project-panel__tab-text">
+                    <span class="project-panel__tab-name">Milagros Perez</span>
+                    <span class="project-panel__tab-role">Contadora</span>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </nav>
 
-          <article class="case-study reveal reveal--left">
-            <div class="case-study__media">
-              <img src="demos/imgdemos/Gabriela.png" alt="Sitio web de Gabriela Catania — abogada en Cariló" loading="lazy" width="1200" height="800">
-            </div>
-            <div class="case-study__body">
-              <span class="case-study__tag">Abogada · Sucesiones e inmobiliario</span>
-              <h3 class="case-study__name">Gabriela Catania</h3>
-              <p class="case-study__intro">Estudio jurídico en Cariló que necesitaba una presencia online sólida para captar clientes locales con confianza.</p>
-              <div class="case-study__details">
-                <div class="case-detail">
-                  <p class="case-detail__label">Problema</p>
-                  <p class="case-detail__text">Sin web profesional, perdía credibilidad frente a competidores y dependía únicamente del boca a boca.</p>
-                </div>
-                <div class="case-detail">
-                  <p class="case-detail__label">Solución</p>
-                  <p class="case-detail__text">Landing con SEO local, áreas de práctica claras, testimonios con resultados y contacto directo por WhatsApp.</p>
-                </div>
-                <div class="case-detail">
-                  <p class="case-detail__label">Resultado</p>
-                  <p class="case-detail__text">Presencia online profesional que transmite autoridad y facilita que nuevos clientes soliciten consultas.</p>
-                </div>
+          <div class="project-panel__stage">
+            <article
+              class="project-view is-active"
+              role="tabpanel"
+              id="panel-gabriela"
+              aria-labelledby="tab-gabriela"
+              data-project-panel-view="gabriela"
+            >
+              <div class="project-view__media">
+                <img src="demos/imgdemos/Gabriela.png" alt="Sitio web de Gabriela Catania — abogada en Cariló" width="1200" height="800" loading="eager">
               </div>
-              <a href="https://gabrielacatania.com/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Visitar sitio en vivo →</a>
-            </div>
-          </article>
-
-          <article class="case-study case-study--reverse reveal reveal--right">
-            <div class="case-study__media">
-              <img src="demos/imgdemos/Antonella.png" alt="Sitio web de Antonela Foniciello — nutricionista deportiva" loading="lazy" width="1200" height="800">
-            </div>
-            <div class="case-study__body">
-              <span class="case-study__tag">Nutricionista · Salud deportiva</span>
-              <h3 class="case-study__name">Antonela Foniciello</h3>
-              <p class="case-study__intro">Profesional de la salud que necesitaba diferenciarse online y convertir seguidores en pacientes de consulta.</p>
-              <div class="case-study__details">
-                <div class="case-detail">
-                  <p class="case-detail__label">Problema</p>
-                  <p class="case-detail__text">Las redes no transmitían la autoridad de sus certificaciones ni facilitaban agendar consultas.</p>
-                </div>
-                <div class="case-detail">
-                  <p class="case-detail__label">Solución</p>
-                  <p class="case-detail__text">Web con credenciales ISAK, servicios especializados, infoproductos y agenda de consultas integrada.</p>
-                </div>
-                <div class="case-detail">
-                  <p class="case-detail__label">Resultado</p>
-                  <p class="case-detail__text">Canal propio de captación que posiciona su expertise y genera consultas de forma directa.</p>
-                </div>
+              <div class="project-view__body">
+                <span class="project-view__tag">Abogada · Sucesiones e inmobiliario</span>
+                <h3 class="project-view__name">Gabriela Catania</h3>
+                <p class="project-view__text">Landing con SEO local y contacto por WhatsApp para un estudio jurídico en Cariló que necesitaba captar clientes con confianza.</p>
+                <a href="https://gabrielacatania.com/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Visitar sitio →</a>
               </div>
-              <a href="https://www.antofoninutricion.com/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Visitar sitio en vivo →</a>
-            </div>
-          </article>
+            </article>
 
+            <article
+              class="project-view"
+              role="tabpanel"
+              id="panel-antonela"
+              aria-labelledby="tab-antonela"
+              data-project-panel-view="antonela"
+              hidden
+            >
+              <div class="project-view__media">
+                <img src="demos/imgdemos/Antonella.png" alt="Sitio web de Antonela Foniciello — nutricionista deportiva" width="1200" height="800" loading="lazy">
+              </div>
+              <div class="project-view__body">
+                <span class="project-view__tag">Nutricionista · Salud deportiva</span>
+                <h3 class="project-view__name">Antonela Foniciello</h3>
+                <p class="project-view__text">Web que destaca credenciales ISAK, servicios e infoproductos para convertir seguidores en pacientes de consulta.</p>
+                <a href="https://www.antofoninutricion.com/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Visitar sitio →</a>
+              </div>
+            </article>
+
+            <article
+              class="project-view"
+              role="tabpanel"
+              id="panel-jose"
+              aria-labelledby="tab-jose"
+              data-project-panel-view="jose"
+              hidden
+            >
+              <div class="project-view__media">
+                <img src="demos/imgdemos/Jose.png" alt="Sitio web de José Guerineau — contador en CABA" width="1200" height="800" loading="lazy">
+              </div>
+              <div class="project-view__body">
+                <span class="project-view__tag">Contador · CABA y online</span>
+                <h3 class="project-view__name">José Guerineau</h3>
+                <p class="project-view__text">Sitio del estudio contable con servicios claros, proceso de trabajo y CTA directo para solicitar asesoramiento.</p>
+                <a href="https://www.guerineauyasociados.com.ar/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Visitar sitio →</a>
+              </div>
+            </article>
+
+            <article
+              class="project-view"
+              role="tabpanel"
+              id="panel-milagros"
+              aria-labelledby="tab-milagros"
+              data-project-panel-view="milagros"
+              hidden
+            >
+              <div class="project-view__media">
+                <img src="demos/imgdemos/Milagros.png" alt="Sitio web de Milagros Perez — contadora en Gran Buenos Aires y CABA" width="1200" height="800" loading="lazy">
+              </div>
+              <div class="project-view__body">
+                <span class="project-view__tag">Contadora · PyMEs y emprendedores</span>
+                <h3 class="project-view__name">Milagros Perez</h3>
+                <p class="project-view__text">Landing 100% digital orientada a conversión para atraer emprendedores, comercios y PyMEs en GBA y CABA.</p>
+                <a href="https://milagrosperez.com/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Visitar sitio →</a>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
