@@ -1,4 +1,4 @@
-import { SITE } from "../config.js";
+import { SITE, TURNIFY_URL } from "../config.js";
 
 const SECTION_IDS = ["inicio", "problema", "solucion", "servicios", "proceso", "quien-esta", "testimonios", "faq", "contacto"];
 
@@ -62,6 +62,25 @@ export function initGoogleReviewLinks() {
         "aria-label",
         "Dejar una reseña en Google (se abre en una nueva pestaña)"
       );
+    }
+  });
+}
+
+export function initTurnifyLinks() {
+  const url = (SITE.contact?.turnify || TURNIFY_URL)?.trim();
+  if (!url) return;
+
+  const externalLabel =
+    "Agendar asesoría con Milagros Perez (se abre en una nueva pestaña)";
+
+  document.querySelectorAll("[data-turnify]").forEach((el) => {
+    if (el.tagName !== "A") return;
+
+    el.href = url;
+    el.target = "_blank";
+    el.rel = "noopener noreferrer";
+    if (!el.getAttribute("aria-label")) {
+      el.setAttribute("aria-label", externalLabel);
     }
   });
 }

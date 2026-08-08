@@ -1,3 +1,5 @@
+export const TURNIFY_URL = "https://www.turnifyapp.com/contadorapm";
+
 export const SITE = {
   name: "Milagros Perez",
   tagline: "Contadora Pública",
@@ -12,6 +14,7 @@ export const SITE = {
       "Hola, quisiera consultar sobre asesoramiento contable y conocer cómo pueden ayudarme.",
     email: "contacto@milagrosperez.com",
     schedule: "Atención 100% digital",
+    turnify: TURNIFY_URL,
   },
 
   social: {
