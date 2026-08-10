@@ -64,17 +64,17 @@
   --radius-xl: 20px;
   --radius-full: 9999px;
 
-  /* ── Sombras sutiles ── */
-  --shadow-sm: 0 1px 3px rgba(47, 49, 54, 0.05);
-  --shadow-md: 0 8px 28px rgba(47, 49, 54, 0.08);
-  --shadow-lg: 0 20px 48px rgba(47, 49, 54, 0.1);
-  --shadow-accent: 0 8px 24px rgba(190, 117, 116, 0.28);
+  /* ── Sombras con más definición (menos “haze”) ── */
+  --shadow-sm: 0 1px 2px rgba(47, 49, 54, 0.06);
+  --shadow-md: 0 4px 14px rgba(47, 49, 54, 0.09);
+  --shadow-lg: 0 12px 28px rgba(47, 49, 54, 0.11);
+  --shadow-accent: 0 6px 16px rgba(190, 117, 116, 0.26);
 
-  /* ── Transiciones (300 ms) ── */
-  --ease: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --duration: 0.3s;
-  --duration-slow: 0.5s;
+  /* ── Transiciones más firmes ── */
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --duration: 0.22s;
+  --duration-slow: 0.34s;
 
   /* ── Breakpoints (referencia) ── */
   --bp-sm: 480px;

@@ -18,8 +18,9 @@ export function initAnimations() {
       });
     },
     {
-      threshold: 0.1,
-      rootMargin: "0px 0px -5% 0px",
+      threshold: 0.06,
+      /* Expande el área: el reveal termina antes de que el bloque quede al centro */
+      rootMargin: "0px 0px 12% 0px",
     }
   );
 

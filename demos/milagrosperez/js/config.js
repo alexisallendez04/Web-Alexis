@@ -4,7 +4,7 @@ export const SITE = {
   name: "Milagros Perez",
   tagline: "Contadora Pública",
   location: "Gran Buenos Aires y CABA",
-  url: "https://milagrosperez.com",
+  url: "https://estudiomilagrosperez.com",
   locale: "es-AR",
 
   contact: {

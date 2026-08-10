@@ -220,7 +220,14 @@ export function initNavigation() {
         window.scrollY -
         (navbar?.offsetHeight ?? 72);
 
-      window.scrollTo({ top, behavior: reduced ? "auto" : "smooth" });
+      /* Salto firme: el smooth nativo alarga el scroll y marea en páginas largas */
+      window.scrollTo({ top, behavior: "auto" });
+      target
+        .querySelectorAll("[data-reveal], [data-reveal-stagger]")
+        .forEach((el) => el.classList.add("is-visible"));
+      if (target.matches("[data-reveal], [data-reveal-stagger]")) {
+        target.classList.add("is-visible");
+      }
     });
   });
 }

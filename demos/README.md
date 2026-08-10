@@ -18,7 +18,7 @@ Las capturas para la landing principal están en `demos/imgdemos/`:
 | Gabriela Catania | Abogada | https://gabrielacatania.com/ |
 | Antonela Foniciello | Nutricionista | https://www.antofoninutricion.com/ |
 | José Guerineau | Contador | https://www.guerineauyasociados.com.ar/ |
-| Milagros Perez | Contadora | https://milagrosperez.com/ |
+| Milagros Perez | Contadora | https://estudiomilagrosperez.com/ |
 
 ## Estructura local
 
