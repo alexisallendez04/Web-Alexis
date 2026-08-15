@@ -1,6 +1,6 @@
 export const SITE = {
   name: "Estudio B&G",
-  tagline: "Management, finanzas e impuestos",
+  tagline: "Gestión, finanzas e impuestos",
   location: "Mar del Plata",
   url: "https://bygestudio.example.com",
   locale: "es-AR",
