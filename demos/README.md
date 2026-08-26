@@ -7,7 +7,6 @@ Cada sitio de cliente vive en su propia carpeta dentro de `demos/`.
 Las capturas para la landing principal están en `demos/imgdemos/`:
 
 - `Gabriela.png`
-- `Antonella.png`
 - `Jose.png`
 - `Milagros.png`
 
@@ -16,7 +15,6 @@ Las capturas para la landing principal están en `demos/imgdemos/`:
 | Cliente | Rubro | URL |
 |---------|-------|-----|
 | Gabriela Catania | Abogada | https://gabrielacatania.com/ |
-| Antonela Foniciello | Nutricionista | https://www.antofoninutricion.com/ |
 | José Guerineau | Contador | https://www.guerineauyasociados.com.ar/ |
 | Milagros Perez | Contadora | https://estudiomilagrosperez.com/ |
 
@@ -26,7 +24,6 @@ Las capturas para la landing principal están en `demos/imgdemos/`:
 demos/
 ├── imgdemos/
 ├── gabrielacatania/
-├── antofoninutricion/
 ├── joseguerineau/
 └── milagrosperez/
 ```
