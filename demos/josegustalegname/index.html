@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      var path = location.pathname;
+      if (path.slice(-1) !== "/" && !/\.[a-z0-9]+$/i.test(path)) {
+        location.replace(path + "/" + location.search + location.hash);
+      }
+    })();
+  </script>
   <title>LG | Guastalegname &amp; Asociados — Derecho Penal y Accidentes de Tránsito</title>
   <meta name="description" content="LG | Guastalegname &amp; Asociados es un estudio jurídico con enfoque integral, especializado en Derecho Penal y Accidentes de Tránsito.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
