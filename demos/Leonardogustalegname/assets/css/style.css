@@ -209,11 +209,12 @@ button:focus:not(:focus-visible) {
 .logo-title {
   font-family: var(--display);
   font-weight: 600;
-  font-size: 14.5px;
+  font-size: 12.5px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #f2f2f3;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .logo-subtitle {
@@ -303,7 +304,8 @@ button:focus:not(:focus-visible) {
   }
 
   .logo-title {
-    font-size: 12px;
+    font-size: 10.5px;
+    white-space: normal;
   }
 
   .logo-subtitle {
@@ -687,8 +689,20 @@ button:focus:not(:focus-visible) {
 .stat .num {
   font-family: var(--font-serif);
   font-size: 36px;
-  color: var(--navy);
+  color: var(--ink);
   line-height: 1.1;
+}
+
+.stat .num--icon {
+  display: flex;
+  align-items: flex-end;
+  height: 40px;
+}
+
+.stat .num--icon svg {
+  width: 36px;
+  height: 36px;
+  display: block;
 }
 
 .stat .lbl {
