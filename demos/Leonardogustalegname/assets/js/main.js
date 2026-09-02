@@ -66,6 +66,24 @@
     window.open(url, "_blank");
   }
 
+  const hero = document.querySelector(".hero");
+  const fab = document.querySelector(".wa-fab");
+  if (hero && fab) {
+    const syncFab = function (heroVisible) {
+      fab.classList.toggle("is-shown", !heroVisible);
+      fab.classList.toggle("is-hidden", heroVisible);
+      fab.setAttribute("aria-hidden", heroVisible ? "true" : "false");
+    };
+    syncFab(true);
+    const heroObs = new IntersectionObserver(
+      function (entries) {
+        syncFab(entries[0].isIntersecting);
+      },
+      { threshold: 0.2 }
+    );
+    heroObs.observe(hero);
+  }
+
   const reveals = document.querySelectorAll(".reveal");
 
   if (reduceMotion) {

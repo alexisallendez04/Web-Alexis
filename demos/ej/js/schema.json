@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Nombre del Estudio",
+  "description": "Descripción breve del servicio profesional. Completar con el rubro y la zona de atención.",
+  "url": "https://ejemplo.com",
+  "email": "consulta@ejemplo.com",
+  "telephone": "+5491100000000",
+  "areaServed": [
+    { "@type": "City", "name": "Buenos Aires" },
+    { "@type": "State", "name": "Buenos Aires" }
+  ],
+  "serviceType": ["Servicio 1", "Servicio 2", "Servicio 3"],
+  "founder": {
+    "@type": "Person",
+    "name": "Nombre Profesional",
+    "jobTitle": "Profesión"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  }
+}

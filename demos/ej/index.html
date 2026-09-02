@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var path = location.pathname;
+      if (/\/index\.html$/i.test(path)) {
+        location.replace(path.replace(/\/index\.html$/i, "/") + location.search + location.hash);
+        return;
+      }
+      if (path.slice(-1) !== "/" && !/\.[a-z0-9]+$/i.test(path)) {
+        var base = document.createElement("base");
+        base.href = location.origin + path + "/";
+        document.head.insertBefore(base, document.head.firstChild);
+      }
+    })();
+  </script>
+  <meta name="description" content="Plantilla de sitio profesional. Completar con el rubro, la zona de atención y la propuesta de valor del cliente.">
+  <meta name="theme-color" content="#0F3460">
+  <title>Nombre del Estudio | Profesión — Zona de atención</title>
+
+  <meta property="og:title" content="Nombre del Estudio">
+  <meta property="og:description" content="Plantilla de sitio profesional. Completar con el copy del cliente.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="application/ld+json" src="js/schema.json"></script>
+</head>
+<body>
+
+  <a href="#inicio" class="skip-link">Ir al contenido</a>
+
+  <header id="navbar" class="site-header" aria-label="Navegación principal">
+    <div class="site-header__inner">
+      <div class="site-header__left">
+        <button id="navToggle" type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMobile">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <ul class="site-header__nav">
+          <li><a href="#servicios" class="nav-link" data-nav-link>Servicios</a></li>
+          <li><a href="#proceso" class="nav-link" data-nav-link>Proceso</a></li>
+          <li><a href="#sobre" class="nav-link" data-nav-link>Sobre mí</a></li>
+          <li><a href="#faq" class="nav-link" data-nav-link>FAQ</a></li>
+        </ul>
+      </div>
+
+      <a href="#inicio" class="navbar-logo" aria-label="Nombre del Estudio — Inicio">
+        Estudio
+      </a>
+
+      <div class="site-header__actions">
+        <a data-wa href="#" class="btn btn--cta nav-cta-desktop">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <div id="navMobile" class="nav-mobile-panel" aria-hidden="true">
+    <ul class="nav-mobile-panel__list">
+      <li><a href="#servicios" class="nav-mobile-panel__link" data-nav-link>Servicios</a></li>
+      <li><a href="#proceso" class="nav-mobile-panel__link" data-nav-link>Proceso</a></li>
+      <li><a href="#sobre" class="nav-mobile-panel__link" data-nav-link>Sobre mí</a></li>
+      <li><a href="#faq" class="nav-mobile-panel__link" data-nav-link>FAQ</a></li>
+      <li class="nav-mobile-panel__cta">
+        <a data-wa href="#" class="btn btn--cta nav-mobile-panel__btn">Contacto</a>
+      </li>
+    </ul>
+  </div>
+
+  <section id="inicio" class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="eyebrow hero-enter">Nombre del Estudio</p>
+        <h1 class="display h1 hero-enter hero-enter-d1">Titular principal: la promesa clara del servicio.</h1>
+        <p class="lead hero-enter hero-enter-d2">Párrafo de apoyo. Explicá para quién es, qué problema resolvés y en qué zona atendés.</p>
+        <div class="hero__actions hero-enter hero-enter-d3">
+          <a data-wa href="#" class="btn btn--cta">Solicitar consulta</a>
+          <a href="#servicios" class="btn btn--outline">Ver servicios</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true">
+    <span class="section-divider__line"></span>
+    <span class="section-divider__code">01</span>
+    <span class="section-divider__line"></span>
+  </div>
+
+  <main id="main">
+
+    <section id="problema" class="section section--white" aria-labelledby="problema-title">
+      <div class="container container--narrow">
+        <header class="section-header section-header--center" data-reveal>
+          <span class="eyebrow">¿Te identificás?</span>
+          <h2 id="problema-title" class="display h2 h2--center">Situaciones que resuelve este profesional</h2>
+        </header>
+        <ol class="problem-list" data-reveal-stagger>
+          <li class="problem-list__item">
+            <span class="problem-list__num">01</span>
+            <p class="problem-list__text">Problema o duda frecuente del cliente 1.</p>
+          </li>
+          <li class="problem-list__item">
+            <span class="problem-list__num">02</span>
+            <p class="problem-list__text">Problema o duda frecuente del cliente 2.</p>
+          </li>
+          <li class="problem-list__item">
+            <span class="problem-list__num">03</span>
+            <p class="problem-list__text">Problema o duda frecuente del cliente 3.</p>
+          </li>
+          <li class="problem-list__item">
+            <span class="problem-list__num">04</span>
+            <p class="problem-list__text">Problema o duda frecuente del cliente 4.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="servicios" class="section" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-header section-header--center" data-reveal>
+          <span class="eyebrow">Qué hacemos</span>
+          <h2 id="services-title" class="display h2 h2--center">Servicios</h2>
+        </header>
+
+        <div class="services-grid" data-reveal-stagger>
+          <article class="module module--service">
+            <div class="module__media">
+              <div class="module__placeholder" aria-hidden="true"></div>
+            </div>
+            <div class="module__body">
+              <h3 class="module__title">Servicio 1</h3>
+              <span class="module__tag">Beneficio principal</span>
+              <p class="module__text">Descripción breve del servicio. Qué incluye y para quién es.</p>
+              <a data-wa href="#" data-wa-message="Hola, quisiera consultar sobre el servicio 1." class="module__link">Consultar</a>
+            </div>
+          </article>
+
+          <article class="module module--service">
+            <div class="module__media">
+              <div class="module__placeholder" aria-hidden="true"></div>
+            </div>
+            <div class="module__body">
+              <h3 class="module__title">Servicio 2</h3>
+              <span class="module__tag">Beneficio principal</span>
+              <p class="module__text">Descripción breve del servicio. Qué incluye y para quién es.</p>
+              <a data-wa href="#" data-wa-message="Hola, quisiera consultar sobre el servicio 2." class="module__link">Consultar</a>
+            </div>
+          </article>
+
+          <article class="module module--service">
+            <div class="module__media">
+              <div class="module__placeholder" aria-hidden="true"></div>
+            </div>
+            <div class="module__body">
+              <h3 class="module__title">Servicio 3</h3>
+              <span class="module__tag">Beneficio principal</span>
+              <p class="module__text">Descripción breve del servicio. Qué incluye y para quién es.</p>
+              <a data-wa href="#" data-wa-message="Hola, quisiera consultar sobre el servicio 3." class="module__link">Consultar</a>
+            </div>
+          </article>
+
+          <article class="module module--service">
+            <div class="module__media">
+              <div class="module__placeholder" aria-hidden="true"></div>
+            </div>
+            <div class="module__body">
+              <h3 class="module__title">Servicio 4</h3>
+              <span class="module__tag">Beneficio principal</span>
+              <p class="module__text">Descripción breve del servicio. Qué incluye y para quién es.</p>
+              <a data-wa href="#" data-wa-message="Hola, quisiera consultar sobre el servicio 4." class="module__link">Consultar</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="center-actions" data-reveal>
+          <a data-wa href="#" class="btn btn--cta">Solicitar consulta</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="diferenciales" class="section section--navy" aria-labelledby="why-title">
+      <div class="container">
+        <header class="section-header section-header--center" data-reveal>
+          <span class="eyebrow">Por qué elegirnos</span>
+          <h2 id="why-title" class="display h2 h2--center display--light">Diferenciales</h2>
+        </header>
+
+        <div class="diff-grid" data-reveal-stagger>
+          <article class="module module--navy">
+            <h3 class="module__title">Diferencial 1</h3>
+            <p class="module__text">Explicá por qué este punto genera confianza.</p>
+          </article>
+          <article class="module module--navy">
+            <h3 class="module__title">Diferencial 2</h3>
+            <p class="module__text">Explicá por qué este punto genera confianza.</p>
+          </article>
+          <article class="module module--navy">
+            <h3 class="module__title">Diferencial 3</h3>
+            <p class="module__text">Explicá por qué este punto genera confianza.</p>
+          </article>
+          <article class="module module--navy">
+            <h3 class="module__title">Diferencial 4</h3>
+            <p class="module__text">Explicá por qué este punto genera confianza.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider section-divider--light section-divider--in-section section--navy" aria-hidden="true">
+      <span class="section-divider__line"></span>
+      <span class="section-divider__code">02</span>
+      <span class="section-divider__line"></span>
+    </div>
+
+    <section id="testimonios" class="section section--white" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section-header section-header--center" data-reveal>
+          <span class="eyebrow">Confianza</span>
+          <h2 id="testimonials-title" class="display h2 h2--center">Testimonios</h2>
+        </header>
+
+        <div class="testimonials-carousel" data-carousel data-reveal>
+          <div class="testimonials-carousel__viewport">
+            <div class="testimonials-carousel__track" data-carousel-track>
+              <blockquote class="quote testimonials-carousel__slide">
+                <p class="quote__text">"Testimonio del cliente. Completar con una cita real."</p>
+                <footer>
+                  <cite class="quote__name">Nombre Cliente</cite>
+                  <p class="quote__role">Rol o empresa</p>
+                </footer>
+              </blockquote>
+              <blockquote class="quote testimonials-carousel__slide">
+                <p class="quote__text">"Testimonio del cliente. Completar con una cita real."</p>
+                <footer>
+                  <cite class="quote__name">Nombre Cliente</cite>
+                  <p class="quote__role">Rol o empresa</p>
+                </footer>
+              </blockquote>
+              <blockquote class="quote testimonials-carousel__slide">
+                <p class="quote__text">"Testimonio del cliente. Completar con una cita real."</p>
+                <footer>
+                  <cite class="quote__name">Nombre Cliente</cite>
+                  <p class="quote__role">Rol o empresa</p>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="testimonials-carousel__controls">
+            <button type="button" class="testimonials-carousel__btn" data-carousel-prev aria-label="Testimonio anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="testimonials-carousel__dots" data-carousel-dots role="tablist" aria-label="Navegación de testimonios"></div>
+            <button type="button" class="testimonials-carousel__btn" data-carousel-next aria-label="Siguiente testimonio">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso" class="section" aria-labelledby="process-title">
+      <div class="container container--narrow">
+        <header class="section-header section-header--center" data-reveal>
+          <span class="eyebrow">Simple y directo</span>
+          <h2 id="process-title" class="display h2 h2--center">Cómo empezamos a trabajar</h2>
+        </header>
+
+        <ol class="process" data-reveal-stagger>
+          <li class="process__step">
+            <span class="process__num">PASO 01</span>
+            <h3 class="process__title">Contanos tu situación</h3>
+            <p class="process__text">Primer contacto para entender qué necesitás.</p>
+          </li>
+          <li class="process__step">
+            <span class="process__num">PASO 02</span>
+            <h3 class="process__title">Evaluamos el caso</h3>
+            <p class="process__text">Análisis y primera orientación clara.</p>
+          </li>
+          <li class="process__step">
+            <span class="process__num">PASO 03</span>
+            <h3 class="process__title">Propuesta a medida</h3>
+            <p class="process__text">Plan de trabajo adaptado a tus objetivos.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="sobre" class="section section--white" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-intro" data-reveal>
+            <span class="eyebrow">Quién te va a acompañar</span>
+            <h2 id="about-title" class="display h2">Nombre Profesional</h2>
+          </div>
+
+          <figure class="about-portrait" data-reveal>
+            <div class="about-portrait__accent" aria-hidden="true"></div>
+            <div class="about-portrait__plate">
+              <div class="about-portrait__media">
+                <div class="about-portrait__placeholder" aria-hidden="true"></div>
+              </div>
+              <div class="about-portrait__caption" aria-hidden="true"></div>
+            </div>
+            <div class="about-portrait__stat">
+              <div class="stat stat--gold">
+                <span class="stat__num">+10</span>
+                <span class="stat__label">años de<br>experiencia</span>
+              </div>
+            </div>
+          </figure>
+
+          <div class="about-body" data-reveal>
+            <p class="text-body">Párrafo 1: formación, trayectoria y enfoque profesional.</p>
+            <p class="text-body">Párrafo 2: cómo trabajás con tus clientes y qué valor aportás.</p>
+            <p class="text-body">Párrafo 3: cierre con la propuesta de relación a largo plazo.</p>
+            <a data-wa href="#" class="btn btn--ghost-light">Ponete en contacto →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <header class="section-header section-header--center" data-reveal>
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2 id="faq-title" class="display h2 h2--center">Resolvemos tus dudas</h2>
+        </header>
+
+        <div class="faq" data-reveal>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              Pregunta frecuente 1
+              <svg class="faq-question__icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer__inner">
+                <p class="faq-answer__text">Respuesta breve y concreta.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              Pregunta frecuente 2
+              <svg class="faq-question__icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer__inner">
+                <p class="faq-answer__text">Respuesta breve y concreta.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              Pregunta frecuente 3
+              <svg class="faq-question__icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer__inner">
+                <p class="faq-answer__text">Respuesta breve y concreta.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              Pregunta frecuente 4
+              <svg class="faq-question__icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer__inner">
+                <p class="faq-answer__text">Respuesta breve y concreta.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+      <span class="section-divider__line"></span>
+      <span class="section-divider__code">03</span>
+      <span class="section-divider__line"></span>
+    </div>
+
+    <section id="contacto" class="section section--navy cta-block" aria-labelledby="cta-title">
+      <div class="container container--narrow" data-reveal>
+        <h2 id="cta-title" class="display h2 h2--center display--light">Hablemos de tu caso</h2>
+        <p class="lead">Contanos tu situación y te orientamos sin compromiso.</p>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-group">
+            <label class="form-label form-label--required" for="nombre">Nombre</label>
+            <input id="nombre" class="form-input" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label form-label--required" for="email">Email</label>
+            <input id="email" class="form-input" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label form-label--required" for="telefono">Teléfono</label>
+            <input id="telefono" class="form-input" name="telefono" type="tel" autocomplete="tel" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label form-label--required" for="mensaje">Consulta</label>
+            <textarea id="mensaje" class="form-textarea" name="mensaje" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--cta">Enviar consulta</button>
+          <p class="form-success" hidden>Gracias. Te redirigimos a WhatsApp para completar la consulta.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <p class="site-footer__brand">Nombre del Estudio</p>
+          <p class="site-footer__meta">Nombre Profesional — Profesión</p>
+          <p class="site-footer__note">CABA y Provincia de Buenos Aires</p>
+          <ul class="site-footer__contact">
+            <li>
+              <a href="mailto:consulta@ejemplo.com" class="site-footer__link">consulta@ejemplo.com</a>
+            </li>
+            <li>
+              <a data-wa href="#" class="site-footer__link" id="footer-phone">+54 9 11 0000-0000</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p class="site-footer__label">Horario</p>
+          <p>Lunes a viernes, 9:00 a 18:00 hs</p>
+        </div>
+        <div id="footer-social"></div>
+      </div>
+      <p class="site-footer__legal">© 2026 Nombre del Estudio. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a id="waFloat" data-wa href="#" class="wa-float" aria-label="Ponete en contacto">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+    <span class="wa-float__label">Contacto</span>
+  </a>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
