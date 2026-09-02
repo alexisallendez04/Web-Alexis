@@ -20,7 +20,7 @@
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
   --pad: 48px;
   --section-y: 120px;
-  --header-h: 88px;
+  --header-h: 100px;
   --bs-border-radius: 0;
   --bs-border-radius-sm: 0;
   --bs-border-radius-lg: 0;
@@ -220,14 +220,14 @@ button:focus:not(:focus-visible) {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   color: #f2f2f3;
   min-width: 0;
 }
 
 .logo-icon {
-  width: 34px;
-  height: 34px;
+  width: 48px;
+  height: 48px;
   display: block;
   flex-shrink: 0;
 }
@@ -334,6 +334,11 @@ button:focus:not(:focus-visible) {
 
   .logo {
     max-width: calc(100% - 40px);
+  }
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
   }
 
   .logo-title {
@@ -714,6 +719,7 @@ button:focus:not(:focus-visible) {
 
 .stat {
   padding: 36px 32px;
+  text-align: center;
 }
 
 .stat + .stat {
@@ -730,6 +736,7 @@ button:focus:not(:focus-visible) {
 .stat .num--icon {
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   height: 40px;
 }
 
@@ -1384,7 +1391,7 @@ button:focus:not(:focus-visible) {
 }
 
 #contacto {
-  scroll-margin-top: 88px;
+  scroll-margin-top: var(--header-h);
 }
 
 .contact-main {
