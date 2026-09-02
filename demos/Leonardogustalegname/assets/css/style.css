@@ -209,7 +209,7 @@ button:focus:not(:focus-visible) {
 .logo-title {
   font-family: var(--display);
   font-weight: 600;
-  font-size: 13.5px;
+  font-size: 14.5px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #f2f2f3;
@@ -219,11 +219,13 @@ button:focus:not(:focus-visible) {
 .logo-subtitle {
   font-family: var(--display);
   font-weight: 400;
-  font-size: 0.85rem;
+  font-size: 9.5px;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.22em;
   color: #d7d9dc;
   line-height: 1.2;
+  text-align: center;
+  margin-right: -0.22em;
 }
 
 .logo .sep {
@@ -301,12 +303,13 @@ button:focus:not(:focus-visible) {
   }
 
   .logo-title {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .logo-subtitle {
-    font-size: 0.58rem;
+    font-size: 8px;
     letter-spacing: 0.16em;
+    margin-right: -0.16em;
   }
 
   .nav-toggle {
