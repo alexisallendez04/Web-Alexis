@@ -1312,7 +1312,7 @@ button:focus:not(:focus-visible) {
 }
 
 .faq-item.open .faq-a {
-  max-height: 280px;
+  max-height: 520px;
   margin-top: 16px;
 }
 

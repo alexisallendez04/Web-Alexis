@@ -62,7 +62,8 @@
     if (area) text += " Quiero hacer una consulta sobre " + area + ".";
     if (msg) text += " " + msg;
     text += " (Contacto: " + contact + ")";
-    const url = "https://wa.me/5491169691045?text=" + encodeURIComponent(text);
+    const WA_NUMBER = "5491169691045";
+    const url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text);
     window.open(url, "_blank");
   }
 
