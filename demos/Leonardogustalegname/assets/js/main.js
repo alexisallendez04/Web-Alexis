@@ -43,29 +43,29 @@
   });
 
   document.querySelectorAll(".contact-form").forEach(function (form) {
-    form.addEventListener("submit", submitContactForm);
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const errorEl = form.querySelector(".cf-error");
+      const name = (form.elements.name && form.elements.name.value.trim()) || "";
+      const contact = (form.elements.contact && form.elements.contact.value.trim()) || "";
+      const area = (form.elements.area && form.elements.area.value) || "";
+      const msg = (form.elements.message && form.elements.message.value.trim()) || "";
+      if (!name || !contact) {
+        if (errorEl) errorEl.textContent = "Complete al menos el nombre y un teléfono o email de contacto.";
+        return;
+      }
+      if (errorEl) errorEl.textContent = "";
+      let text = "Hola, soy " + name + ".";
+      if (area) text += " Quiero hacer una consulta sobre " + area + ".";
+      if (msg) text += " " + msg;
+      text += " (Contacto: " + contact + ")";
+      const url = "https://wa.me/5491169691045?text=" + encodeURIComponent(text);
+      const opened = window.open(url, "_blank", "noopener,noreferrer");
+      if (!opened) {
+        window.location.assign(url);
+      }
+    });
   });
-
-  function submitContactForm(event) {
-    event.preventDefault();
-    const name = document.getElementById("cf-name").value.trim();
-    const contact = document.getElementById("cf-contact").value.trim();
-    const area = document.getElementById("cf-area").value;
-    const msg = document.getElementById("cf-message").value.trim();
-    const errorEl = document.getElementById("cf-error");
-    if (!name || !contact) {
-      errorEl.textContent = "Completá al menos el nombre y un teléfono o email de contacto.";
-      return;
-    }
-    errorEl.textContent = "";
-    let text = "Hola, soy " + name + ".";
-    if (area) text += " Quiero hacer una consulta sobre " + area + ".";
-    if (msg) text += " " + msg;
-    text += " (Contacto: " + contact + ")";
-    const WA_NUMBER = "5491169691045";
-    const url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text);
-    window.open(url, "_blank");
-  }
 
   const hero = document.querySelector(".hero");
   const fab = document.querySelector(".wa-fab");

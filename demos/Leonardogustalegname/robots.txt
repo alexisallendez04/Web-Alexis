@@ -1,0 +1,8 @@
+# Reemplazar el origen cuando exista el dominio real.
+User-agent: *
+Allow: /
+
+Disallow: /assets/referencia/
+Disallow: /assets/documents/
+
+Sitemap: https://www.guastalegnameyasociados.com.ar/sitemap.xml
