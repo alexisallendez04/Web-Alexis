@@ -1,4 +1,11 @@
 (function () {
+  const WA_TURNOS = "5491124950376";
+  const WA_URGENCIAS = "5491169691045";
+
+  function waLink(mensaje, numero) {
+    return "https://wa.me/" + (numero || WA_TURNOS) + "?text=" + encodeURIComponent(mensaje);
+  }
+
   const fill = document.getElementById("spineFill");
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.getElementById("siteNav");
@@ -59,7 +66,7 @@
       if (area) text += " Quiero hacer una consulta sobre " + area + ".";
       if (msg) text += " " + msg;
       text += " (Contacto: " + contact + ")";
-      const url = "https://wa.me/5491169691045?text=" + encodeURIComponent(text);
+      const url = waLink(text);
       const opened = window.open(url, "_blank", "noopener,noreferrer");
       if (!opened) {
         window.location.assign(url);
